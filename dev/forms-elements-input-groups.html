@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Input Groups</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Input Groups</h2>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Input Groups</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                                        
+                               
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <!-- BASIC EXAMPLE -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Basic Example</h2>
+                                    <p>Place one add-on or button on either side of an input.</p>
+                                </div>                                
+                            </div>                                                              
+                            
+                            <div class="input-group">
+                                <span class="input-group-addon">@</span>
+                                <input type="text" class="form-control" placeholder="Username">
+                            </div>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon">@example.com</span>
+                            </div>
+
+                            <div class="input-group">
+                                <span class="input-group-addon">$</span>
+                                <input type="text" class="form-control">
+                                <span class="input-group-addon">.00</span>
+                            </div>                                                       
+                            
+                        </div>
+                        <!-- END BASIC EXAMPLE -->
+                        
+                        <!-- SIZING -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Sizing</h2>
+                                    <p>Place one add-on or button on either side of an input.</p>
+                                </div>                                
+                            </div>                                                              
+                            
+                            <div>
+                                <label>Large</label>
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon">A</span>
+                                    <input type="text" class="form-control" placeholder="Lorem ipsum dolor">
+                                </div>
+
+                                <label>Default</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">B</span>
+                                    <input type="text" class="form-control" placeholder="Lorem ipsum dolor">
+                                </div>
+
+                                <label>Small</label>
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">C</span>
+                                    <input type="text" class="form-control" placeholder="Lorem ipsum dolor">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END SIZING -->
+                        
+                        <!-- BUTTON ADDONS -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Button addons</h2>
+                                    <p>Place one add-on or button on either side of an input.</p>
+                                </div>                                
+                            </div>                                                              
+                            
+                            <div>
+                                <label>Basic</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                            </span>
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button">Go!</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label>Buttons with dropdowns</label>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control">
+                                            <div class="input-group-btn">
+                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action <span class="caret"></span></button>
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#">Action</a></li>
+                                                    <li><a href="#">Another action</a></li>
+                                                    <li><a href="#">Something else here</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">Separated link</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <label>Multiple buttons</label>
+                                <div class="row"> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-group"> 
+                                            <div class="input-group-btn"> 
+                                                <button type="button" class="btn btn-default btn-icon" aria-label="Bold"><span class="icon-bold"></span></button> 
+                                                <button type="button" class="btn btn-default btn-icon" aria-label="Italic"><span class="icon-italic"></span></button> 
+                                            </div> 
+                                            <input type="text" class="form-control"> 
+                                        </div> 
+                                    </div> 
+                                    <div class="col-md-6"> 
+                                        <div class="input-group"> 
+                                            <input type="text" class="form-control"> 
+                                            <div class="input-group-btn"> 
+                                                <button type="button" class="btn btn-default btn-icon" aria-label="Help"><span class="icon-question-circle"></span></button> 
+                                                <button type="button" class="btn btn-default">Action</button> 
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- EMD BUTTON ADDONS -->
+                        
+                        <!-- BUTTON ADDONS -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Checkbox & Radio addons</h2>
+                                    <p>Place any checkbox or radio option within an input group's addon instead of text.</p>
+                                </div>                                
+                            </div>                                                              
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Checkbox</label>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <div class="app-checkbox"> 
+                                                    <label><input type="checkbox" name="app-checkbox-1" value="0" checked></label> 
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Placeholder...">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <div class="app-checkbox"> 
+                                                    <label><input type="checkbox" name="app-checkbox-1" value="0"></label> 
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Placeholder...">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Radio</label>                                    
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <div class="app-radio"> 
+                                                    <label><input type="radio" name="app-checkbox-1" value="0" checked></label> 
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Placeholder...">                                            
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <div class="app-radio"> 
+                                                    <label><input type="radio" name="app-checkbox-1" value="1"></label> 
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="Placeholder...">                                            
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- EMD BUTTON ADDONS -->
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

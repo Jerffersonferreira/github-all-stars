@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Bank - Security</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">                       
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/assets/bank/header.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content">
+                    //= partials/assets/bank/navigation.html
+                                                                                                  
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container container-boxed">
+                                                                               
+                        <form class="form-horizontal">                               
+                            <div class="block block-condensed">
+                                <div class="app-heading app-heading-small">
+                                    <div class="title">
+                                        <h2>Security Settings</h2>
+                                        <p>Do not disclose your information to third parties</p>
+                                    </div>
+                                </div>
+                                <div class="block-content">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            
+                                            <div class="listing">
+                                                <div class="listing-item margin-bottom-20">
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <strong>Password</strong><br>
+                                                        Update your password
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <a href="#" class="btn btn-primary btn-clean" data-toggle="modal" data-target="#modal-password">Edit</a>
+                                                    </div>
+                                                </div>
+                                                <div class="listing-item">
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <strong>Question</strong><br>
+                                                        Change your security question
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <a href="#" class="btn btn-primary btn-clean" data-toggle="modal" data-target="#modal-change-question">Edit</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-6">
+                                            
+                                            <div class="listing">
+                                                <div class="listing-item margin-bottom-20">
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <strong>Pin Code</strong><br>
+                                                        Change pin code on your card
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <a href="#" class="btn btn-primary btn-clean" data-toggle="modal" data-target="#modal-change-pin">Edit</a>
+                                                    </div>
+                                                </div>
+                                                <div class="listing-item">
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <strong>Phone Security</strong><br>
+                                                        Use your phone for better security
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <label class="switch">
+                                                            <input type="checkbox" name="switch_1" checked value="0">
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </form>                                                                                                                                                                                                                
+                                
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+            
+            //= partials/assets/bank/footer.html
+            
+            
+            <!-- MODAL PASSWORD -->
+            <div class="modal fade" id="modal-password" tabindex="-1" role="dialog">                        
+                <div class="modal-dialog" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">                        
+                        <div class="modal-body">
+                            
+                            <div class="app-heading app-heading-small app-heading-condensed margin-bottom-30">                                
+                                <div class="title">
+                                    <h5>Password Update</h5>
+                                    <p>Update your password information</p>
+                                </div>
+                            </div>                                                        
+                            
+                            <form action="#" method="post" id="password_update">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Old Password</label>                                    
+                                            <input type="password" class="form-control" id="old_password" name="old_password" placeholder="Your current password">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">                                        
+                                        <div class="col-md-6">
+                                            <label>New Password</label>                                    
+                                            <input type="password" class="form-control" id="new_password" name="new_password" placeholder="Your new password">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label>Repeat Password</label>                                    
+                                            <input type="password" class="form-control" id="rep_password" name="rep_assword" placeholder="Repeat your password">
+                                        </div>
+                                    </div>                                    
+                                </div>                                
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="app-checkbox"> 
+                                                <label><input type="checkbox" value="1" id="show_password"> Show passwords</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-sm-6">
+                                            <button type="button" class="btn btn-default pull-right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                                                        
+                        </div>                        
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL PASSWORD -->
+            
+            <!-- MODAL CHANGE PIN -->
+            <div class="modal fade" id="modal-change-pin" tabindex="-1" role="dialog">                        
+                <div class="modal-dialog" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">                        
+                        <div class="modal-body">
+                            
+                            <div class="app-heading app-heading-small app-heading-condensed margin-bottom-30">                                
+                                <div class="title">
+                                    <h5>Change Pin</h5>
+                                    <p>Modify your access code</p>
+                                </div>
+                            </div>                                                        
+                            
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Your new pin</label>
+                                            <input type="text" class="form-control mask_pin" name="new_pin">
+                                            <span class="help-block">Please use unique 4 digits pin code</span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">                                        
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-default pull-right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                                                        
+                        </div>                        
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL CHANGE PIN -->
+            
+            <!-- MODAL CHANGE PIN -->
+            <div class="modal fade" id="modal-change-question" tabindex="-1" role="dialog">                        
+                <div class="modal-dialog" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">                        
+                        <div class="modal-body">
+                            
+                            <div class="app-heading app-heading-small app-heading-condensed margin-bottom-30">                                
+                                <div class="title">
+                                    <h5>Update Question</h5>
+                                    <p>Modify your secret question</p>
+                                </div>
+                            </div>                                                        
+                            
+                            <form action="#" method="post">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Question</label>
+                                            <select class="bs-select" name="question">                                                        
+                                                <option value="1">Name of your first pet?</option>
+                                                <option value="2">Name of your first teacher?</option>                                                        
+                                                <option value="3">Your first car model?</option>
+                                            </select>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">                                    
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label>Your Answer</label>
+                                            <input type="text" class="form-control" name="answer">
+                                            <span class="help-block">Be honest in your answer</span>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="row">                                        
+                                        <div class="col-md-12">
+                                            <button type="button" class="btn btn-default pull-right">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                                                        
+                        </div>                        
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL CHANGE PIN -->
+            
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/bootstrap-select/bootstrap-select.js"></script>        
+        <script type="text/javascript" src="js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+    </body>
+</html>

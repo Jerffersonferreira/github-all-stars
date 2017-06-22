@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Tabs And Accordions</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">                        
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">                    
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Accordions</h1>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Buttons</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                    
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <!-- STAR APP ACCORDION -->
+                        <div class="block">
+                            
+                            <div class="row margin-top-10">
+                                <div class="col-md-4">
+
+                                    <!-- START PAGE HEADING -->
+                                    <div class="app-heading app-heading-small app-heading-condensed">                                    
+                                        <div class="title">
+                                            <h2>App Accordion</h2>
+                                            <p>Simple example of <code>app-accordion</code> feature.</p>
+                                        </div>                                    
+                                    </div>
+                                    <!-- END PAGE HEADING -->
+
+                                    <div class="app-accordion">
+                                        <div class="item">
+                                            <div class="heading">
+                                                <div class="title">Section 1</div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="block">
+                                                    Integer viverra ligula placerat mi fermentum malesuada. Aenean eu tempor velit. Fusce iaculis turpis est, ut faucibus arcu ullamcorper eu.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item open">
+                                            <div class="heading">
+                                                <div class="title">Section 2</div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="block">
+                                                    Quisque placerat placerat lacus, vitae accumsan mauris mollis quis. Maecenas accumsan justo eros.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="heading">
+                                                <div class="title">Section 3</div>
+                                            </div>
+                                            <div class="content">
+                                                <div class="block">
+                                                    Morbi pulvinar pellentesque velit, nec pharetra urna consectetur sed. Vestibulum sed eros rhoncus enim fermentum ultricies tincidunt ac orci.                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+
+                                    <!-- START PAGE HEADING -->
+                                    <div class="app-heading app-heading-small app-heading-condensed">                                    
+                                        <div class="title">
+                                            <h2>Full Height</h2>
+                                            <p>Add <code>data-type="full-height"</code> to set 100% height relatively to parent.</p>
+                                        </div>                                    
+                                    </div>
+                                    <!-- END PAGE HEADING -->
+
+                                    <div class="pull-left" style="height: 400px;">
+                                        <div class="app-accordion" data-type="full-height">
+                                            <div class="item">
+                                                <div class="heading">
+                                                    <div class="title">Section 1</div>
+                                                </div>
+                                                <div class="content scroll">
+                                                    <div class="block">                                                        
+                                                        Integer viverra ligula placerat mi fermentum malesuada. Aenean eu tempor velit. Fusce iaculis turpis est, ut faucibus arcu ullamcorper eu.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item open">
+                                                <div class="heading">
+                                                    <div class="title">Section 2</div>
+                                                </div>
+                                                <div class="content scroll">
+                                                    <div class="block">
+                                                        Nulla facilisi. Aenean venenatis venenatis elementum. Integer fringilla, orci vitae mollis dignissim, dui velit ullamcorper massa, a scelerisque leo felis non tellus. Nullam vitae est sed ante volutpat tempor eget nec sapien. Fusce gravida, nibh in ornare consectetur, neque ligula consequat tellus, eu consectetur ipsum neque ut dui.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="heading">
+                                                    <div class="title">Section 3</div>
+                                                </div>
+                                                <div class="content scroll">
+                                                    <div class="block">
+                                                        Morbi pulvinar pellentesque velit, nec pharetra urna consectetur sed. Vestibulum sed eros rhoncus enim fermentum ultricies tincidunt ac orci.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+
+                                    <!-- START PAGE HEADING -->
+                                    <div class="app-heading app-heading-small app-heading-condensed">                                    
+                                        <div class="title">
+                                            <h2>Close Other</h2>
+                                            <p>Add <code>data-open="close-other"</code> to close other blocks on open.</p>
+                                        </div>                                    
+                                    </div>
+                                    <!-- END PAGE HEADING -->
+
+                                    <div class="pull-left" style="height: 400px;">
+                                        <div class="app-accordion" data-type="full-height" data-open="close-other">
+                                            <div class="item">
+                                                <div class="heading">
+                                                    <div class="title">Section 1</div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="block">
+                                                        Integer viverra ligula placerat mi fermentum malesuada. Aenean eu tempor velit. Fusce iaculis turpis est, ut faucibus arcu ullamcorper eu.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item open">
+                                                <div class="heading">
+                                                    <div class="title">Section 2</div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="block">
+                                                        Quisque placerat placerat lacus, vitae accumsan mauris mollis quis. Maecenas accumsan justo eros.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item">
+                                                <div class="heading">
+                                                    <div class="title">Section 3</div>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="block">
+                                                        Morbi pulvinar pellentesque velit, nec pharetra urna consectetur sed. Vestibulum sed eros rhoncus enim fermentum ultricies tincidunt ac orci.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- END APP ACCORDION -->
+                        
+                        <!-- BOOTSTRAP ACCORDION -->
+                        <div class="block">
+                            
+                            <div class="row margin-top-10">
+                                <div class="col-md-6">
+                                                        
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bootstrap Accordion</h2>
+                                            <p>Extend the default collapse behavior to create an accordion with the panel component.</p>
+                                        </div>                                    
+                                    </div>
+                                                        
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                        Collapsible Group Item #1
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                        Collapsible Group Item #2
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingThree">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                        Collapsible Group Item #3
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+                                                        
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Features On Heading</h2>
+                                            <p>It's available to use button form elements etc.</p>
+                                        </div>                                    
+                                    </div>
+                                                        
+                                    <div class="panel-group" id="accordion2" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingFour">
+                                                <h4 class="panel-title">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                        Collapsible Group Item #1
+                                                    </a>
+                                                </h4>
+                                                <div class="panel-elements pull-right">
+                                                    <span class="label label-success">Success</span>
+                                                </div>                                                
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingFour">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingFive">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                                        Collapsible Group Item #2
+                                                    </a>
+                                                </h4>
+                                                <div class="panel-elements pull-right">
+                                                    <button class="btn btn-default">Button</button>
+                                                </div>                                                
+                                            </div>
+                                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading" role="tab" id="headingSix">
+                                                <h4 class="panel-title">
+                                                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion2" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                                        Collapsible Group Item #3
+                                                    </a>
+                                                </h4>
+                                                <div class="panel-elements pull-right" style="width: 220px">
+                                                    <div class="input-group">
+                                                        <div class="input-group-addon"><span class="fa fa-search"></span></div>
+                                                        <input type="text" class="form-control" placeholder="Search...">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>                                
+                            </div>
+                            
+                        </div>
+                        <!-- END BOOTSTRAP ACCORDION -->
+                        
+                        <!-- BOOTSTRAP TABS -->
+                        <div class="block">
+
+                            <div class="row margin-top-10">
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bootstrap Tabs</h2>
+                                            <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
+                                        </div>                                    
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tabs-1" data-toggle="tab">Home</a></li>
+                                            <li><a href="#tabs-2" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#tabs-3" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tabs-1">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-2">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-3">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Justified</h2>
+                                            <p>Easily make tabs equal widths.</p>
+                                        </div>                                    
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-tabs nav-justified">
+                                            <li class="active"><a href="#tabs-4" data-toggle="tab">Home</a></li>
+                                            <li><a href="#tabs-5" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#tabs-6" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tabs-4">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-5">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-6">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                            
+                            <div class="row margin-top-50">
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bordered Tabs Content</h2>
+                                            <p>Add <code>.tab-content-bordered</code> to <code>.tab-content</code>, and get bordered container for tabs.</p>
+                                        </div>                                    
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-tabs">
+                                            <li class="active"><a href="#tabs-7" data-toggle="tab">Home</a></li>
+                                            <li><a href="#tabs-8" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#tabs-9" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content tab-content-bordered">
+                                            <div class="tab-pane active" id="tabs-7">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-8">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-9">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bordered Content</h2>
+                                            <p>Same feature for justified tabs.</p>
+                                        </div>                                    
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-tabs nav-justified">
+                                            <li class="active"><a href="#tabs-10" data-toggle="tab">Home</a></li>
+                                            <li><a href="#tabs-11" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#tabs-12" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content tab-content-bordered">
+                                            <div class="tab-pane active" id="tabs-10">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-11">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="tabs-12">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END BOOTSTRAP TABS -->
+                        
+                        <!-- START BOOTSTRAP PILS -->
+                        <div class="block">
+                            <div class="row margin-top-10">
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bootstrap Pills</h2>
+                                            <p>Take that same HTML, but use <code>.nav-pills</code> instead.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-pills">
+                                            <li class="active"><a href="#pills-1" data-toggle="tab">Home</a></li>
+                                            <li><a href="#pills-2" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#pills-3" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="pills-1">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-2">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-3">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Justified</h2>
+                                            <p>Easily make pills equal widths.</p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <ul class="nav nav-pills nav-justified">
+                                            <li class="active"><a href="#pills-4" data-toggle="tab">Home</a></li>
+                                            <li><a href="#pills-5" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#pills-6" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="pills-4">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-5">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-6">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                </div>
+                            </div>
+                            
+                            <div class="row margin-top-50">
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bordered Pills</h2>
+                                            <p>Add class <code>.nav-pills-bordered</code> to get bordered style.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <ul class="nav nav-pills nav-pills-bordered">
+                                            <li class="active"><a href="#pills-7" data-toggle="tab">Home</a></li>
+                                            <li><a href="#pills-8" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#pills-9" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="pills-7">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-8">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-9">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-md-6">
+
+                                    <div class="app-heading app-heading-small app-heading-condensed">
+                                        <div class="title">
+                                            <h2>Bordered & Justified</h2>
+                                            <p>Easily make pills equal widths.</p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <ul class="nav nav-pills nav-justified nav-pills-bordered">
+                                            <li class="active"><a href="#pills-10" data-toggle="tab">Home</a></li>
+                                            <li><a href="#pills-11" data-toggle="tab">Profile</a></li>
+                                            <li><a href="#pills-12" data-toggle="tab">Messages</a></li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="pills-10">
+                                                <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.</p> 
+                                                <p>Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-11">
+                                                <p>Dicunt vocent accusata ei pri, in solum ornatus constituam mei. Posse feugiat id est, pro mundi ridens nusquam ex. Duo oblique facilis detracto an, alii error saepe ad sit. Has decore sapientem deseruisse ad, eligendi pericula electram te mei, consul labores cu sit.</p>
+                                                <p>Mea id quas lucilius laboramus, ex per malis everti consectetuer, sumo aperiam deseruisse ea eum.</p>
+                                            </div>
+                                            <div class="tab-pane" id="pills-12">
+                                                <p>Eos verterem repudiare rationibus id, vix ei fugit pertinacia intellegebat, rebum falli molestiae at mei. Doming integre feugiat id vim. Quidam interesset eam eu. Case viderer usu te, sea et omnes consulatu adversarium.</p> 
+                                                <p>An nostrud nominati mei, ad quas postea malorum vis. Eum aliquam accusata similique ex, sed eu enim meliore, cu mea posidonium omittantur. Nibh tractatos efficiendi qui ei.</p>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+
+                                </div>
+                            </div>                            
+                        </div>
+                        <!-- END BOOTSTRAP PILS -->
+                                                                        
+                    </div>                    
+
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->                        
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

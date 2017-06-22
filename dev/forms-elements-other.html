@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Other Form Elements</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Other Elements</h2>
+                            <p>Another features that is not included in other packs</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Other Elements</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                   
+                    <!-- START PAGE CONTAINER -->                    
+                    <div class="container">
+                   
+                        <!-- COLORPICKER -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Bootstrap Colorpicker</h2>
+                                    <p>Fancy and customizable colorpicker plugin</p>
+                                </div>                                
+                                <div class="heading-elements">
+                                    <span class="label label-success label-bordered label-ghost">since v1.3</span>
+                                </div>
+                            </div>
+                                                                                    
+                            <div class="form-group">                                                                        
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Basic</label>
+                                        <input type="text" class="form-control bs-colorpicker" value="#3c9e9a">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>As Component</label>
+                                        <div class="input-group bs-colorpicker colorpicker-component">
+                                            <input type="text" class="form-control" value="#1169af">
+                                            <span class="input-group-addon"><i></i></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Custom size</label>
+                                        <input type="text" class="form-control bs-colorpicker-lg" value="#0f7118">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END COLORPICKER -->
+                        
+                        <!-- TAGS INPUT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Tags Input</h2>
+                                    <p>Bootstrap tags input plugin</p>
+                                </div>                                
+                            </div>
+                                                              
+                            <div class="form-group">                                                                        
+                                <label>Basic example</label>
+                                <input type="text" class="form-control" data-role="tagsinput" value="php,javascript,mysql,css">
+                            </div>
+                        </div>
+                        <!-- END TAGS INPUT -->
+                        
+                        <!-- NESTABLE LIST -->
+                        <div class="block block-condensed">
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Nestable List</h2>
+                                    <p>Drag & drop hierarchical list with mouse and touch compatibility</p>
+                                </div>                                
+                            </div>
+                            <div class="block-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h5>Nestable group #1</h5>
+                                        <div class="dd" id="nestable">
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="1">
+                                                    <div class="dd-handle">Basic element #1</div>
+                                                </li>
+                                                <li class="dd-item" data-id="2">
+                                                    <div class="dd-handle">Element with group #1</div>
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item" data-id="3"><div class="dd-handle">Basic element #3</div></li>
+                                                        <li class="dd-item" data-id="4"><div class="dd-handle">Basic element #4</div></li>
+                                                        <li class="dd-item" data-id="5">
+                                                            <div class="dd-handle">Element with group #5</div>
+                                                            <ol class="dd-list">
+                                                                <li class="dd-item" data-id="6"><div class="dd-handle">Basic element #6</div></li>
+                                                                <li class="dd-item" data-id="7"><div class="dd-handle">Basic element #7</div></li>
+                                                                <li class="dd-item" data-id="8"><div class="dd-handle">Basic element #8</div></li>
+                                                            </ol>
+                                                        </li>
+                                                        <li class="dd-item" data-id="9"><div class="dd-handle">Basic element #9</div></li>
+                                                        <li class="dd-item" data-id="10"><div class="dd-handle">Basic element #10</div></li>
+                                                    </ol>
+                                                </li>
+                                                <li class="dd-item" data-id="11">
+                                                    <div class="dd-handle">Basic element #11</div>
+                                                </li>
+                                                <li class="dd-item" data-id="12">
+                                                    <div class="dd-handle">Basic element #12</div>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h5>Nestable group #2</h5>
+                                        <div class="dd" id="nestable2">
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="13">
+                                                    <div class="dd-handle">Basic element #13</div>
+                                                </li>
+                                                <li class="dd-item" data-id="14">
+                                                    <div class="dd-handle">Basic element #14</div>
+                                                </li>
+                                                <li class="dd-item" data-id="15">
+                                                    <div class="dd-handle">Element with group #15</div>
+                                                    <ol class="dd-list">
+                                                        <li class="dd-item" data-id="16"><div class="dd-handle">Basic element #16</div></li>
+                                                        <li class="dd-item" data-id="17"><div class="dd-handle">Basic element #17</div></li>
+                                                        <li class="dd-item" data-id="18"><div class="dd-handle">Basic element #18</div></li>
+                                                    </ol>
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- END NESTABLE LIST -->
+                        
+                        <!-- FILE INPUT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>File Input</h2>
+                                    <p>Custom design of file input field</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Button File Input</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="file">
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Custom Button Color</label>
+                                    <div class="col-md-10">
+                                        <input type="file" class="file btn-primary" title="<span class='icon-download2'></span> Custom File Input">
+                                    </div>
+                                </div>                                
+                            </form>
+                            
+                        </div>
+                        <!-- END FILE INPUT -->
+                        
+                        <!-- BASIC INPUTS -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Spinner</h2>
+                                    <p>Input spinner function with options</p>
+                                </div>                                
+                            </div>
+                            <form class="form-horizontal">
+                                <div class="form-group">                                                                
+                                    <label class="col-md-2 control-label">Basic</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control spinner" value="5">
+                                    </div>                                    
+                                    <div class="col-md-7">
+                                        <strong>Class</strong>
+                                        <p>Add class <code>.spinner</code> to input, to get basic functionality</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">                                                                
+                                    <label class="col-md-2 control-label">Min value = 0</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control spinner" value="5" data-spinner-min="0">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <strong>Option</strong><br>
+                                        <p>Add attribute <code>data-spinner-min="0"</code> to get min value 0</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">                                                                
+                                    <label class="col-md-2 control-label">Max value = 10</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control spinner" value="5" data-spinner-max="10">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <strong>Option</strong>
+                                        <p>Add attribute <code>data-spinner-max="10"</code> to get max value 10</p>
+                                    </div>
+                                </div>
+                                <div class="form-group">                                                                
+                                    <label class="col-md-2 control-label">Step = 5</label>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control spinner" value="10" data-spinner-step="5">
+                                    </div>
+                                    <div class="col-md-7">
+                                        <strong>Option</strong>
+                                        <p>Add attribute <code>data-spinner-step="5"</code> to get custom step</p>
+                                    </div>
+                                </div>                                
+                            </form>                                                        
+                        </div>
+                        <!-- END BASIC INPUTS -->                                                
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/nestable/jquery.nestable.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+        
+        <script type="text/javascript">
+            $(document).ready(function(){                
+                $("#nestable").nestable({group: 1});                
+                $("#nestable2").nestable({group: 1});                                                
+            });
+        </script>
+    </body>
+</html>

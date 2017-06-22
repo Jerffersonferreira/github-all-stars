@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Basic Form Elements</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Default Elements</h2>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Default Elements</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                   
+                    <!-- START PAGE CONTAINER -->                    
+                    <div class="container">
+                        
+                        <!-- BASIC INPUTS -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Basic Inputs</h2>
+                                    <p>Ultra Crisp Line Icons with Integrity</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Input text</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Password</label>
+                                    <div class="col-md-10">
+                                        <input type="password" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Placeholder</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" placeholder="placeholder">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Predefined value</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="Predefined value">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Readonly</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="Field value" readonly>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Disabled</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control" value="Field value" disabled>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Textarea</label>
+                                    <div class="col-md-10">
+                                        <textarea class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <!-- END BASIC INPUTS -->
+                        
+                        <!-- BASIC SELECT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Basic Select</h2>
+                                    <p>Ultra Crisp Line Icons with Integrity</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Input text</label>
+                                    <div class="col-md-10">
+                                        <select class="form-control">
+                                            <option>Elit senserit intellegat</option>
+                                            <option>Mei et ridens voluptua</option>
+                                            <option selected>Laboramus voluptatum</option>
+                                            <option>Ferri nobis possim</option>
+                                            <option>Usu nobis volumus</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Password</label>
+                                    <div class="col-md-10">
+                                        <select multiple class="form-control">
+                                            <option>Elit senserit intellegat</option>
+                                            <option selected>Mei et ridens voluptua</option>
+                                            <option>Laboramus voluptatum</option>
+                                            <option>Ferri nobis possim</option>
+                                            <option>Usu nobis volumus</option>
+                                        </select>
+                                    </div>
+                                </div>                                
+                            </form>
+                            
+                        </div>
+                        <!-- END BASIC SELECT -->
+                        
+                        <!-- BASIC SELECT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Basic Checkbox & Radio Buttons</h2>
+                                    <p>Ultra Crisp Line Icons with Integrity</p>
+                                </div>                                
+                            </div>                                  
+                            
+                            <div class="checkbox"> 
+                                <label> 
+                                    <input type="checkbox" value=""> Option one is this and that—be sure to include why it's great 
+                                </label> 
+                            </div> 
+                            <div class="checkbox disabled"> 
+                                <label> 
+                                    <input type="checkbox" value="" disabled="disabled"> Option two is disabled 
+                                </label> 
+                            </div> 
+                            <div class="radio"> 
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="checked"> Option one is this and that—be sure to include why it's great 
+                                </label> 
+                            </div> 
+                            <div class="radio"> 
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"> Option two can be something else and selecting it will deselect option one 
+                                </label> 
+                            </div> 
+                            <div class="radio disabled"> 
+                                <label> 
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="disabled"> Option three is disabled 
+                                </label> 
+                            </div>                                                         
+                        </div>
+                        <!-- END BASIC SELECT -->
+                        
+                        <!-- FILE INPUT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>File Input</h2>
+                                    <p>Default file input and custom</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Default File Input</label>
+                                    <div class="col-md-10">
+                                        <input type="file" >
+                                    </div>
+                                </div>                                        
+                            </form>
+                            
+                        </div>
+                        <!-- END FILE INPUT -->
+                        
+                        <!-- HELP BLOCK -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Sizing</h2>
+                                    <p>Set heights using classes like <code>.input-lg</code>.</p>
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <label>Large</label>
+                                <input class="form-control input-lg" type="text" placeholder=".input-lg">
+                            </div>
+                            <div class="form-group">
+                                <label>Default</label>
+                                <input class="form-control" type="text" placeholder="Default input">
+                            </div>
+                            <div class="form-group">
+                                <label>Small</label>
+                                <input class="form-control input-sm" type="text" placeholder=".input-sm">
+                            </div>                            
+                        </div>
+                        <!-- END HELP BLOCK -->
+                        
+                        <!-- HELP BLOCK -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Help Block</h2>
+                                    <p>Ultra Crisp Line Icons with Integrity</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Default</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control">
+                                        <span class="help-block">Lorem ipsum dolor sit amet</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Text Center</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control">
+                                        <span class="help-block text-center">Lorem ipsum dolor sit amet</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Text Right</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="form-control">
+                                        <span class="help-block text-right">Lorem ipsum dolor sit amet</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Right</label>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control">                                        
+                                    </div>
+                                    <label class="col-md-2 control-label help-block">Lorem ipsum dolor sit amet</label>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <!-- END HELP BLOCK -->
+
+                        <!-- HELP BLOCK -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Form Grid</h2>
+                                    <p>Mobile ready bootstrap grid system.</p>
+                                </div>                                
+                            </div>
+                                  
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">                                        
+                                    <div class="col-md-12">
+                                        <label>.col-md-12</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">                                    
+                                    <div class="col-md-8">
+                                        <label>.col-md-8</label>
+                                        <input type="text" class="form-control">
+                                    </div>               
+                                    <div class="col-md-4">
+                                        <label>.col-md-4</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                                                               
+                                </div>       
+                                <div class="form-group">                                    
+                                    <div class="col-md-6">
+                                        <label>.col-md-6</label>
+                                        <input type="text" class="form-control">
+                                    </div>               
+                                    <div class="col-md-3">
+                                        <label>.col-md-3</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                                                               
+                                    <div class="col-md-3">
+                                        <label>.col-md-3</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                        
+                                </div>                                      
+                                <div class="form-group">                                    
+                                    <div class="col-md-4">
+                                        <label>.col-md-4</label>
+                                        <input type="text" class="form-control">
+                                    </div>               
+                                    <div class="col-md-4">
+                                        <label>.col-md-4</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>.col-md-4</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                                        
+                                </div>                                                                                    
+                                <div class="form-group">                                    
+                                    <div class="col-md-2">
+                                        <label>.col-md-2</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                         
+                                    <div class="col-md-5">
+                                        <label>.col-md-5</label>
+                                        <input type="text" class="form-control">
+                                    </div>   
+                                    <div class="col-md-5">
+                                        <label>.col-md-5</label>
+                                        <input type="text" class="form-control">
+                                    </div>                                                                                                                                   
+                                </div>                                           
+                            </form>
+                            
+                        </div>
+                        <!-- END HELP BLOCK -->
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->                        
+                        
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

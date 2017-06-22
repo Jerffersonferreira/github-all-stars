@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Call Service - Daily Statistics</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">           
+
+            <!-- START APP CONTAINER -->
+            <div class="app-container">
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Process Window</h1>
+                            <p>Information about customer</p>
+                        </div>               
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Application</a></li>
+                            <li><a href="#">Pages</a></li>
+                            <li class="active">Process Window</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <div class="call-box hidden">
+                            <button class="btn btn-danger btn-icon call-box-endcall" onClick="app._addClass('.call-box','hidden');"><span class="fa fa-phone"></span></button>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="call-box-timer">                                        
+                                        <div class="timer">00 : 01 : 15</div>
+                                        <div class="status">Incoming call</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="contact contact-lg margin-bottom-0">
+                                        <img src="assets/images/users/user_4.jpg">
+                                        <div class="contact-container">
+                                            <a href="#">Jared Stevens</a>
+                                            <span>Regular customer</span>                                            
+                                        </div>                           
+                                        <div class="contact-controls">
+                                            <button class="btn btn-link btn-icon"><span class="fa fa-signal"></span></button>
+                                        </div>
+                                    </div>
+                                </div>                                
+                                <div class="col-md-3">
+                                    <button class="btn btn-info btn-icon-fixed btn-block"><span class="fa fa-random"></span> Redirect Call To</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-success btn-icon-fixed btn-block"><span class="fa fa-plus"></span> Create New Invoice</button>
+                                </div>
+                            </div>                            
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-8">
+                                
+                                <div class="block block-condensed">
+                                    <div class="app-heading app-heading-small">                                        
+                                        <div class="title">
+                                            <h2>Messages</h2>
+                                            <p>Latest message: 16:13 31.08.2016</p>
+                                        </div>     
+                                        <div class="heading-elements">
+                                            <button class="btn btn-success btn-clean" data-toggle="modal" data-target="#call-center">Call</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="block-content">                                                                                
+                                        
+                                        <div class="messages scroll" style="height: 260px;">
+                                            <div class="messages-item inbox">
+                                                <div class="user"><img src="assets/images/users/user_2.jpg" alt=""></div>
+                                                <div class="text">Do you sagittis non interdum ut, scelerisque lobortis purus?</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                            <div class="messages-item">
+                                                <div class="user"><img src="assets/images/users/user_1.jpg" alt=""></div>
+                                                <div class="text">Qui ullamcorper nunc placerat euismod arcu wisi. Wisi at ipsum, etiam placerat quam, nibh vel massa, odio magna tellus dui...</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                            <div class="messages-item inbox">
+                                                <div class="user"><img src="assets/images/users/user_2.jpg" alt=""></div>
+                                                <div class="text">Lorem ipsum dolor sit amet, massa rutrum nisl turpis posuere purus ut?</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                            <div class="messages-item">
+                                                <div class="user"><img src="assets/images/users/user_1.jpg" alt=""></div>
+                                                <div class="text">Ok! Wisi at ipsum, etiam placerat...</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                            <div class="messages-item inbox">
+                                                <div class="user"><img src="assets/images/users/user_2.jpg" alt=""></div>
+                                                <div class="text">Ok</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                            <div class="messages-item">
+                                                <div class="user"><img src="assets/images/users/user_1.jpg" alt=""></div>
+                                                <div class="text">Btw, what do you think about?</div>
+                                                <div class="date">Sunday, July 07, 2016 at 15:45</div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>                                    
+                                </div>
+                                
+                                <div class="block block-condensed block-arrow-top">
+                                    <div class="block-content padding-top-15">
+                                        <form action="#" method="post">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <div class="input-group-btn">
+                                                        <button class="btn btn-default btn-icon"><span class="icon-picture"></span></button>
+                                                        <button class="btn btn-default btn-icon"><span class="icon-cloud-upload"></span></button>
+                                                    </div>
+                                                    <input type="text" class="form-control" name="message" placeholder="Message...">
+                                                    <div class="input-group-btn">
+                                                        <button class="btn btn-default">Send Message</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                                <div class="block block-condensed">
+                                    <div class="app-heading app-heading-small">                                        
+                                        <div class="title">
+                                            <h2>Information</h2>
+                                            <p>Latest actions & transactions</p>
+                                        </div>           
+                                        <div class="heading-elements">
+                                            <button class="btn btn-default btn-icon-fixed"><span class="fa fa-refresh"></span> Load more</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Ticket</th>
+                                                <th>Service</th>
+                                                <th>Time In Queue</th>
+                                                <th>Length</th>
+                                                <th>Operator</th>                                                    
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-bold">#251-yh-21</td>
+                                                <td class="text-bold text-info"><span class="label-icon label-icon-info label-icon-bordered margin-right-10"><i class="fa fa-comment-o"></i></span> Chat</td>
+                                                <td class="text-bold">00:13</td>
+                                                <td class="text-bold">02:27</td>
+                                                <td class="text-bold">Operator #25</td>                                                    
+                                            </tr>                                                
+                                            <tr>
+                                                <td class="text-bold">#251-xh-58</td>
+                                                <td class="text-bold text-success"><span class="label-icon label-icon-success label-icon-bordered margin-right-10"><i class="fa fa-phone"></i></span> Call</td>
+                                                <td class="text-bold">00:23</td>
+                                                <td class="text-bold">05:18</td>
+                                                <td class="text-bold">Operator #7</td>
+                                            </tr>                                                
+                                            <tr>
+                                                <td class="text-bold text-muted">#251-to-21</td>
+                                                <td class="text-bold text-danger"><span class="label-icon label-icon-danger label-icon-bordered margin-right-10"><i class="fa fa-times"></i></span> Missed Call</td>
+                                                <td class="text-bold text-muted">05:01</td>
+                                                <td class="text-bold text-muted">00:00</td>
+                                                <td class="text-bold text-muted">No answer</td>
+                                            </tr>                                                
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-4">
+                                
+                                <div class="block block-condensed">
+                                    <div class="app-heading app-heading-small">                                        
+                                        <div class="title">
+                                            <h3>Settings</h3>
+                                            <p>Customer quck settings</p>
+                                        </div>                                                         
+                                    </div>
+                                    <div class="block-content">                                        
+                                        <div class="row margin-bottom-10">
+                                            <div class="col-md-6 padding-top-10 text-bold">
+                                                SMS Notifications
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="switch">
+                                                    <input type="checkbox" name="sms_noty" checked="" value="0">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-10">
+                                            <div class="col-md-6 padding-top-10 text-bold">
+                                                Email Notifications
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="switch">
+                                                    <input type="checkbox" name="email_noty" checked="" value="0">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 padding-top-10 text-bold">
+                                                Social Networks
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label class="switch">
+                                                    <input type="checkbox" name="social_noty" value="0">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="block block-condensed">
+                                    <div class="app-heading app-heading-small">                                        
+                                        <div class="title">
+                                            <h3>Allen Reynolds</h3>
+                                            <p>Detailed information</p>
+                                        </div>                 
+                                        <div class="heading-elements">
+                                            <button class="btn btn-default btn-icon"><span class="fa fa-pencil"></span></button>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered margin-bottom-0">                                        
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%" class="text-bold">Date Of Birth</td>
+                                                <td>31.08.2016</td>                                                
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Card Number</td>
+                                                <td>**** - **** - **56 - 4321</td>                                                
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Address</td>
+                                                <td>Baker Street 221b, London, UK.</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Email</td>
+                                                <td>allenraynolds@email.com</td>
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Phone</td>
+                                                <td>09 (358) 523-12-92</td>
+                                            </tr>                                            
+                                        </tbody>
+                                    </table>
+                                    <div class="block-divider-text margin-top-minus-one margin-bottom-0">
+                                        Income Info
+                                    </div>
+                                    <table class="table table-bordered border-top-0">
+                                        <tbody>
+                                            <tr>
+                                                <td width="40%" class="text-bold">Monthly Income</td>
+                                                <td>$2,192.00</td>                                                
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Income Type</td>
+                                                <td>Employment</td>                                                
+                                            </tr>                                            
+                                            <tr>
+                                                <td class="text-bold">Pay Frequency</td>
+                                                <td>Twice Monthly</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>                                                                        
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->          
+            
+            <!-- MODAL SMALL -->
+            <div class="modal fade" id="call-center" tabindex="-1" role="dialog" aria-labelledby="call-center-header">                        
+                <div class="modal-dialog modal-sm" role="document">
+                    <div class="modal-content modal-content-calling">                        
+                        <div class="modal-body">
+                            <div class="calling">
+                                <span class="fa fa-phone"></span>
+                            </div>
+                            <p class="margin-bottom-0 text-bold text-center text-lg">Dmitry Ivaniuk</p>
+                            <p class="margin-bottom-0 text-center">#211-xc-68</p>                            
+                        </div>
+                        <div class="modal-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-success btn-rounded btn-block" onClick="app._removeClass('.call-box','hidden');app._addClass('.call-box','animated zoomIn')" data-dismiss="modal">Accept</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-block" data-dismiss="modal">Ignore</button>
+                                </div>
+                            </div>                                                        
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL SMALL -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+        <script type="text/javascript">
+            $(function(){
+                $("#call-center").modal("show");
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+

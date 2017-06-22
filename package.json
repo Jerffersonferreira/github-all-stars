@@ -1,0 +1,32 @@
+{
+  "name": "github-all-stars",
+  "version": "1.0.0",
+  "description": "Consumo da Github API para a exibição de repositórios favoritados pelo usuário escolhido.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-htmlmin": "^1.3.0",
+    "gulp-install": "^0.6.0",
+    "gulp-less": "^3.1.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViniciusVinna/github-all-stars.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViniciusVinna/github-all-stars/issues"
+  },
+  "homepage": "https://github.com/ViniciusVinna/github-all-stars#readme"
+}

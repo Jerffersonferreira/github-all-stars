@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Radio Buttons And Checkboxes</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Checkbox, Radio & Switch Buttons</h2>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Checkbox, Radio & Switch Buttons</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                    
+                         
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <!-- STYLED CHECKBOX & RADIO -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Styled Checkbox & Radio</h2>
+                                    <p>Sample of styled checkboxes and radio buttons that works as default and looks better.</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Checkbox</label>
+                                    <div class="app-checkbox"> 
+                                        <label><input type="checkbox" name="app-checkbox-1" value="0"> Default Checkbox</label> 
+                                    </div>
+                                    <div class="app-checkbox"> 
+                                        <label><input type="checkbox" name="app-checkbox-1" value="1" checked> Checked Checkbox</label> 
+                                    </div>
+                                    <div class="app-checkbox"> 
+                                        <label><input type="checkbox" name="app-checkbox-1" value="2" checked disabled> Disabled Checkbox</label> 
+                                    </div>
+                                </div>                            
+                                <div class="col-md-4">
+                                    <label>Radio Button</label>
+                                    <div class="app-radio"> 
+                                        <label><input type="radio" name="app-radio-1" value="0"> Default Radio</label> 
+                                    </div>
+                                    <div class="app-radio"> 
+                                        <label><input type="radio" name="app-radio-1" value="1" checked> Checked Radio</label> 
+                                    </div>
+                                    <div class="app-radio"> 
+                                        <label><input type="radio" name="app-radio-1-1" value="2" checked disabled> Disabled Radio</label> 
+                                    </div>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Inline</label>
+                                    <br>
+                                    <div class="app-checkbox inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-2" value="0" checked> Checked</label> 
+                                    </div>
+                                    <div class="app-checkbox inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-2" value="1"> Default</label> 
+                                    </div>                                                      
+                                    <br>
+                                    <div class="app-radio inline"> 
+                                        <label><input type="radio" name="app-radio-2" value="1" checked> Checked</label>                                         
+                                    </div>
+                                    <div class="app-radio inline"> 
+                                        <label><input type="radio" name="app-radio-2" value="0"> Default</label> 
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>States & Design</h2>
+                                    <p>Use classes <code>success, warning, danger</code> to get custom checkbox color.</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Checkbox</label>
+                                    <br>
+                                    <div class="app-checkbox success inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="0" checked> Checked</label> 
+                                    </div>
+                                    <div class="app-checkbox success inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="1"> Default</label> 
+                                    </div>
+                                    <br>
+                                    <div class="app-checkbox warning inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="2" checked> Checked</label> 
+                                    </div>
+                                    <div class="app-checkbox warning inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="3"> Default</label> 
+                                    </div>
+                                    <br>
+                                    <div class="app-checkbox danger inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="4" checked> Checked</label> 
+                                    </div>                                                                        
+                                    <div class="app-checkbox danger inline"> 
+                                        <label><input type="checkbox" name="app-checkbox-3" value="5"> Default</label> 
+                                    </div>                                                                        
+                                </div> 
+                                <div class="col-md-4">
+                                    <label>Radio Button</label>
+                                    <br>
+                                    <div class="app-radio success inline"> 
+                                        <label><input type="radio" name="app-radio-3" value="0" checked> Checked</label> 
+                                    </div>
+                                    <div class="app-radio success inline"> 
+                                        <label><input type="radio" name="app-radio-3" value="0"> Default</label> 
+                                    </div>
+                                    <br>
+                                    <div class="app-radio warning inline"> 
+                                        <label><input type="radio" name="app-radio-4" value="1" checked> Checked</label> 
+                                    </div>
+                                    <div class="app-radio warning inline"> 
+                                        <label><input type="radio" name="app-radio-4" value="1"> Default</label> 
+                                    </div>
+                                    <br>
+                                    <div class="app-radio danger inline"> 
+                                        <label><input type="radio" name="app-radio-5" value="2" checked> Checked</label> 
+                                    </div>                                                                        
+                                    <div class="app-radio danger inline"> 
+                                        <label><input type="radio" name="app-radio-5" value="2"> Default</label> 
+                                    </div>                                                                        
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Round Radio Button</label>
+                                    <div class="app-radio round"> 
+                                        <label><input type="radio" name="app-radio-9" value="0"> Default Radio</label> 
+                                    </div>
+                                    <div class="app-radio round"> 
+                                        <label><input type="radio" name="app-radio-9" value="1" checked> Checked Radio</label> 
+                                    </div>
+                                    <div class="app-radio round"> 
+                                        <label><input type="radio" name="app-radio-10" value="2" checked disabled> Disabled Radio</label> 
+                                    </div>                                                                        
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- END STYLED CHECKBOX & RADIO -->
+                        
+                        <!-- SWITCH -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Switch Button</h2>
+                                    <p>Checkboxes & Radio buttons can be changed on switch button.</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-2">                                    
+                                    <label>Checkbox</label>
+                                    <br>
+                                    <label class="switch">
+                                        <input type="checkbox" name="switch_1" checked="" value="0">
+                                    </label>
+                                    <label class="switch">
+                                        <input type="checkbox" name="switch_1" value="1">
+                                    </label>                                    
+                                </div>
+
+                                <div class="col-md-2">                                    
+                                    <label>Radio</label>
+                                    <br>
+                                    <label class="switch">
+                                        <input type="radio" name="switch_2" checked="" value="0">
+                                    </label>
+                                    <label class="switch">
+                                        <input type="radio" name="switch_2" value="1">
+                                    </label>                                    
+                                </div>                                    
+                                    
+                                <div class="col-md-2">                                    
+                                    <label>Disabled</label>
+                                    <br>
+                                    <label class="switch">
+                                        <input type="checkbox" name="switch_3" checked="" value="0" disabled="">
+                                    </label>
+                                    <label class="switch">
+                                        <input type="checkbox" name="switch_3" value="1" disabled="">
+                                    </label>                                    
+                                </div>                               
+                                
+                                <div class="col-md-2">                                    
+                                    <label>Small</label>
+                                    <br>
+                                    <label class="switch switch-sm">
+                                        <input type="checkbox" name="switch_8" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-sm">
+                                        <input type="checkbox" name="switch_8" value="0">
+                                    </label>                                     
+                                </div>
+                                
+                                <div class="col-md-2">                                    
+                                    <label>Large</label>
+                                    <br>
+                                    <label class="switch switch-lg">
+                                        <input type="checkbox" name="switch_4" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-lg">
+                                        <input type="checkbox" name="switch_4" value="0">
+                                    </label>                                     
+                                </div>                           
+                            </div>                                                                                    
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Coub Style</h2>
+                                    <p>Checkboxes & Radio buttons can be changed on switch button.</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-2">                                    
+                                    <label>Checkbox</label>
+                                    <br>
+                                    <label class="switch switch-cube">
+                                        <input type="checkbox" name="switch_5" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-cube">
+                                        <input type="checkbox" name="switch_5" value="1">
+                                    </label>                                    
+                                </div>
+
+                                <div class="col-md-2">                                    
+                                    <label>Radio</label>
+                                    <br>
+                                    <label class="switch switch-cube">
+                                        <input type="radio" name="switch_6" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-cube">
+                                        <input type="radio" name="switch_6" value="1">
+                                    </label>                                    
+                                </div>                                    
+                                    
+                                <div class="col-md-2">                                    
+                                    <label>Disabled</label>
+                                    <br>
+                                    <label class="switch switch-cube">
+                                        <input type="checkbox" name="switch_7" checked="" value="0" disabled="">
+                                    </label>
+                                    <label class="switch switch-cube">
+                                        <input type="checkbox" name="switch_7" value="1" disabled="">
+                                    </label>                                    
+                                </div>
+                                
+                                <div class="col-md-2">                                    
+                                    <label>Small</label>
+                                    <br>
+                                    <label class="switch switch-sm switch-cube">
+                                        <input type="checkbox" name="switch_8" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-sm switch-cube">
+                                        <input type="checkbox" name="switch_8" value="0">
+                                    </label>                                     
+                                </div>
+                                
+                                <div class="col-md-2">                                    
+                                    <label>Large</label>
+                                    <br>
+                                    <label class="switch switch-lg switch-cube">
+                                        <input type="checkbox" name="switch_8" checked="" value="0">
+                                    </label>
+                                    <label class="switch switch-lg switch-cube">
+                                        <input type="checkbox" name="switch_8" value="0">
+                                    </label>                                     
+                                </div>                           
+                            </div>                            
+                            
+                        </div>
+                        <!-- END SWITCH -->
+                        
+                    </div>                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

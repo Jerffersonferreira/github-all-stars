@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - jVector Maps</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>jVectorMap</h1>
+                            <p>Javascript based vector map</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">jVectorMap</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <div class="block">                            
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>World</h3>                                
+                                            <p>Simple world map with default parameters</p>
+                                        </div>                                
+                                    </div>                                    
+                                    
+                                    <div id="jvm-world-map" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <div class="block"> 
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>USA Map</h3>                                
+                                            <p>Use another map area to provide special info.</p>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <div id="jvm-us_map" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                        </div>                                                
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <div class="block">                            
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>Markers On Map</h3>                                
+                                            <p>Add markers on your map to provide some info.</p>
+                                        </div>                                
+                                    </div>                                    
+                                    
+                                    <div id="jvm-world-map-markers" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <div class="block"> 
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>Labels On Map</h3>                                
+                                            <p>Add labels to make it more understandable.</p>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <div id="jvm-us-map-labels" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <script type="text/javascript" src="js/vendor/jvectormap/jquery-jvectormap-us-aea-en.js"></script>        
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

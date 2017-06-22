@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - User Contacts</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>User & Contacts</h1>
+                            <p>Example of users and contact lists.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">User & Contacts</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                 
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="block block-condensed">
+                                    <!-- START HEADING -->
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h5>Default</h5>
+                                            <p>Example of simple user contact elements.</p>
+                                        </div>
+                                    </div>
+                                    <!-- END HEADING -->
+                                    
+                                    <div class="block-content">                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact"><img src="assets/images/users/user_1.jpg"> John Doe</div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Simple</strong>
+                                                <p>Used <code>contact</code> only to get basic example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-bordered"><img src="assets/images/users/user_3.jpg"> Erin Stewart</div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Bordered</strong>
+                                                <p>Used <code>contact contact-bordered</code> to get bordered contact.</p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded"><img src="assets/images/users/user_2.jpg"> Jeff Kuhn</div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Rounded</strong>
+                                                <p>Used <code>contact contact-rounded</code> to get rounded example.</p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-dir-right"><img src="assets/images/users/user_4.jpg"> Jared Stevens</div>                                                
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Right Direction</strong>
+                                                <p>Used <code>contact contact-dir-right</code> to get image right direction.</p>
+                                            </div>
+                                        </div>                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded"><img src="assets/images/users/user_5.jpg"> Juan Obrien <span class="label label-success pull-right">label</span></div>                                                
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Elements</strong>
+                                                <p>Its possible to use labels badges and another elements inside contacts.</p>
+                                            </div>
+                                        </div>                                                                                
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <a href="#" class="contact contact-rounded contact-bordered"><img src="assets/images/users/user_6.jpg"> John Doe</a>                                                
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Linked</strong>
+                                                <p>You can wrap your contact in <code>&lt;a></code> if you need to.</p>
+                                            </div> 
+                                        </div>                                                                                
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered status-online"><img src="assets/images/users/user_7.jpg"> Jeff Kuhn</div>                                                
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Status</strong>
+                                                <p>Available statuses: <code>status-offline</code>,<code>status-online</code>,<code>status-away</code>.</p>
+                                            </div> 
+                                        </div>
+                                    </div>                    
+                                    
+                                    <div class="block-divider"><span class="fa fa-angle-down"></span></div>
+                                    
+                                    <!-- START HEADING -->
+                                    <div class="app-heading app-heading-small margin-top-0">                                
+                                        <div class="title">
+                                            <h5>Large</h5>
+                                            <p>Add class <code>.contact-lg</code> to get large contact block.</p>
+                                        </div>
+                                    </div>
+                                    <!-- END HEADING -->
+
+                                    <div class="block-content">                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-lg">
+                                                    <img src="assets/images/users/user_6.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Erin Stewart</a>
+                                                        <span>Developer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Basic</strong>
+                                                <p>Used <code>contact contact-lg</code> only to get basic example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-lg">
+                                                    <img src="assets/images/users/user_7.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Jared Stevens</a>
+                                                        <span>CEO</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Rounded</strong>
+                                                <p>Used <code>contact contact-rounded contact-lg</code> to get rounded example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-lg">
+                                                    <img src="assets/images/users/user_8.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI/UX Designer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Borderd</strong>
+                                                <p>Used <code>contact contact-rounded contact-bordered contact-lg</code> to get this example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-lg">
+                                                    <img src="assets/images/users/user_9.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI/UX Designer</span>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-icon"><span class="fa fa-plus"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Controls</strong>
+                                                <p>Used <code>contact-controls</code> block to add buttons.</p>
+                                            </div>
+                                        </div>          
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-lg contact-faded">
+                                                    <img src="assets/images/users/user_1.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>PHP Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Faded</strong>
+                                                <p>Used <code>contact-faded</code> block to get faded image.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-dir-right contact-lg">
+                                                    <img src="assets/images/users/user_10.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>Web Designer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Right Direction</strong>
+                                                <p>Used <code>contact contact-rounded contact-bordered contact-dir-right contact-lg</code> to get this example.</p>
+                                            </div>
+                                        </div>    
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-lg status-online">
+                                                    <img src="assets/images/users/user_5.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI/UX Designer</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Status</strong>
+                                                <p>Available statuses: <code>status-offline</code>,<code>status-online</code>,<code>status-away</code>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="block-divider"><span class="fa fa-angle-down"></span></div>
+                                    
+                                    <!-- START HEADING -->
+                                    <div class="app-heading app-heading-small margin-top-0">                                
+                                        <div class="title">
+                                            <h5>Extra Large</h5>
+                                            <p>Add class <code>.contact-xlg</code> to get extra large contact block.</p>
+                                        </div>
+                                    </div>
+                                    <!-- END HEADING -->
+                                    
+                                    <div class="block-content">                                        
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-xlg">
+                                                    <img src="assets/images/users/user_1.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Erin Stewart</a>
+                                                        <span>Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Basic</strong>
+                                                <p>Used <code>contact contact-xlg</code> only to get basic example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-xlg">
+                                                    <img src="assets/images/users/user_2.jpg"> 
+                                                    <div class="contact-container">
+                                                        <a href="#">Jared Stevens</a>
+                                                        <span>CEO</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Rounded</strong>
+                                                <p>Used <code>contact contact-rounded contact-xlg</code> to get rounded example.</p>
+                                            </div>                                            
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-xlg">
+                                                    <img src="assets/images/users/user_8.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI/UX Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Borderd</strong>
+                                                <p>Used <code>contact contact-rounded contact-bordered contact-xlg</code> to get this example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-xlg">
+                                                    <img src="assets/images/users/user_9.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Erin Stewart</a>
+                                                        <span>Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-icon"><span class="fa fa-plus"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Controls</strong>
+                                                <p>Used <code>contact-controls</code> block to add buttons.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-xlg contact-faded">
+                                                    <img src="assets/images/users/user_1.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>PHP Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Faded</strong>
+                                                <p>Used <code>contact-faded</code> block to get faded image.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row margin-bottom-15">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-dir-right contact-xlg">
+                                                    <img src="assets/images/users/user_10.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>Web Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Right Direction</strong>
+                                                <p>Used <code>contact contact-rounded contact-bordered contact-dir-right contact-xlg</code> to get this example.</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <div class="contact contact-rounded contact-bordered contact-xlg status-online">
+                                                    <img src="assets/images/users/user_5.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI/UX Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <strong>Status</strong>
+                                                <p>Available statuses: <code>status-offline</code>,<code>status-online</code>,<code>status-away</code>.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="block-divider"><span class="fa fa-angle-down"></span></div>
+                                    
+                                    <!-- START HEADING -->
+                                    <div class="app-heading app-heading-small margin-top-0">                                
+                                        <div class="title">
+                                            <h5>Single</h5>
+                                            <p>Add class <code>contact-single</code> to get single contact mode.</p>
+                                        </div>
+                                    </div>
+                                    <!-- END HEADING -->
+                                    
+                                    <div class="block-content"> 
+                                        
+                                        <div class="row margin-bottom-15">                                            
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single">
+                                                    <img src="assets/images/users/user_1.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-bordered">
+                                                    <img src="assets/images/users/user_2.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI,UX Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-rounded">
+                                                    <img src="assets/images/users/user_3.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Jared Stevens</a>
+                                                        <span>CEO, CO Founder</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-bordered contact-rounded">
+                                                    <img src="assets/images/users/user_4.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Erin Stewart</a>
+                                                        <span>Web Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        
+                                        <div class="row">                                            
+                                            <div class="col-md-3">
+                                                <div class="contact contact-bordered contact-single">
+                                                    <img src="assets/images/users/user_5.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-icon"><span class="fa fa-cog"></span></button>
+                                                    </div>
+                                                    <div class="contact-controls contact-controls-dir-right">
+                                                        <button class="btn btn-default btn-icon"><span class="fa fa-pencil"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-rounded contact-bordered">
+                                                    <img src="assets/images/users/user_6.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Juan Obrien</a>
+                                                        <span>UI,UX Designer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-cog"></span></button>
+                                                    </div>
+                                                    <div class="contact-controls contact-controls-dir-right">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-pencil"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-rounded contact-bordered contact-faded">
+                                                    <img src="assets/images/users/user_7.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">John Doe</a>
+                                                        <span>PHP Developer</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-cog"></span></button>
+                                                    </div>
+                                                    <div class="contact-controls contact-controls-dir-right">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-pencil"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                            <div class="col-md-3">
+                                                <div class="contact contact-single contact-rounded contact-bordered status-online">
+                                                    <img src="assets/images/users/user_8.jpg">
+                                                    <div class="contact-container">
+                                                        <a href="#">Jared Stevens</a>
+                                                        <span>CEO, CO Founder</span>
+                                                        <p>The reason why i'm still...</p>
+                                                    </div>
+                                                    <div class="contact-controls">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-cog"></span></button>
+                                                    </div>
+                                                    <div class="contact-controls contact-controls-dir-right">
+                                                        <button class="btn btn-default btn-rounded btn-icon"><span class="fa fa-pencil"></span></button>
+                                                    </div>
+                                                </div>
+                                            </div>                                            
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>                            
+                        </div>
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

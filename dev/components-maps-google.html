@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Google Maps</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Google Maps</h1>
+                            <p>Maps powered by Google</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Google Maps</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <div class="block">                            
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>World</h3>                                
+                                            <p>Simple world map with default parameters</p>
+                                        </div>                                
+                                    </div>                                    
+                                    
+                                    <div id="google_world_map" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <div class="block"> 
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>Map With Markers</h3>                                
+                                            <p>Add markers on your map to provide some info.</p>
+                                        </div>                                
+                                    </div>
+                                    
+                                    <div id="google_map_markers" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                
+                            </div>
+                        </div>                                                
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                <div class="block">                            
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h3>Custom Map Style</h3>                                
+                                            <p>Change your map style for something cool.</p>
+                                        </div>                                
+                                    </div>                                    
+                                    
+                                    <div id="google_map_style" class="pull-left" style="width: 100%; height: 400px;"></div>
+                                </div>
+                                                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

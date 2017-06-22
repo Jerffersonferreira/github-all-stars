@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Select And Datepicker</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Select & Datepicker</h2>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Select & Datepicker</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                    
+                                  
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">                       
+                        
+                        <!-- BOOTSTRAP DATETIMEPICKER -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Bootstrap Datetimepicker</h2>
+                                    <p>Easiest way to get datepicker and timepicker with maximum functionality</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-3">
+                                    <label>Default Inline</label>
+                                    <div class="bs-datepicker-inline"></div>
+                                </div>                            
+                                <div class="col-md-4 col-md-offset-1">
+                                    <label>With Time</label>
+                                    <div class="bs-datepicker-inline-time"></div>
+                                </div>
+                                <div class="col-md-3 col-md-offset-1">
+                                    <label>View Mode</label>
+                                    <div class="bs-datepicker-inline-years"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Field Datepicker</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control bs-datepicker">
+                                    </div>
+                                </div>                            
+                                <div class="col-md-4">
+                                    <label>Addon Datepicker</label>
+                                    <div class="form-group">
+                                        <div class="input-group bs-datepicker">
+                                            <input type="text" class="form-control">
+                                            <span class="input-group-addon">
+                                                <span class="icon-calendar-full"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Disabled Weekends</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control bs-datepicker-weekends">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Date & Time picker</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control bs-datetimepicker">
+                                    </div>
+                                </div>                            
+                                <div class="col-md-4">
+                                    <label>Time picker</label>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control bs-timepicker">
+                                    </div>
+                                </div>                            
+                            </div>
+                        </div>
+                        <!-- END BOOTSTRAP DATETIMEPICKER -->
+                        
+                        <!-- BOOTSTRAP DATERANGE PICKER-->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Bootstrap Date Range Picker</h2>
+                                    <p>A JavaScript component for choosing date ranges</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-4">                                        
+                                        <label>Default Example</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="fa fa-calendar"></span>
+                                            </div>
+                                            <input type="text" class="form-control daterange" value="09/01/2016 - 09/20/2016">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">                                        
+                                        <label>Date & Time Example</label>
+                                        <div class="input-group">
+                                            <div class="input-group-addon">
+                                                <span class="fa fa-calendar"></span>
+                                            </div>
+                                            <input type="text" class="form-control datetimerange" value="09/01/2016 2:00 PM - 09/20/2016 2:00 PM">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- END BOOTSTRAP DATERANGE PICKER-->
+                        
+                        <!-- BOOTSTRAP SELECT -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Bootstrap Select</h2>
+                                    <p>Bootstrap-select is a jQuery plugin that utilizes Bootstrap's dropdown.js to style and bring additional functionality to standard select elements</p>
+                                </div>                                
+                            </div>
+                                                              
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Basic</label>
+                                    <select class="bs-select">
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                        <option>Option Number 4</option>                                        
+                                        <option>Option Number 5</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Optgroups</label>
+                                    <select class="bs-select">
+                                        <optgroup label="Group 1-2">
+                                            <option>Option Number 1</option>
+                                            <option>Option Number 2</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3-5">
+                                            <option>Option Number 3</option>
+                                            <option>Option Number 4</option>                                        
+                                            <option>Option Number 5</option>                                        
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Multiple</label>
+                                    <select class="bs-select" multiple>
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                        <option>Option Number 4</option>                                        
+                                        <option>Option Number 5</option>                                        
+                                    </select>
+                                </div>
+                            </div>                                                                                                                    
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Live Search</h2>
+                                    <p>You can add a search input by passing <code>data-live-search="true"</code> attribute</p>
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label>Default</label>
+                                    <select class="bs-select" data-live-search="true">
+                                        <option>Hot Dog, Fries and a Soda</option>
+                                        <option>Burger, Shake and a Smile</option>
+                                        <option>Sugar, Spice and all things nice</option>
+                                    </select>
+                                    <span class="help-block">Default search example</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Key words</label>
+                                    <select class="bs-select" data-live-search="true">
+                                        <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                        <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                        <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                                    </select>
+                                    <span class="help-block">Add key words to options to improve their searchability</span>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Limit Selections</h2>
+                                    <p>Limit the number of options that can be selected via the <code>data-max-options</code>.</p>
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label>Default</label>
+                                    <select class="bs-select" multiple data-max-options="2">
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                    </select>
+                                    <span class="help-block">Default limit example</span>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Optgroup limit</label>
+                                    <select class="bs-select" multiple>
+                                        <optgroup label="Group 1-2" data-max-options="1">
+                                            <option>Option Number 1</option>
+                                            <option>Option Number 2</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3-5" data-max-options="2">
+                                            <option>Option Number 3</option>
+                                            <option>Option Number 4</option>                                        
+                                            <option>Option Number 5</option>                                        
+                                        </optgroup>                                        
+                                    </select>
+                                    <span class="help-block">Limit in optgroup</span>
+                                </div>
+                            </div>
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Customs</h2>
+                                    <p>Styling, sizing and disabled features</p>
+                                </div>                                
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-4">
+                                    <label>Custom button color</label>
+                                    <select class="bs-select" data-style="btn-danger">
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                    </select>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Menu size</label>
+                                    <select class="bs-select" data-size="5">
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                        <option>Option Number 4</option>
+                                        <option>Option Number 5</option>
+                                        <option>Option Number 6</option>
+                                        <option>Option Number 7</option>
+                                        <option>Option Number 8</option>
+                                    </select>                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Disabled</label>
+                                    <select class="bs-select" disabled>
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                    </select>                                    
+                                </div>                                
+                            </div>
+                            
+                        </div>
+                        <!-- END BOOTSTRAP SELECT -->                        
+
+                        <!-- START SELECT2 PLUGIN -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Select 2</h2>
+                                    <p>Select2 gives you a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other options</p>
+                                </div>                                
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Default</label>
+                                    <select class="s2-select form-control">
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                        <option>Option Number 4</option>                                        
+                                        <option>Option Number 5</option>                                        
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Optgroups</label>
+                                    <select class="s2-select form-control">
+                                        <optgroup label="Group 1-2">
+                                            <option>Option Number 1</option>
+                                            <option>Option Number 2</option>
+                                        </optgroup>
+                                        <optgroup label="Group 3-5">
+                                            <option>Option Number 3</option>
+                                            <option>Option Number 4</option>                                        
+                                            <option>Option Number 5</option>                                        
+                                        </optgroup>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Multiple</label>
+                                    <select class="s2-select form-control" multiple>
+                                        <option>Option Number 1</option>
+                                        <option>Option Number 2</option>
+                                        <option>Option Number 3</option>
+                                        <option>Option Number 4</option>                                        
+                                        <option>Option Number 5</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">                                                                
+                                <div class="col-md-4">
+                                    <label>Search</label>
+                                    <select class="s2-select-search form-control">
+                                        <option>Lorem ipsum dolor</option>
+                                        <option>Sit ament nopilous</option>
+                                        <option>Toi samo tuda</option>
+                                        <option>Mauris dolor nulla</option>                                        
+                                        <option>Phasellus tincidunt</option>                                        
+                                    </select>
+                                </div>                                
+                                <div class="col-md-4">
+                                    <label>Tags</label>
+                                    <select class="s2-select-search form-control" multiple="multiple">
+                                        <option>Lorem ipsum dolor</option>
+                                        <option>Sit ament nopilous</option>
+                                        <option>Toi samo tuda</option>
+                                        <option>Mauris dolor nulla</option>                                        
+                                        <option>Phasellus tincidunt</option>                                        
+                                    </select>
+                                </div>                                
+                                <div class="col-md-4">
+                                    <label>Disabled</label>
+                                    <select class="s2-select form-control" disabled>
+                                        <option>Lorem ipsum dolor</option>
+                                        <option>Sit ament nopilous</option>
+                                        <option>Toi samo tuda</option>
+                                        <option>Mauris dolor nulla</option>                                        
+                                        <option>Phasellus tincidunt</option>                                        
+                                    </select>
+                                </div>                                
+                            </div>
+                            
+                        </div>
+                        <!-- END SELECT2 -->
+                        
+                        <!-- START MULTISELECT PLUGIN -->
+                        <div class="block">
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Multiselect</h2>
+                                    <p>Drop-in replacement for standard multiply select</p>
+                                </div>                       
+                                <div class="heading-elements">
+                                    <span class="label label-success label-bordered label-ghost">since v1.3</span>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        
+                                        <select class="multiselect form-control" multiple="multiple">
+                                            <option selected>Lorem ipsum dolor</option>
+                                            <option>Sit ament nopilous</option>
+                                            <option>Toi samo tuda</option>
+                                            <option selected>Mauris dolor nulla</option>                                        
+                                            <option>Phasellus tincidunt</option>                                        
+                                            <option>Nulla ante metus</option>
+                                            <option selected>Sed id arcu mi</option>
+                                            <option>Donec euismod ullamcorper</option>
+                                            <option>Phasellus elementum</option>
+                                        </select>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="multiselect form-control" multiple="multiple">
+                                            <optgroup label="Option group 1">
+                                                <option>Lorem ipsum dolor</option>
+                                                <option>Sit ament nopilous</option>
+                                                <option>Toi samo tuda</option>
+                                            </optgroup>
+                                            <optgroup label="Option group 2">
+                                                <option>Mauris dolor nulla</option>                                        
+                                                <option>Phasellus tincidunt</option>                                        
+                                                <option>Nulla ante metus</option>
+                                                <option>Sed id arcu mi</option>
+                                                <option>Donec euismod ullamcorper</option>
+                                                <option>Phasellus elementum</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                        <!-- END MULTISELECT PLUGIN -->
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/bootstrap-select/bootstrap-select.js"></script>
+        <script type="text/javascript" src="js/vendor/select2/select2.full.min.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap-daterange/daterangepicker.js"></script>
+        <script type="text/javascript" src="js/vendor/multiselect/jquery.multi-select.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

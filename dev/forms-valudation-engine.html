@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Validation Engine</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Validation Engine</h2>
+                            <p>Awesome plugin that helps you in validation.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">Validation Engine</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                   
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <!-- LENGTH EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Answer length (required)</h2>
+                                            <p>Validation of required fields and validates length of value.</p>
+                                        </div>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>Required</label>
+                                            <span class="help-block">Require an answer (can be applied to all types of inputs and select elements)</span>
+                                            <input class="form-control" data-validation="required" placeholder="Required">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Max Length</label>
+                                            <span class="help-block">Max 10 characters</span>
+                                            <input class="form-control" data-validation="length,required" data-validation-length="max10" placeholder="Text up to 10 chars">                                    
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Min Length</label>
+                                            <span class="help-block">Min 5 characters</span>
+                                            <input class="form-control" data-validation="length" data-validation-length="min5" placeholder="Text min length 5 chars">                                    
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Min & Max Length</label>
+                                            <span class="help-block">No less than 5 characters and no more than 10 characters</span>
+                                            <input class="form-control" data-validation="length" data-validation-length="5-10" placeholder="Text between 5 and 10 chars">                                    
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END LENGTH EXAMPLE -->
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <!-- NUMBER EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Numbers</h2>
+                                            <p>Validating number values</p>
+                                        </div>                                
+                                    </div>                                                              
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>Numeric</label>
+                                            <span class="help-block">Any numerical value</span>
+                                            <input class="form-control" data-validation="number" placeholder="Only numbers">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Float</label>
+                                            <span class="help-block">Only allowing float values</span>
+                                            <input class="form-control" data-validation="number" data-validation-allowing="float" placeholder="Float number">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Range</label>
+                                            <span class="help-block">Only allowing numbers from 1 to 100</span>
+                                            <input class="form-control" data-validation="number" data-validation-allowing="range[1;100]" placeholder="Range nuber 1-100">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Negative Range</label>
+                                            <span class="help-block">Only allowing numbers from -50 to 30</span>
+                                            <input class="form-control" data-validation="number" data-validation-allowing="range[-50;30],negative" placeholder="Range nuber -50-30">
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END NUMBER EXAMPLE -->
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <!-- DATE EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Date validators</h2>
+                                            <p>This module contains validators needed when validating dates and time.</p>
+                                        </div>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>Date</label>
+                                            <span class="help-block">Validate date formatted yyyy-mm-dd.</span>
+                                            <input class="form-control" data-validation="date" placeholder="yyyy-mm-dd">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Custom Format</label>
+                                            <span class="help-block">It is possible to use another format.</span>
+                                            <input class="form-control" data-validation="date" data-validation-format="dd-mm-yyyy" placeholder="dd-mm-yyyy">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Birthdate</label>
+                                            <span class="help-block">Validate past dates and dates that is not older then 120 years.</span>
+                                            <input class="form-control" data-validation="birthdate" data-validation-format="dd/mm/yyyy" placeholder="dd/mm/yyyy">
+                                        </div>                                        
+                                        <div class="form-group">
+                                            <label>Time</label>
+                                            <span class="help-block">Validate time formatted HH:mm.</span>
+                                            <input class="form-control" data-validation="time" placeholder="HH:mm">
+                                        </div>                                        
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END DATE EXAMPLE -->
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <!-- OTHER EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Other Fields</h2>
+                                            <p>Examples of other field types</p>
+                                        </div>                                
+                                    </div>                                                              
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>E-mail</label>
+                                            <span class="help-block">Validation of elmail adress input</span>
+                                            <input class="form-control" data-validation="email" placeholder="youremail@domain.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>URL:s</label>
+                                            <span class="help-block">URL validation example</span>
+                                            <input class="form-control" data-validation="url" placeholder="http://domain.com/">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Alphanumeric</label>
+                                            <span class="help-block">This input requires an answer that contains only letters a-z and/or numbers</span>
+                                            <input class="form-control" data-validation="alphanumeric" placeholder="a-z 0-9">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Regexp</label>
+                                            <span class="help-block">This input would only allow lowercase letters a-z</span>
+                                            <input class="form-control" data-validation="custom" data-validation-regexp="^([a-z]+)$" placeholder="lowercase letters">
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END OTHER EXAMPLE -->
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                
+                                <!-- FILE EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>File validators</h2>
+                                            <p>This module contains validators needed when validating file uploads.</p>
+                                        </div>
+                                    </div>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>File Size</label>
+                                            <span class="help-block">Validate that file isn't larger than 512 kilo bytes.</span>
+                                            <input type="file" class="file" data-validation="size" data-validation-max-size="512kb">
+                                        </div>    
+                                        <div class="form-group">
+                                            <label>File Type</label>
+                                            <span class="help-block">Validate that file is an image of type JPG, GIF or PNG and not larger than 2 mega bytes</span>
+                                            <input type="file" class="file" data-validation="mime size" data-validation-allowing="jpg, png, gif" data-validation-max-size="2M">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Extension</label>
+                                            <span class="help-block">Validate that a file is given and that it has .txt as extension</span>
+                                            <input type="file" class="file" data-validation="required extension" data-validation-allowing="txt">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Multiple Files</label>
+                                            <span class="help-block">Min 2 images; format: jpg, png, gif; max-size: 512kb.</span>
+                                            <input type="file" class="file" multiple="multiple"
+                                                   data-validation="length mime size"
+                                                   data-validation-length="min2"
+                                                   data-validation-allowing="jpg, png, gif"
+                                                   data-validation-max-size="512kb"
+                                                   data-validation-error-msg-size="You can not upload images larger than 512kb"
+                                                   data-validation-error-msg-mime="You can only upload images"
+                                                   data-validation-error-msg-length="You have to upload at least two images">
+                                        </div>
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END FILE EXAMPLE -->
+                                
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <!-- LOCATION EXAMPLE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Location validators</h2>
+                                            <p>This module contains validators needed when validating geographical data.</p>
+                                        </div>                                
+                                    </div>                                                              
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label>Country</label>
+                                            <span class="help-block">Validate country (english only).</span>
+                                            <input type="text" class="form-control" data-validation="country">
+                                        </div>    
+                                        <div class="form-group">
+                                            <label>State (US)</label>
+                                            <span class="help-block">Validate US state (english only).</span>
+                                            <input type="text" class="form-control" data-validation="federatestate">
+                                        </div> 
+                                        <div class="form-group">
+                                            <label>Longitude, Latitude</label>
+                                            <span class="help-block">Validate longitude and latitude (eg 40.714623,-74.006605).</span>
+                                            <input type="text" class="form-control" data-validation="longlat">
+                                        </div> 
+                                        <div class="form-group margin-top-20">
+                                            <button class="btn btn-default" type="submit">Submit & Validate</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- END LOCATION EXAMPLE -->
+                                
+                            </div>
+                        </div>                                                
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/form-validator/jquery.form-validator.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+        
+        <script type="text/javascript">
+            $.validate({
+                modules : 'date,file,location',
+                onValidate: function(){
+                    
+                    delayBeforeFire(function(){                                                
+                        app.spy();
+                    },100);
+                                        
+                }
+            });
+        </script>
+    </body>
+</html>
+
+
+
+
+
+

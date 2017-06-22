@@ -1,0 +1,50 @@
+@app-error-box-width: 500px;
+
+.app{
+    
+    .app-error-container{
+        float: left;
+        width: 100%;
+        min-height: 100%;
+        background: url("../img/backgrounds/sky.png") center center repeat;
+        
+        .app-error{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-top: -175px;
+            margin-left: -@app-error-box-width / 2;
+            width: @app-error-box-width;
+            height: 350px;
+            text-align: center;
+            
+            .app-error-code{
+                font-size: 220px;
+                font-weight: 300;
+                float: left;
+                width: 100%;
+                line-height: 200px;
+                color: @app-design-main-color;
+                margin-bottom: 20px;
+            }
+            .app-error-message{
+                float: left;
+                width: 100%;
+                font-size: 17px;
+                font-weight: 600;
+                line-height: 30px;
+                color: @app-layout-base-font-color-secondary;
+                margin-bottom: 50px;
+            }
+            .app-error-button{
+                float: left;
+                width: 100%;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: @screen-md) {
+    
+}

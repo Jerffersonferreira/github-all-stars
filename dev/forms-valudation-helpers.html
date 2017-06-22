@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Validation Helpers</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>Validation Helpers</h2>
+                            <p>Awesome plugins that helps you in validation.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                                <li><a href="#">Dashboard</a></li>
+                                <li><a href="#">Form Elements</a></li>
+                                <li class="active">Validation Helpers</li>
+                            </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                   
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <!-- BASIC EXAMPLE -->
+                        <div class="block">                        
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Masked Input</h2>
+                                    <p>It allows a user to more easily enter data in a certain format.</p>
+                                </div>                                
+                            </div>                                                              
+                            
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Date</label>  
+                                    <div class="col-md-5">
+                                        <input type="text" class="mask_date form-control">
+                                        <span class="help-block">Format: YYYY-MM-DD</span>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <input type="text" class="mask_date_rev form-control">
+                                        <span class="help-block">Format: DD-MM-YYYY</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Phone</label>    
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_phone form-control">
+                                        <span class="help-block">Example: 98 (765) 432-10-98</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Phone + Ext</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_phone_ext form-control">
+                                        <span class="help-block">Example: 98 (765) 432-10-98 x9999</span>
+                                    </div>
+                                </div>                    
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Credit</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_credit form-control">
+                                        <span class="help-block">Example: 9876-5432-1098-7654</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">TIN:</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_tin form-control">
+                                        <span class="help-block">Example: 98-7654321</span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">SSN:</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_ssn form-control">
+                                        <span class="help-block">Example: 987-65-4321</span>
+                                    </div>
+                                </div>                    
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Product:</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_product form-control">
+                                        <span class="help-block">Example: A1-234-B567</span>
+                                    </div>
+                                </div>                       
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label">Percent:</label>
+                                    <div class="col-md-10">
+                                        <input type="text" class="mask_percent form-control">
+                                        <span class="help-block">Example: 50%</span>
+                                    </div>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        <!-- END BASIC EXAMPLE -->                                                
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

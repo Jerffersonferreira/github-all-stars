@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Loading Feature</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Loading</h1>                            
+                            <p>Custom feature to show your loading state.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Loading</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                 
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <div class="block block-condensed">                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Basic & States</h5>
+                                    <p>Basic example of loading state.</p>
+                                </div>
+                            </div>                            
+                            
+                            <div class="block-content">
+                                <button class="btn btn-default" onclick="app.loading('show',{value: [0,30],speed: 10});">Default [0%-30%]</button>
+                                <button class="btn btn-primary" onclick="app.loading('show',{value: [0,40],speed: 10, state: 'primary'});">Primary [0%-40%]</button>
+                                <button class="btn btn-success" onclick="app.loading('show',{value: [0,50],speed: 10,state: 'success'});">Success [0%-50%]</button>
+                                <button class="btn btn-warning" onclick="app.loading('show',{value: [0,60],speed: 10,state: 'warning'});">Warning [0%-60%]</button>
+                                <button class="btn btn-info" onclick="app.loading('show',{value: [0,70],speed: 10,state: 'info'});">Info [0%-70%]</button>
+                                <button class="btn btn-danger" onclick="app.loading('show',{value: [0,90],speed: 10,state: 'danger'});">Danger [0%-90%]</button>
+                            </div>
+                                                        
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Actions</h5>
+                                    <p>Use predefined options: <code>show, update, destroy</code>.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="block-content margin-bottom-30">
+                                <button class="btn btn-default" onclick="app.loading('show',{value: [0,30],speed: 10});">Show [0%-30%]</button>
+                                <button class="btn btn-default" onclick="app.loading('update',{value: [50,80],speed: 10});">Update [30-80%]</button>
+                                <button class="btn btn-default" onclick="app.loading('destroy');">Destroy</button>
+                            </div>  
+                            
+                            <div class="block-content margin-bottom-30">
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <div class="app-heading app-heading-small app-heading-condensed-horizontal">                                
+                                            <div class="title">
+                                                <h5>Position</h5>
+                                                <p>Use option <code>position</code> with value <code>bottom</code> to use place progress bar in bottom.</p>
+                                            </div>
+                                        </div>                            
+                                        
+                                        <button class="btn btn-default" onclick="app.loading('show',{value: [0,75],position: 'bottom', state: 'danger',speed: 5});">Bottom [0%-75%]</button>                                        
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <div class="app-heading app-heading-small app-heading-condensed-horizontal">                                
+                                            <div class="title">
+                                                <h5>Speed</h5>
+                                                <p>Use option <code>speed</code> with value (int) value to get another speed.</p>
+                                            </div>
+                                        </div>                            
+                                        
+                                        <button class="btn btn-default" onclick="app.loading('show',{value: [0,80],speed: 5});">Speed 5 [0%-80%]</button>
+                                        <button class="btn btn-default" onclick="app.loading('show',{value: [0,80],speed: 10});">Speed 10 [0%-80%]</button>
+                                        <button class="btn btn-default" onclick="app.loading('show',{value: [0,80],speed: 20});">Speed 20 [0%-80%]</button>
+                                        <button class="btn btn-default" onclick="app.loading('show',{value: [0,80],speed: 30});">Speed 30 [0%-80%]</button>                                        
+                                    </div>
+                                </div>                            
+                                
+                            </div>
+                                                        
+                        </div>                                                
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+                        
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

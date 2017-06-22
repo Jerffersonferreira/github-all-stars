@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Modals And Popups</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">                        
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">                    
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Modals & Popups</h1>
+                            <p>Easiest way to make your heading beautiful</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Modals & Popups</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                                        
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        
+                        <div class="block">
+                            <!-- START HEADING -->
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Modals</h5>
+                                    <p>Modals are very popular way to show information that need special attention.</p>
+                                </div>
+                            </div>
+                            <!-- END HEADING -->
+                            
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <h5>Default Modal</h5>
+                                    <p>This is default modal with header, content and footer.<br> Also header contains with close button.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-default">Open Modal</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Clean Modal</h5>
+                                    <p>This is clean modal with content only.<br> It supports all features from template.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-clean">Open Modal</button>
+                                </div>                                
+                                <div class="col-md-3 text-center">
+                                    <h5>Disable Backdrop</h5>
+                                    <p>Add <code>data-backdrop="static"</code> to your modal<br> to prevent close on click.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-backdrop-disable" data-backdrop="static">Open Modal</button>
+                                </div>
+                            </div>                                                        
+                            
+                            <!-- START HEADING -->
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Modal Sizing</h5>
+                                    <p>Use this features to get custom size of your modal window.</p>
+                                </div>
+                            </div>
+                            <!-- END HEADING -->
+                            
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <h5>Small</h5>
+                                    <p>Add class <code>.modal-sm</code> to get<br> small <code>400px</code> width modal window.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-small">Open Modal</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Default</h5>
+                                    <p>You dont need to add any class<br> to get default <code>600px</code> width modal window.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-default">Open Modal</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Large</h5>
+                                    <p>Add class <code>.modal-lg</code> to get<br> small <code>900px</code> width modal window.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-large">Open Modal</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Full Width</h5>
+                                    <p>Add class <code>.modal-fw</code> to get<br> small <code>94%</code> width modal window.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-full">Open Modal</button>
+                                </div>
+                            </div>
+                            
+                            <!-- START HEADING -->
+                            <div class="app-heading app-heading-small">
+                                <div class="title">
+                                    <h5>Theme Colors</h5>
+                                    <p>Its easy to style your modal with custom heading color.</p>
+                                </div>
+                            </div>
+                            <!-- END HEADING -->
+                            
+                            <div class="row">
+                                <div class="col-md-2 text-center">
+                                    <h5>Default</h5>
+                                    <p>No need to add any class.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-default">Open Modal</button>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <h5>Primary</h5>
+                                    <p>Add class <code>.modal-primary</code>.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-primary">Open Modal</button>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <h5>Info</h5>
+                                    <p>Add class <code>.modal-info</code>.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-info">Open Modal</button>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <h5>Success</h5>
+                                    <p>Add class <code>.modal-success</code>.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-success">Open Modal</button>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <h5>Wraning</h5>
+                                    <p>Add class <code>.modal-warning</code>.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-warning">Open Modal</button>
+                                </div>
+                                <div class="col-md-2 text-center">
+                                    <h5>Danger</h5>
+                                    <p>Add class <code>.modal-danger</code>.</p>
+                                    <button class="btn btn-default" data-toggle="modal" data-target="#modal-danger">Open Modal</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="block">
+                            <!-- START HEADING -->
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Popovers</h5>
+                                    <p>You can show your secondary info in this tiny pop-up block.</p>
+                                </div>
+                            </div>
+                            <!-- END HEADING -->
+                            
+                            <div class="row">
+                                
+                                <div class="col-md-3 text-center">
+                                    <h5>Popover on top</h5>
+                                    <p>Add <code>data-placement="top"</code> to <br>show your popover on top.</p>
+                                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" title="Top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                        Open Popover
+                                    </button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Popover On Left</h5>
+                                    <p>Add <code>data-placement="left"</code> to <br>show your popover on left.</p>
+                                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" title="Left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                        Open Popover
+                                    </button>                                    
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Popover on right</h5>
+                                    <p>Add <code>data-placement="right"</code> to <br>show your popover on right.</p>
+                                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" title="Right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                        Open Popover
+                                    </button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Popover on bottom</h5>
+                                    <p>Add <code>data-placement="bottom"</code> to <br>show your popover on bottom.</p>
+                                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" title="Bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                        Open Popover
+                                    </button>
+                                </div>
+                                
+                            </div>
+                            <div class="row margin-top-30">
+                                
+                                <div class="col-md-3 text-center">
+                                    <h5>Dismissible</h5>
+                                    <p>Add <code>data-trigger="focus"</code> to <br>hide element on focus out.</p>
+                                    <button class="btn btn-default" data-container="body" data-placement="top" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">
+                                        Open Popover
+                                    </button>
+                                </div>                                
+                                <div class="col-md-3 text-center">
+                                    <h5>Show on hover</h5>
+                                    <p>Add class <code>.popover-hover</code> to <br>show your popover on hover.</p>
+                                    <button class="btn btn-default popover-hover" data-placement="top" data-container="body"  data-trigger="click" data-content="And here's some amazing content. It's very engaging. Right?">
+                                        Open Popover
+                                    </button>
+                                </div>                                
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="block">
+                            <!-- START HEADING -->
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>SweetAlert</h5>
+                                    <p>A beautiful replacement for javascripts alert.</p>
+                                </div>
+                            </div>
+                            <!-- END HEADING -->
+                            
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <h5>Basic</h5>
+                                    <p>A basic message.</p>
+                                    <button class="btn btn-default" onclick="swal('Here\'s a message!');">Open Alert</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Title</h5>
+                                    <p>A title with a text under.</p>
+                                    <button class="btn btn-default" onclick="swal('Here\'s a message!', 'It\'s pretty, isn\'t it?');">Open Alert</button>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>State</h5>
+                                    <p>A success message!.</p>
+                                    <button class="btn btn-default" onclick="swal('Good job!', 'You clicked the button!', 'success');">Open Alert</button>
+                                    
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <h5>Timer</h5>
+                                    <p>A message with auto close timer.</p>
+                                    <button class="btn btn-default" onclick="swal({title: 'Auto close alert!', text: 'I will close in 2 seconds.', timer: 2000, showConfirmButton: false});">Open Alert</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>                    
+
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->            
+            
+            <!-- MODAL DEFAULT -->
+            <div class="modal fade" id="modal-default" tabindex="-1" role="dialog" aria-labelledby="modal-default-header">                        
+                <div class="modal-dialog" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-default-header">Modal title</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL DEFAULT -->
+
+            <!-- MODAL CLEAN -->
+            <div class="modal fade" id="modal-clean" tabindex="-1" role="dialog">                        
+                <div class="modal-dialog" role="document">                    
+                    <div class="modal-content">                    
+                        <div class="modal-body">
+
+                            <div class="app-heading app-heading-small app-heading-condensed">                                
+                                <div class="title">
+                                    <h5>Clean Modal</h5>
+                                    <p>Aenean quis quam diam. Nam fringilla arcu ipsum.</p>
+                                </div>
+                            </div>
+
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+
+                            <p class="text-right"><button class="btn btn-default" data-dismiss="modal">Close</button></p>
+                        </div>                    
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL CLEAN -->
+
+            <!-- MODAL BACKDROP DISABLE -->
+            <div class="modal fade" id="modal-backdrop-disable" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">                    
+                    <div class="modal-content">                    
+                        <div class="modal-body">
+
+                            <div class="app-heading app-heading-small app-heading-condensed">                                
+                                <div class="title">
+                                    <h5>Disable Backdrop</h5>
+                                    <p>Aenean quis quam diam. Nam fringilla arcu ipsum.</p>
+                                </div>
+                            </div>
+
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+
+                            <p class="text-right"><button class="btn btn-default" data-dismiss="modal">Close</button></p>
+                        </div>                    
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL BACKDROP DISABLE -->
+            
+            <!-- MODAL SMALL -->
+            <div class="modal fade" id="modal-small" tabindex="-1" role="dialog" aria-labelledby="modal-small-header">                        
+                <div class="modal-dialog modal-sm" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-small-header">Small Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL SMALL -->
+            
+            <!-- MODAL LARGE -->
+            <div class="modal fade" id="modal-large" tabindex="-1" role="dialog" aria-labelledby="modal-large-header">                        
+                <div class="modal-dialog modal-lg" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-large-header">Large Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL LARGE -->
+            
+            <!-- MODAL FULL WIDTH -->
+            <div class="modal fade" id="modal-full" tabindex="-1" role="dialog" aria-labelledby="modal-full-header">                        
+                <div class="modal-dialog modal-fw" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-full-header">Full Width</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL FULL WIDTH -->
+            
+            <!-- MODAL PRIMARY -->
+            <div class="modal fade" id="modal-primary" tabindex="-1" role="dialog" aria-labelledby="modal-primary-header">                        
+                <div class="modal-dialog modal-primary" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-primary-header">Primary Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL PRIMARY -->
+            
+            <!-- MODAL INFO -->
+            <div class="modal fade" id="modal-info" tabindex="-1" role="dialog" aria-labelledby="modal-info-header">                        
+                <div class="modal-dialog modal-info" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-info-header">Info Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-info">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL INFO -->
+            
+            <!-- MODAL SUCCESS -->
+            <div class="modal fade" id="modal-success" tabindex="-1" role="dialog" aria-labelledby="modal-success-header">                        
+                <div class="modal-dialog modal-success" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-success-header">Success Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL SUCCESS -->
+            
+            <!-- MODAL WARNING -->
+            <div class="modal fade" id="modal-warning" tabindex="-1" role="dialog" aria-labelledby="modal-warning-header">                        
+                <div class="modal-dialog modal-warning" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-success-header">Warning Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-warning">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL WARNING -->
+            
+            <!-- MODAL DANGER -->
+            <div class="modal fade" id="modal-danger" tabindex="-1" role="dialog" aria-labelledby="modal-danger-header">                        
+                <div class="modal-dialog modal-danger" role="document">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-cross"></span></button>
+
+                    <div class="modal-content">
+                        <div class="modal-header">                        
+                            <h4 class="modal-title" id="modal-danger-header">Danger Modal</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>Vestibulum eget risus id ante semper sodales vel sed nibh. Nullam tortor tellus, vestibulum a laoreet laoreet, lacinia in lorem. Fusce tempor lorem tellus, sed egestas velit ornare et.</p>
+                            <p>Vivamus viverra sem non imperdiet porta. Suspendisse quis dolor varius, gravida felis nec, vulputate sem. Nunc at rhoncus dui. Aenean quis quam diam. Nam fringilla arcu ipsum, vel venenatis tellus aliquam eu. Nam vehicula quis diam vel placerat. Vivamus a congue erat. Ut venenatis libero massa, sed tincidunt nunc ultricies eget. Vestibulum in ultricies sem. Duis ac risus et leo egestas aliquet ac nec ante. Donec varius pharetra tristique.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-danger">Submit</button>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <!-- END MODAL DANGER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/sweetalert/sweetalert.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->        
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

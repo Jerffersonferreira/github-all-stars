@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Other Form Elements</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h2>File Handling</h2>
+                            <p>List of plugins for file handling</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Form Elements</a></li>
+                            <li class="active">File Handling</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                   
+                    <!-- START PAGE CONTAINER -->                    
+                    <div class="container">
+                        
+                        <div class="row">
+                            <div class="col-md-8">
+                                
+                                <!-- DEFAULT DROPZONE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Dropzone</h2>
+                                            <p>Dropzone.js is a light weight JavaScript library that turns an HTML element into a dropzone.</p>
+                                        </div>                                
+                                    </div>
+
+                                    <form action="assets/php/dropzone.php"  method="post" enctype="multipart/form-data" class="dropzone"></form>
+
+                                </div>
+                                <!-- END DROPZONE -->                                                                                               
+                                
+                            </div>
+                            <div class="col-md-4">
+                                
+                                <!-- DEFAULT DROPZONE -->
+                                <div class="block">                        
+
+                                    <div class="app-heading app-heading-small">                                
+                                        <div class="title">
+                                            <h2>Tiny Dropzone</h2>
+                                            <p>Add class <code>dropzone-tiny</code> to <code>dropzone</code> form to get small dropzone form.</p>
+                                        </div>                                
+                                    </div>
+
+                                    <form action="assets/php/dropzone.php"  method="post" enctype="multipart/form-data" class="dropzone dropzone-tiny"></form>
+
+                                </div>
+                                <!-- END DROPZONE -->
+                                
+                            </div>
+                        </div>                                                
+                        
+                        <div class="block bloc-condensed">
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h2>Image Cropping Tool</h2>
+                                    <p>A simple jQuery image cropping plugin.</p>
+                                </div>                                
+                            </div>                            
+                            <form action="assets/php/cropping.php" method="post">
+                            <div class="block-content">
+                                <div class="row">                                        
+                                    <div class="col-md-4">                                            
+                                        <div class="cropping-image-wrap">
+                                            <img src="assets/images/large/img-11.jpg" class="img-responsive">
+                                        </div>                                                                                                                                    
+                                    </div>
+                                    <div class="col-md-4 form-horizontal">
+                                        <div class="form-group">
+                                            <div class="col-md-12">                                                                                                        
+                                                <button id="crop_zoomIn" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-search-plus"></span> Zoom In
+                                                </button>                                                        
+                                                <button id="crop_zoomOut" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-search-minus"></span> Zoom Out
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <button id="crop_rotateLeft" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-reply"></span> Rotate Left
+                                                </button>                                                   
+                                                <button id="crop_rotateRight" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-share"></span> Rotate Right
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group push-down-30">
+                                            <div class="col-md-12">
+                                                <button id="crop_reset" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-eraser"></span> Reset
+                                                </button>
+                                                <button id="crop_clear" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-times"></span> Clear
+                                                </button>            
+                                                <button id="crop_destroy" type="button" class="btn btn-primary btn-icon-fixed">
+                                                    <span class="fa fa-trash-o"></span> Destroy
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group cropping-options">
+                                            <label class="col-md-3 control-label">
+                                                AutoCrop
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked value="0" name="autoCrop">                                                    
+                                                </label>
+                                            </div>
+                                            <label class="col-md-3 control-label">
+                                                Zoomable
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked value="0" name="zoomable">                                                    
+                                                </label>
+                                            </div>    
+                                            <label class="col-md-3 control-label">
+                                                Movable
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked value="0" name="movable">                                                    
+                                                </label>
+                                            </div>    
+                                            <label class="col-md-3 control-label">
+                                                Resizable
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" value="0" name="resizable" checked>                                                    
+                                                </label>
+                                            </div>
+                                            <label class="col-md-3 control-label">
+                                                Modal
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked value="0" name="modal">                                                    
+                                                </label>
+                                            </div>
+                                            <label class="col-md-3 control-label">
+                                                Dashed
+                                            </label>
+                                            <div class="col-md-3">
+                                                <label class="switch">
+                                                    <input type="checkbox" checked value="0" name="dashed">                                                    
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-horizontal">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="cropping-preview-wrap">
+                                                    <div class="cropping-preview"></div>
+                                                </div>                                                    
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">X</div>
+                                                    <input type="text" class="form-control" name="imgX" id="dci_x">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">Y</div>
+                                                    <input type="text" class="form-control" name="imgY" id="dci_y">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">W</div>
+                                                    <input type="text" class="form-control" name="imgW" id="dci_w">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="input-group">
+                                                    <div class="input-group-addon">H</div>
+                                                    <input type="text" class="form-control" name="imgH" id="dci_h">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                                                                        
+                                </div>
+
+                            </div>
+                            <div class="block-content">
+                                <input type="hidden" value="img-11.jpg" name="cropping-image">
+                                <button type="submit" class="btn btn-danger pull-right btn-icon-fixed"><span class="fa fa-picture-o"></span> Crop Image</button>
+                            </div> 
+                            </form>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+                        
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/dropzone/dropzone.js"></script>
+        <script type="text/javascript" src="js/vendor/cropper/cropper.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+        
+        <script type="text/javascript">
+            
+            $(function(){
+                // Image croppting 
+                var imgX = $("#dci_x");
+                var imgY = $("#dci_y");
+                var imgW = $("#dci_w");
+                var imgH = $("#dci_h");
+                var crop = $(".cropping-image-wrap > img");
+
+                var options = {
+                    aspectRatio: 1,
+                    crop: function(data) {
+                        imgX.val(Math.round(data.x));
+                        imgY.val(Math.round(data.y));
+                        imgW.val(Math.round(data.height));
+                        imgH.val(Math.round(data.width));
+                    },
+                    preview: ".cropping-preview"
+                }
+
+                crop.cropper(options);    
+
+                $("#crop_zoomIn").on("click",function() {
+                    crop.cropper("zoom", 0.1);
+                });
+                $("#crop_zoomOut").on("click",function() {
+                    crop.cropper("zoom", -0.1);
+                });
+                $("#crop_rotateLeft").on("click",function() {
+                    crop.cropper("rotate", -90);
+                });
+                $("#crop_rotateRight").on("click",function() {
+                    crop.cropper("rotate", 90);
+                });    
+                $("#crop_reset").on("click",function() {
+                    crop.cropper("reset");
+                });
+                $("#crop_clear").on("click",function() {
+                    crop.cropper("clear");
+                });
+                $("#crop_destroy").on("click",function() {
+                    crop.cropper("destroy");
+                });
+
+                $(".cropping-options :checkbox").on("change", function(e){
+
+                    $this = $(this);
+                    console.log($this.is(":checked"));
+                    options[$this.attr("name")] = $this.is(":checked") ? true : false;
+                    crop.cropper("destroy").cropper(options);
+                }); 
+
+                // End Image cropping
+
+            });
+            
+        </script>            
+    </body>
+</html>

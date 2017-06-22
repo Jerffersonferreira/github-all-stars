@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Statusbar Feature</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Status Bar</h1>
+                            <p>Notify your customers in new way.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Status Bar</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                 
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+                        
+                        <div class="block block-condensed">                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Basic Features</h5>
+                                    <p>Use this feature for notification or info presentation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="block-content">                                
+                                <div class="row">
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Default</h5>
+                                        <p>Default status bar with text</p>
+                                        <a href="#statusbar_1" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Loading</h5>
+                                        <p>Status bar with loading</p>
+                                        <a href="#statusbar_2" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>With Icon</h5>
+                                        <p>Status bar with icon</p>
+                                        <a href="#statusbar_3" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Form</h5>
+                                        <p>Status bar with form elements</p>
+                                        <a href="#statusbar_8" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>                                    
+                                </div>                                                                
+                            </div>    
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>States</h5>
+                                    <p>Add classes to get another state color.</p>
+                                </div>
+                            </div>
+                            <div class="block-content">
+                                
+                                <div class="row">
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Info</h5>
+                                        <p>Success status bar</p>
+                                        <a href="#statusbar_6" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Success</h5>
+                                        <p>Success status bar</p>
+                                        <a href="#statusbar_4" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Warning</h5>                                        
+                                        <p>Warning status bar</p>
+                                        <a href="#statusbar_5" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Danger</h5>
+                                        <p>Danger status bar</p>
+                                        <a href="#statusbar_7" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>                                    
+                                </div>
+                                                                
+                            </div>
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Options</h5>
+                                    <p>Change some options to make it usefull.</p>
+                                </div>
+                            </div>
+                            <div class="block-content margin-bottom-30">
+                                
+                                <div class="row">
+                                    <div class="col-md-3 text-center">                                                                                
+                                        <h5>Top Direction</h5>
+                                        <p>Add class <code>.app-statusbar-top</code> top get top direction.</p>
+                                        <a href="#statusbar_9" class="btn btn-default app-statusbar-open">Open Status Bar</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>                                                
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->
+        
+        <!-- LIST OF STATUSBARS -->
+        <div class="app-statusbar" id="statusbar_1">
+            <div class="app-statusbar-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>
+
+        <div class="app-statusbar" id="statusbar_2">
+            <div class="app-statusbar-icon"><div class="app-spinner loading"></div></div>
+            <div class="app-statusbar-text">Loading...</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>    
+
+        <div class="app-statusbar" id="statusbar_3">
+            <div class="app-statusbar-icon"><span class="icon-alarm"></span></div>
+            <div class="app-statusbar-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>    
+
+        <div class="app-statusbar app-statusbar-success" id="statusbar_4">        
+            <div class="app-statusbar-icon"><span class="icon-checkmark-circle"></span></div>
+            <div class="app-statusbar-text">Success statusbar</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>    
+
+        <div class="app-statusbar app-statusbar-warning" id="statusbar_5">        
+            <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
+            <div class="app-statusbar-text">Warning statusbar</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>        
+
+        <div class="app-statusbar app-statusbar-info" id="statusbar_6">        
+            <div class="app-statusbar-icon"><span class="icon-arrow-right-circle"></span></div>
+            <div class="app-statusbar-text">Info statusbar</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>            
+
+        <div class="app-statusbar app-statusbar-danger" id="statusbar_7">        
+            <div class="app-statusbar-icon"><span class="icon-volume-high"></span></div>
+            <div class="app-statusbar-text">Danger statusbar</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>
+
+        <div class="app-statusbar app-statusbar-default" id="statusbar_8">                
+            <div class="app-statusbar-body">
+                <form class="form-horizontal">
+                                                            
+                    <div class="form-group">
+                        <label class="col-md-3 control-label text-right">Authentication</label>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Login">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-default btn-clean">Submit</button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="app-statusbar-close icon-remove"></div>
+        </div>  
+        
+        <div class="app-statusbar app-statusbar-top" id="statusbar_9">
+            <div class="app-statusbar-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+            <div class="app-statusbar-close fa fa-times"></div>
+        </div>
+        <!-- END OF STATUSBARS -->
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+

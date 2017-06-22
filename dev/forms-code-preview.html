@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Code Preview</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                        
+                        <div class="title">
+                            <h1>Code Preview</h1>
+                            <p>JS modules for preview code.</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Code Preview</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->                 
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <div class="block">
+                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h5>Code Mirror</h5>
+                                    <p>Is a versatile text editor implemented in JavaScript for the browser. It is specialized for editing code, and comes with a number of language modes and addons that implement more advanced editing functionality.</p>
+                                </div>
+                            </div>
+                            
+<textarea id="codeEditor">
+<?php
+    class SomeClassName extends AnotherClassName{
+
+        var $someVar,$anotherVar;
+        var $someArray = array();
+
+        private function __construct($id,$param1,$param2){
+            $this->someVar    = $param1;
+            $this->anotherVar = $param2;
+            $this->someArray = $this->load_data($id);
+        }
+
+        public function build(){
+            return (($this->someVar / $this->anotherVar) * $this->buffer) > 0 ? true : false ;
+        }
+
+        public function load_data($id){
+            $data = array();
+
+            $query = mysql_query("SELECT * FROM `base` WHERE `id`='".$this->int($id)."'");
+
+            if(mysql_num_rows($query) > 0){
+                while($row = mysql_fetch_array($query)) $data[] = $row['somecol'];                                
+                return $data;    
+            }else
+                return false;
+        }
+
+        private function __destruct(){
+            $this->someVar    = false;
+            $this->anotherVar = false;
+        }
+    }
+?></textarea>
+                            
+                        </div>
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/footers/extended.html
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        <!-- CODEMIRROR -->
+        <script type="text/javascript" src="js/vendor/codemirror/codemirror.js"></script>
+        <script type='text/javascript' src="js/vendor/codemirror/modes/htmlmixed.js"></script>
+        <script type="text/javascript" src="js/vendor/codemirror/modes/xml.js"></script>
+        <script type="text/javascript" src="js/vendor/codemirror/modes/javascript.js"></script>
+        <script type="text/javascript" src="js/vendor/codemirror/modes/css.js"></script>
+        <script type="text/javascript" src="js/vendor/codemirror/modes/clike.js"></script>
+        <script type="text/javascript" src="js/vendor/codemirror/modes/php.js"></script>
+        <!-- END CODEMIRROR -->
+        
+        //= partials/scripts-important-include.html
+        //= partials/scripts-app-include.html
+        
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("codeEditor"), {
+                lineNumbers: true,
+                matchBrackets: true,
+                mode: "application/x-httpd-php",
+                indentUnit: 4,
+                indentWithTabs: true,
+                enterMode: "keep",
+                tabMode: "shift"                                                
+            });
+            editor.setSize('100%','700px');
+        </script>
+    </body>
+</html>
+
+
+
+
+
+

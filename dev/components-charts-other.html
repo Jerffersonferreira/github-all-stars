@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>                        
+        <title>Boooya - Other Charts</title>            
+        
+        //= partials/meta-section.html
+        //= partials/styles-include.html
+    </head>
+    <body>        
+        
+        <!-- APP WRAPPER -->
+        <div class="app">            
+            
+            <!-- START APP CONTAINER -->
+            <div class="app-container">                
+                //= partials/sidebars/default-fixed.html
+                
+                <!-- START APP CONTENT -->
+                <div class="app-content app-sidebar-left">
+                    //= partials/headers/default.html
+                    
+                    <!-- START PAGE HEADING -->
+                    <div class="app-heading app-heading-bordered app-heading-page">                       
+                        <div class="title">
+                            <h1>Other Charts</h1>
+                            <p>Simple chart elements</p>
+                        </div>
+                        //= partials/heading-elements.html
+                    </div>
+                    <div class="app-heading-container app-heading-bordered bottom">
+                        <ul class="breadcrumb">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Components</a></li>
+                            <li class="active">Other Charts</li>
+                        </ul>
+                    </div>
+                    <!-- END PAGE HEADING -->
+                    
+                    <!-- START PAGE CONTAINER -->
+                    <div class="container">
+
+                        <div class="block">                            
+                            <div class="app-heading app-heading-small">                                
+                                <div class="title">
+                                    <h3>Sparkline</h3>                                
+                                    <p>Simple world map with default parameters</p>
+                                </div>                                
+                            </div>                                    
+
+                            <table class="table table-noborder">
+                                <tr>
+                                    <td width="100"><strong>Line</strong></td>
+                                    <td><span class="sparkline" sparkFillColor="#FFF" sparkLineWidth="2" sparkLineColor="#9FD468" sparkWidth="100" sparkHeight="45" >5,4,3,2,4,5,6,7,8,6,4,5</span></td>
+                                    <td>Line charts are the default chart type, but to specify the type explicitly set an option called "type" to "line".</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bar</strong></td>
+                                    <td><span class="sparkline" sparkType="bar" sparkBarColor="#4FC0E8" sparkWidth="100" sparkHeight="45" sparkBarWidth="5">5,4,3,2,4,5,6,7,8,6,4,5</span></td>
+                                    <td>Set the "type" option to "bar" to generate bar charts. </td>
+                                </tr>
+                                <tr>
+                                    <td width="100"><strong>Discrete</strong></td>
+                                    <td><span class="sparkline" sparkType="discrete" sparkLineColor="#F6BB43" sparkWidth="100" sparkHeight="45" >5,4,3,2,4,5,6,7,8,6,4,5</span></td>
+                                    <td>Set the "type" option to "discrete" to generate discrete charts.</td>
+                                </tr>
+                                <tr>
+                                    <td width="100"><strong>Pie</strong></td>
+                                    <td><span class="sparkline" sparkType="pie" sparkWidth="50" sparkHeight="50" >5,4,3,2</span></td>
+                                    <td>Set the "type" option to "pie" to generate pie charts.</td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        
+                    </div>
+                    <!-- END PAGE CONTAINER -->
+                    
+                </div>
+                <!-- END APP CONTENT -->
+                                
+            </div>
+            <!-- END APP CONTAINER -->
+            
+            //= partials/sidepanels/default.html
+        </div>        
+        <!-- END APP WRAPPER -->                
+        
+        //= partials/scripts-important-include.html
+        <!-- THIS PAGE SCRIPTS -->
+        <script type="text/javascript" src="js/vendor/sparkline/jquery.sparkline.min.js"></script>
+        <!-- END THIS PAGE SCRIPTS -->
+        //= partials/scripts-app-include.html
+    </body>
+</html>
+
+
+
+
+
+
