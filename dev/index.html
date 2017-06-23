@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>Github All Stars</title>
-
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,62 +15,22 @@
             <div class="app-container app-sidebar-left-closed">
                 <div class="app-content app-header-fixed">
                     //= partials/navigation.html
-
-                    <div class="app-heading app-heading-bordered app-heading-page">
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <div class="icon icon-lg">
-                                    <span class="icon-star"></span>
-                                </div>
-                                <div class="title">
-                                    <h2>Repositórios Favoritados</h2>
-                                    <p>Exibindo nenhum item</p>
-                                </div>
-                            </div>
-
-                            <div class="col-md-2">
-                                <div class="progress margin-top-10">
-                                    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">80%</div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-1">
-                                <div class="app-widget-informer">
-                                    <div class="intval">50 / 60</div>
-                                    <div class="subtitle">Limite da API</div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-3">
-                                <select class="bs-select" multiple data-actions-box="true" data-live-search="true" data-live-search-placeholder="Pesquisar linguagem">
-                                    <option>Javascript</option>
-                                    <option>PHP</option>
-                                    <option>Python</option>
-                                </select>
-                            </div>
-
-                            <div class="col-md-3">
-                                <select class="bs-select">
-                                    <option data-content="<span class='icon-sort-alpha-asc'></span> Ordem Alfabética">Ordem Alfabética</option>
-                                     <option data-content="<span class='icon-star'></span> Stars">Stars</option>
-                                      <option data-content="<span class='icon-warning'></span> Open Issues">Open Issues</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    //= partials/app-heading.html
 
                     <div class="container">
-                        <div class="row">
+                        <div id="appCardList" class="row">
+                        </div>
+
+                        <div data-card-template style="display: none;">
                             <div class="col-md-3">
-                                <!-- MESSAGE -->
                                 <div class="block block-condensed block-highlight-hover">
                                     <div class="app-heading app-heading-small margin-bottom-0">
                                         <div class="title">
                                             <div class="contact contact-rounded contact-bordered contact-lg margin-bottom-0">
-                                                <img src="assets/images/users/user_1.jpg" alt="">
+                                                <img data-card-image src="img/no-image.png" >
                                                 <div class="contact-container">
-                                                    <a href="#">Nome do Repositório</a>
-                                                    <span>by Vinícius Ribeiro</span>
+                                                    <a href="#" data-card-name target="_blank">Nome do Repositório</a>
+                                                    <span data-card-user>by Vinícius Ribeiro</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -88,35 +47,35 @@
 
                                     <div class="block-content">
                                         <div class="row heading-line-below">
-                                            <div class="col-md-4">
-                                                <h2 class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-star"></span> 12345</h2>
+                                            <div class="col-md-4 text-left">
+                                                <h4 class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-star"></span> <span data-card-stars>0</span></h4>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <h2 class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-warning"></span> 12345</h2>
+                                            <div class="col-md-4 text-left">
+                                                <h4 data-card- class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-warning"></span> <span data-card-issues>0</span></h4>
                                             </div>
 
-                                            <div class="col-md-4">
-                                                <h2 class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-eye"></span> 12345</h2>
+                                            <div class="col-md-4 text-left">
+                                                <h4 data-card- class="text-uppercase text-bold text-rg margin-bottom-5"><span class="icon-eye"></span> <span data-card-watchers>0</span></h4>
                                             </div>
                                         </div>
 
                                          <div class="row">
                                             <div class="col-md-6">
-                                                <p class="text-sm text-rg margin-bottom-5">Criação: 2016/01/08</p>
+                                                <p class="text-sm text-rg margin-bottom-5">Criação: <span data-card-created>2016/01/08</span></p>
                                             </div>
 
                                             <div class="col-md-6">
-                                                <p class="text-sm text-rg margin-bottom-5">Envio: 2016/01/08</p>
+                                                <p class="text-sm text-rg margin-bottom-5">Envio: <span data-card-pushed>2016/01/08</span></p>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="block-footer">
-                                        <a href="#" class="label label-default label-bordered pull-left">Público</a>
-                                        <a href="#" class="label label-default label-bordered pull-left margin-left-10">2MB</a>
+                                        <a data-card-public href="#" class="label label-default label-bordered pull-left">Público</a>
+                                        <a data-card-size href="#" class="label label-default label-bordered pull-left margin-left-10">2MB</a>
 
-                                        <span class="label label-warning label-bordered pull-right">Javascript</span>
+                                        <span data-card-language class="label label-warning label-bordered pull-right">Javascript</span>
                                     </div>
                                 </div>
                             </div>

@@ -13,7 +13,8 @@
     "gulp-rigger": "^0.5.8",
     "gulp-rimraf": "^0.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-watch": "^4.3.9"
+    "gulp-watch": "^4.3.9",
+    "moment": "^2.18.1"
   },
   "devDependencies": {},
   "scripts": {
