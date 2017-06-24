@@ -78,10 +78,12 @@
                             </div>
                     
                             <div class="col-md-3">
-                                <select class="bs-select">
-                                    <option data-content="<span class='icon-sort-alpha-asc'></span> Ordem Alfabética">Ordem Alfabética</option>
-                                     <option data-content="<span class='icon-star'></span> Stars">Stars</option>
-                                      <option data-content="<span class='icon-warning'></span> Open Issues">Open Issues</option>
+                                <select id="filterSelect" class="bs-select">
+                                    <option data-content="<span class='icon-funnel'></span> Ordenar por:" disabled selected>Ordenar por:</option>
+                                    <option data-content="<span class='icon-sort-alpha-asc'></span> Ordem Alfabética" value="ascending">Ordem Alfabética</option>
+                                     <option data-content="<span class='icon-star'></span> Stars" value="stargazers">Stars</option>
+                                      <option data-content="<span class='icon-warning'></span> Open Issues" value="openIssues">Open Issues</option>
+                                      <option data-content="<span class='icon-eye'></span> Watchers" value="watchers">Watchers</option>
                                 </select>
                             </div>
                         </div>

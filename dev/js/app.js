@@ -12,7 +12,7 @@
             }
             return count;
         }
-    }
+    };
 
     // Cache DOM elements
     var DOMCache = {
@@ -24,14 +24,21 @@
             widgetContainer: $('#limitInformer'),
             rateValue: $('<div id="rateValue" class="intval">'),
             rateText: $('<div id="rateText" class="subtitle">Limite da API</div>'),
+        },
+        selects: {
+            orderBy: $('#filterSelect'),
         }
-    }
+    };
+
+    // Repository cache
+    var cachedRepositories = {};
 
     // Api Handler
     var githubAPI = {
+        username: 'suissa',
+        targetAPI: 'starred',
         usersEndpoint: 'https://api.github.com/users/suissa/starred',
         rateLimit: 'https://api.github.com/rate_limit',
-        cachedRepositories: {},
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {
             })
@@ -45,21 +52,21 @@
             $.get( 'js/starred.json', function( data ) {
             })
             .done(function(data) {
-                // console.log(data);
+                cachedRepositories = data;
                 render.repositoriesCards(data);
             })
             .fail(function() {
             });
         }
-    }
+    };
 
     // Render Components
     var render = {
         limitInformer: function( apiData ) {
             if ( apiData != null || apiData != undefinied ) {
-                var apidata = apiData;
-                var remaining = apiData.remaining;
-                var limit = apiData.limit;
+                var apidata    = apiData;
+                var remaining  = apiData.remaining;
+                var limit      = apiData.limit;
                 var percentage = parseFloat( remaining / limit * 100 ).toFixed(1);
 
                 DOMCache.widgets.rateValue.text( remaining + ' / ' + limit) ;
@@ -76,6 +83,7 @@
             .text(percentage + '%');
         },
         repositoriesCards: function( data ) {
+            DOMCache.cards.wrapper.html('');
             var repositoriesData = data;
             var repositoriesCount = helpers.countObjectProperties( repositoriesData );
 
@@ -110,12 +118,48 @@
                 })
             }
         }
-    }
+    };
+
+    // OrderBy - using COC
+    var orderBy = {
+        ascending: function( obj ) {
+            obj.sort( function( a, b ) {
+                return 2 * ( a.name.toLowerCase() > b.name.toLowerCase() ) - 1;
+            });
+            return render.repositoriesCards(obj);
+        },
+        openIssues: function( obj ) {
+            obj.sort( function( a, b ) {
+                return b.open_issues - a.open_issues;
+            });
+            return render.repositoriesCards(obj);
+        },
+        stargazers: function( obj ) {
+            obj.sort( function( a, b ) {
+                return b.stargazers_count - a.stargazers_count;
+            });
+            return render.repositoriesCards(obj);
+        },
+        watchers: function( obj ) {
+            obj.sort( function( a, b ) {
+                return b.watchers - a.watchers;
+            });
+            return render.repositoriesCards(obj);
+        },
+    };
+
+    // Event Handling
+    DOMCache.selects.orderBy.on( 'change', function() {
+        var selectedValue = $(this).find("option:selected").val();
+        orderBy[selectedValue](cachedRepositories);
+    });
 
     $(document).ready(function() {
         githubAPI.getRateLimit();
         githubAPI.getStarredRepositories();
-        // render.limitInformer();
+        // setTimeout( function() {
+        //     orderBy.ascending(cachedRepositories);
+        // }, 5000 );
     });
 
 })();
