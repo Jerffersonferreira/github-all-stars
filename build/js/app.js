@@ -1,20 +1,37 @@
 (function() {
     'use strict';
-    var cardTemplate = $('[data-card-template]').html().trim();
 
-    function countObjectProperties( obj ) {
-        var count = 0;
-        for ( var property in obj ) {
-            if ( Object.prototype.hasOwnProperty.call( obj, property ) ) {
-                count++;
+    // Application helpers
+    var helpers = {
+        countObjectProperties: function( obj ) {
+            var count = 0;
+            for ( var property in obj ) {
+                if ( Object.prototype.hasOwnProperty.call( obj, property ) ) {
+                    count++;
+                }
             }
+            return count;
         }
-        return count;
     }
 
+    // Cache DOM elements
+    var DOMCache = {
+        cards: {
+            wrapper: $( '#appCardList' ),
+            vcard: $( '[data-card-template]' ).html().trim(),
+        },
+        widgets: {
+            widgetContainer: $('#limitInformer'),
+            rateValue: $('<div id="rateValue" class="intval">'),
+            rateText: $('<div id="rateText" class="subtitle">Limite da API</div>'),
+        }
+    }
+
+    // Api Handler
     var githubAPI = {
         usersEndpoint: 'https://api.github.com/users/suissa/starred',
         rateLimit: 'https://api.github.com/rate_limit',
+        cachedRepositories: {},
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {
             })
@@ -28,7 +45,7 @@
             $.get( 'js/starred.json', function( data ) {
             })
             .done(function(data) {
-                console.log(data);
+                // console.log(data);
                 render.repositoriesCards(data);
             })
             .fail(function() {
@@ -36,70 +53,63 @@
         }
     }
 
+    // Render Components
     var render = {
         limitInformer: function( apiData ) {
-            var apidata = apiData;
-            var $widgetContainer = $("#limitInformer");
-            var $rateValue = $('<div id="rateValue" class="intval">');
-            var $rateText = $('<div id="rateText" class="subtitle">Limite da API</div>');
+            if ( apiData != null || apiData != undefinied ) {
+                var apidata = apiData;
+                var remaining = apiData.remaining;
+                var limit = apiData.limit;
+                var percentage = parseFloat( remaining / limit * 100 ).toFixed(1);
 
-            var remaining = apiData.remaining;
-            var limit = apiData.limit;
-            var percentage = parseFloat( remaining / limit * 100 );
-
-            $rateValue.text( remaining + ' / ' + limit) ;
-
-            $widgetContainer.html();
-            $widgetContainer.append( [$rateValue,$rateText] );
-
-            render.limitProgressBar( percentage );
+                DOMCache.widgets.rateValue.text( remaining + ' / ' + limit) ;
+                DOMCache.widgets.widgetContainer.html();
+                DOMCache.widgets.widgetContainer.append( [ DOMCache.widgets.rateValue, DOMCache.widgets.rateText] );
+                render.limitProgressBar( percentage );
+            }
         },
-
         limitProgressBar: function( percentage ) {
-            var percentage = percentage.toFixed(2);
+            var percentage = percentage;
             var $progressContainer = $( "#limitProgressBar" );
             $progressContainer
             .css({ "width": percentage +"%" })
             .text(percentage + '%');
         },
-
         repositoriesCards: function( data ) {
             var repositoriesData = data;
-            var itensCount = countObjectProperties( repositoriesData );
-            var $wrapper = $( '#appCardList' );
+            var repositoriesCount = helpers.countObjectProperties( repositoriesData );
 
-            repositoriesData.map( function(obj) {
-                var $card = $(cardTemplate);
+            if ( repositoriesCount != 0 ) {
+                repositoriesData.map( function(obj) {
+                    var $card = $(DOMCache.cards.vcard);
+                    var created = moment(obj.created_at).format('DD\/MM\/YYYY');
+                    var pushed = moment(obj.pushed_at).format('DD\/MM\/YYYY');
+                    var publicRepo = "Público";
+                    var sizeMB = parseFloat( obj.size / 1024 ).toFixed(2);
+                    var language = obj.language;
+                    var languageClass;
+                    if ( language != null ) var languageClass = language.toLowerCase();
+                    if ( obj.private ) var publicRepo = "Privado";
 
-                var created = moment(obj.created_at).format('DD\/MM\/YYYY');
-                var pushed = moment(obj.pushed_at).format('DD\/MM\/YYYY');
-                var publicRepo = "Público";
-                var sizeMB = parseFloat( obj.size / 1024 ).toFixed(2);
-                var language = obj.language;
-                var languageClass;
-                if ( language != null ) var languageClass = language.toLowerCase();
-                if ( obj.private ) var publicRepo = "Privado";
-
-                $card.find('[data-card-name]').html(obj.name);
-                $card.find('[data-card-name]').attr('href', obj.html_url);
-                $card.find('[data-card-user]').html('by ' + obj.owner.login);
-                $card.find('[data-card-image]').attr('src', obj.owner.avatar_url);
-                $card.find('[data-card-stars]').html(obj.stargazers_count);
-                $card.find('[data-card-issues]').html(obj.open_issues);
-                $card.find('[data-card-watchers]').html(obj.watchers_count);
-                $card.find('[data-card-created]').html(created);
-                $card.find('[data-card-pushed]').html(pushed);
-                $card.find('[data-card-public]').html(publicRepo);
-                $card.find('[data-card-size]').html(sizeMB + ' MB');
-                $card.find('[data-card-language]').html(language);
-                if ( languageClass != null ) {
-                    $card.find('[data-card-language]').addClass(languageClass);
-                }
-
-                $wrapper.append($card);
-            })
+                    $card.find('[data-card-name]').html(obj.name);
+                    $card.find('[data-card-name]').attr('href', obj.html_url);
+                    $card.find('[data-card-user]').html('by ' + obj.owner.login);
+                    $card.find('[data-card-image]').attr('src', obj.owner.avatar_url);
+                    $card.find('[data-card-stars]').html(obj.stargazers_count);
+                    $card.find('[data-card-issues]').html(obj.open_issues);
+                    $card.find('[data-card-watchers]').html(obj.watchers_count);
+                    $card.find('[data-card-created]').html(created);
+                    $card.find('[data-card-pushed]').html(pushed);
+                    $card.find('[data-card-public]').html(publicRepo);
+                    $card.find('[data-card-size]').html(sizeMB + ' MB');
+                    $card.find('[data-card-language]').html(language);
+                    if ( languageClass != null ) {
+                        $card.find('[data-card-language]').addClass(languageClass);
+                    }
+                    DOMCache.cards.wrapper.append($card);
+                })
+            }
         }
-
     }
 
     $(document).ready(function() {
