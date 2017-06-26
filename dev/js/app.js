@@ -1,5 +1,6 @@
 (function() {
     'use strict';
+
     // Application helpers
     var helpers = {
         countObjectProperties: function( obj ) {
@@ -15,6 +16,22 @@
             return arrArg.filter( function( elem, pos,arr ) {
                 return arr.indexOf( elem ) == pos;
             });
+        },
+        filtered: function( obj, filters ) {
+            // console.log(obj);
+            var teste;
+            var count = 0;
+            var tempArray = [];
+            var arrayLenght = filters.length;
+            var teste = obj.forEach( function(obj) {
+                for ( var i = 0; i < arrayLenght; i++ ) {
+                    if ( obj.language == filters[i]) {
+                        tempArray.push(obj);
+                    }
+                }
+                count++;
+            });
+            return tempArray;
         },
     };
 
@@ -135,8 +152,8 @@
                 });
                 var filteredLanguages = helpers.removeDuplicateObj( cachedObj.languagesArr).sort();
                 filteredLanguages.map( function( obj ) {
-                    DOMCache.selects.languageSelect.append('<option value="'+ obj +'">' + obj + '</option>');
-                    $(DOMCache.selects.languageSelect).selectpicker('refresh');
+                    DOMCache.selects.languageSelect.append( '<option value="'+ obj +'">' + obj + '</option>' );
+                    $( DOMCache.selects.languageSelect ).selectpicker( 'refresh' );
                 });
             }
         },
@@ -174,6 +191,11 @@
     DOMCache.selects.orderBy.on( 'change', function() {
         var selectedValue = $(this).find("option:selected").val();
         orderBy[selectedValue](cachedObj.repositories);
+    });
+    DOMCache.selects.languageSelect.on( 'change', function() {
+        var filteredValues = $(this).val();
+        var objectFilter = helpers.filtered( cachedObj.repositories, filteredValues );
+        render.repositoriesCards(objectFilter);
     });
 
     $(document).ready(function() {
