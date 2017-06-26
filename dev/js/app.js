@@ -1,6 +1,40 @@
 (function() {
     'use strict';
 
+    // Cache DOM elements
+    var DOMCache = {
+        cards: {
+            wrapper: $( '#appCardList' ),
+            vcard: $( '[data-card-template]' ).html().trim(),
+        },
+        widgets: {
+            widgetContainer: $('#limitInformer'),
+            rateValue: $('<div id="rateValue" class="intval">'),
+            rateText: $('<div id="rateText" class="subtitle">Limite da API</div>'),
+        },
+        selects: {
+            orderBy: $('#filterSelect'),
+            languageSelect: $('#languageSelect'),
+            option: $('<option></option>'),
+        },
+        loadMore: {
+            loadMoreBtn: $('<button type="button" class="btn btn-large btn-info btn-rounded">Carregar Mais</button>'),
+            loadMoreWrapper: $('#loadMoreWrapper'),
+        },
+        alerts: {
+            warning: $('[data-alert-warning-template]').html(),
+            danger: $('[data-alert-danger-template]').html(),
+        },
+        searchBar: $('#searchBar'),
+    };
+
+    // Cache Objects
+    var cachedObj = {
+        repositories: {},
+        languagesObj: {},
+        languagesArr: [],
+    };
+
     // Application helpers
     var helpers = {
         countObjectProperties: function( obj ) {
@@ -34,36 +68,6 @@
             }
         },
     };
-
-    // Cache DOM elements
-    var DOMCache = {
-        cards: {
-            wrapper: $( '#appCardList' ),
-            vcard: $( '[data-card-template]' ).html().trim(),
-        },
-        widgets: {
-            widgetContainer: $('#limitInformer'),
-            rateValue: $('<div id="rateValue" class="intval">'),
-            rateText: $('<div id="rateText" class="subtitle">Limite da API</div>'),
-        },
-        selects: {
-            orderBy: $('#filterSelect'),
-            languageSelect: $('#languageSelect'),
-            option: $('<option></option>'),
-        },
-        loadMore: {
-            loadMoreBtn: $('<button type="button" class="btn btn-large btn-info btn-rounded">Carregar Mais</button>'),
-            loadMoreWrapper: $('#loadMoreWrapper'),
-        },
-        searchBar: $('#searchBar'),
-    };
-
-    // Cache Objects
-    var cachedObj = {
-        repositories: {},
-        languagesObj: {},
-        languagesArr: [],
-    }
 
     // Api Handler
     var githubAPI = {
@@ -137,7 +141,13 @@
 
             if ( percentage >= 50 ) $progressContainer.addClass('progress-bar-success');
             if ( percentage < 50 ) $progressContainer.removeClass('progress-bar-success').addClass('progress-bar-warning');
-            if ( percentage < 25 ) $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
+            if ( percentage < 25 ) {
+                $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
+                app_plugins.statusbar.open('#warning');
+            }
+            if ( percentage == 0 ) {
+                app_plugins.statusbar.open('#danger');
+            }
         },
         repositoriesCards: function( data, clear ) {
             if ( clear == true ) DOMCache.cards.wrapper.html('');
@@ -190,7 +200,6 @@
         },
         loadMore: function( boolean ) {
             if ( true ) {
-                console.log( 'teste' );
                 DOMCache.loadMore.loadMoreWrapper.append( DOMCache.loadMore.loadMoreBtn );
             };
         }
@@ -247,10 +256,4 @@
             githubAPI.getStarredRepositories();
         }
     });
-
-    $(document).ready(function() {
-        // githubAPI.getRateLimit();
-        // githubAPI.getStarredRepositories();
-    });
-
 })();

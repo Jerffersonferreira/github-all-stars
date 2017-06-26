@@ -15,7 +15,7 @@ var app_plugins = {
     statusbar: {
         init: function() {
             $(".app-statusbar-open, .app-statusbar-close").on("click",function () {
-                app.statusbar.open($(this).attr('href'));
+                app_plugins.statusbar.open($(this).attr('href'));
                 return false;
             });
         },

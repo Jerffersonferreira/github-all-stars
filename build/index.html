@@ -19,7 +19,7 @@
                         <a href="index.html" class="app-header-logo app-header-logo-light app-header-logo-condensed">GITHUB ALL STARS</a>
                     
                         <div class="app-header-search" >
-                            <input id="searchBar" type="text" name="keyword" placeholder="Digite o nome de um usuário Github">
+                            <input id="searchBar" type="text" name="keyword" placeholder="Digite o nome de um usuário Github" tabindex="1" autofocus>
                         </div>
                     
                         <ul class="app-header-buttons pull-right">
@@ -146,6 +146,22 @@
                                         <span data-card-language class="label label-warning label-bordered pull-right">Javascript</span>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        
+                        <div data-alert-warning-template">
+                            <div class="app-statusbar app-statusbar-warning" id="warning">
+                                <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
+                                <div class="app-statusbar-text">A quantidade de consumo de API está ficando baixo.</div>
+                                <div class="app-statusbar-close fa fa-times"></div>
+                            </div>
+                        </div>
+                        
+                        <div data-alert-danger-template">
+                            <div class="app-statusbar app-statusbar-danger" id="danger">
+                                <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
+                                <div class="app-statusbar-text">Você esgotou o limite de uso da API</div>
+                                <div class="app-statusbar-close fa fa-times"></div>
                             </div>
                         </div>
 
