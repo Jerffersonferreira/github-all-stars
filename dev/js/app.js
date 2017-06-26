@@ -55,7 +55,7 @@
         },
         removeDuplicateObj: function( arrLanguages ) {
             return arrLanguages.filter(function( elem, pos, arr ) {
-                return arr.indexOf(elem) == pos;
+                return arr.indexOf( elem ) == pos;
             });
         },
         filtered: function( obj, filters ) {
@@ -122,15 +122,15 @@
                         }
                     } else {
                         render.loadMore( false );
-                        console.log(data);
                     }
                 },
                 error: function(data) {
                     githubAPI.getRateLimit();
-                    console.log(data.status);
+
                     if ( data.status == 403 ) {
                         app_plugins.statusbar.open('#danger');
                     }
+
                     if ( data.status == 404 ) {
                         render.placeholder('clear');
                         app_plugins.statusbar.open('#userDanger');
@@ -330,10 +330,5 @@
             githubAPI.currentPage = 1;
             githubAPI.getStarredRepositories();
         }
-    });
-
-    $(document).ready( function() {
-        console.log(DOMCache.profile.info);
-        // render.placeholder('render');
     });
 })();
