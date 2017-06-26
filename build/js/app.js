@@ -68,8 +68,9 @@
     var githubAPI = {
         username: 'suissa',
         targetAPI: 'starred',
-        perPage: 32,
-        usersEndpoint: 'https://api.github.com/users/suissa/starred',
+        perPage: 30,
+        currentPage: 1,
+        usersEndpoint: 'https://api.github.com/users/',
         rateLimit: 'https://api.github.com/rate_limit',
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {
@@ -80,20 +81,24 @@
             .fail(function() {
             });
         },
-        getStarredRepositories: function() {
+        getStarredRepositories: function( usersEndpoint, username, currentPage ) {
             $.ajax({
-                url: 'js/starred.json',
+                url: githubAPI.usersEndpoint + githubAPI.username +'/starred?page='+ githubAPI.currentPage,
                 type: 'GET',
                 success: function( data ) {
+                    githubAPI.getRateLimit();
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
                         render.repositoriesCards( data );
                         render.languages( cachedObj.repositories );
 
                         if ( data.length <= githubAPI.perPage ) {
-                            console.log('funfou');
                             render.loadMore( true );
+                        } else {
+                            render.loadMore( false );
                         }
+                    } else {
+                        console.log('erro ao carregar elementos');
                     }
                 },
                 error: function(data) {
@@ -127,8 +132,9 @@
             if ( percentage < 50 ) $progressContainer.removeClass('progress-bar-success').addClass('progress-bar-warning');
             if ( percentage < 10 ) $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
         },
-        repositoriesCards: function( data ) {
-            DOMCache.cards.wrapper.html('');
+        repositoriesCards: function( data, clear ) {
+            if ( clear == true ) DOMCache.cards.wrapper.html('');
+
             var repositoriesData = data;
             var repositoriesCount = helpers.countObjectProperties( repositoriesData );
 
@@ -189,25 +195,25 @@
             obj.sort( function( a, b ) {
                 return 2 * ( a.name.toLowerCase() > b.name.toLowerCase() ) - 1;
             });
-            return render.repositoriesCards(obj);
+            return render.repositoriesCards(obj, true);
         },
         openIssues: function( obj ) {
             obj.sort( function( a, b ) {
                 return b.open_issues - a.open_issues;
             });
-            return render.repositoriesCards(obj);
+            return render.repositoriesCards(obj, true);
         },
         stargazers: function( obj ) {
             obj.sort( function( a, b ) {
                 return b.stargazers_count - a.stargazers_count;
             });
-            return render.repositoriesCards(obj);
+            return render.repositoriesCards(obj, true);
         },
         watchers: function( obj ) {
             obj.sort( function( a, b ) {
                 return b.watchers - a.watchers;
             });
-            return render.repositoriesCards(obj);
+            return render.repositoriesCards(obj, true);
         },
     };
 
@@ -219,7 +225,13 @@
     DOMCache.selects.languageSelect.on( 'change', function() {
         var filteredValues = $(this).val();
         var objectFilter = helpers.filtered( cachedObj.repositories, filteredValues );
-        render.repositoriesCards(objectFilter);
+        render.repositoriesCards(objectFilter, true);
+    });
+    DOMCache.loadMore.loadMoreBtn.on( 'click', function(e) {
+        e.preventDefault();
+        githubAPI.currentPage++;
+        githubAPI.getStarredRepositories();
+        console.log(cachedObj.repositories);
     });
 
     $(document).ready(function() {
