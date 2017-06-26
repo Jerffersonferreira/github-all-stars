@@ -24,16 +24,11 @@ var app_plugins = {
             if($(id).is(":hidden")) $(id).fadeIn();
         }
     },
-    search: function() {
-        $(".app-header-search").on("click",function(){
-            $(".app-header-search > input").focus();
-        });
-    },
+
     loaded: function() {
         app_plugins.bootstrap_select();
         app_plugins.bootstrap_tooltip();
         app_plugins.statusbar.init();
-        app_plugins.search();
     }
 };
 

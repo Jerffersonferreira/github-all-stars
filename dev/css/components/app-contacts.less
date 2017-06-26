@@ -6,27 +6,27 @@
         float: left;
         width: 100%;
         text-decoration: none;
-        line-height: 20px;        
+        line-height: 20px;
         padding: 10px 0px;
         padding-left: 30px;
-        
+
         > img{
             width: 20px;
             position: absolute;
             left: 0px;
-            top: 10px;            
+            top: 10px;
         }
-        
+
         &.contact-lg, &.contact-xlg, &.contact-single{
             padding: 0px;
             padding-left: 55px;
             margin-bottom: 20px;
-            
+
             > img{
                 top: 0px;
-                width: 40px;                
+                width: 40px;
             }
-            
+
             > .contact-container{
                 > a, > span, > p{
                     display: block;
@@ -42,37 +42,37 @@
                 }
                 > span{
                     color: @app-layout-base-font-color-secondary;
-                }   
+                }
                 strong{
                     font-weight: 600;
                 }
-            }     
+            }
             > .contact-controls{
                 position: absolute;
                 right: 0px;
                 top: 0px;
             }
         }
-        
+
         &.contact-xlg{
             padding: 0px;
             padding-left: 70px;
-            
+
             > img{
                 top: 0px;
                 width: 60px;
-            }                  
-            > .contact-controls{                
+            }
+            > .contact-controls{
                 top: 10px;
             }
         }
-        
+
         &.contact-rounded{
             > img{
                 .border-radius(50%);
             }
-        }                
-        
+        }
+
         &.contact-bordered{
             &:after{
                 position: absolute;
@@ -81,10 +81,10 @@
                 height: 26px;
                 border: 1px solid @app-desing-border-color;
                 background: transparent;
-                left: -3px;                
+                left: -3px;
                 top: 7px;
             }
-            
+
             &.contact-rounded{
                 &:after{
                     .border-radius(50%);
@@ -95,37 +95,37 @@
                     width: 46px;
                     height: 46px;
                     top: -3px;
-                }                
+                }
             }
             &.contact-xlg{
                 &:after{
                     width: 66px;
                     height: 66px;
                     top: -3px;
-                }                
+                }
             }
         }
-        
+
         &.contact-dir-right{
             padding-left: 0px;
             padding-right: 30px;
-            
+
             > img{
                 left: auto;
                 right: 3px;
             }
-            
-            &.contact-lg{                 
+
+            &.contact-lg{
                 padding-right: 50px;
             }
             &.contact-xlg{
                 padding-right: 70px;
             }
-            
+
             &.contact-bordered{
                 &:after{
                     left: auto;
-                    right: 0px;                                                
+                    right: 0px;
                 }
             }
         }
@@ -134,7 +134,7 @@
                 .opacity(0.7);
                 .transition(opacity @app-default-transition-speed linear);
             }
-            
+
             &:hover{
                 > img{
                     .opacity(1);
@@ -143,8 +143,8 @@
         }
         &.contact-single{
             text-align: center;
-            padding: 0px;                        
-            
+            padding: 0px;
+
             > img{
                 position: relative;
                 top: auto;
@@ -153,7 +153,7 @@
                 width: 60px;
                 margin: 0px 0px 15px 0px;
             }
-            
+
             &.contact-bordered{
                 &:after{
                     left: 50%;
@@ -167,16 +167,16 @@
                 right: 50%;
                 margin-right: 40px;
                 top: 10px;
-                
+
                 &.contact-controls-dir-right{
                     right: auto;
                     left: 50%;
                     margin-right: 0px;
                     margin-left: 40px;
                 }
-            } 
+            }
         }
-        
+
         &.status-online,&.status-offline,&.status-away{
             &:before{
                 content: " ";
@@ -190,7 +190,7 @@
                 .border-radius(50%);
                 z-index: 1;
             }
-            
+
             &.contact-lg{
                 &:before{
                     width: 16px;
@@ -220,7 +220,7 @@
         &.status-online{
             &:before{
                 background: @app-design-success-bg;
-            }            
+            }
         }
         &.status-away{
             &:before{
@@ -230,12 +230,12 @@
         &.contact-ps-controls{
             padding-right: 50px;
         }
-        
+
         &.contact-image-only{
-            width: auto;            
+            width: auto;
             padding: 0px;
             margin-right: 10px;
-            
+
             img{
                 position: relative;
                 top: 0px;
@@ -246,10 +246,136 @@
             }
         }
     }
-    
-    
 }
 
-@media (max-width: @screen-md) {
-    
+// placeholder
+.timeline-item {
+  background: #fff;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 10px auto;
+  max-width: 472px;
+  min-height: 200px;
+}
+
+@keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    }
+}
+
+.animated-background {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #f6f7f8 8%, #eeeeee 18%, #f6f7f8 33%);
+    background-size: 800px 104px;
+    height: 220px;
+    position: relative;
+}
+
+.background-masker {
+    background: #fff;
+    position: absolute;
+}
+
+/* Every thing below this is just positioning */
+
+.background-masker.header-top,
+.background-masker.header-bottom,
+.background-masker.subheader-bottom {
+    top: 0;
+    left: 40px;
+    right: 0;
+    height: 10px;
+}
+
+.background-masker.header-left,
+.background-masker.subheader-left,
+.background-masker.header-right,
+.background-masker.subheader-right {
+    top: 10px;
+    left: 40px;
+    height: 8px;
+    width: 10px;
+}
+
+.background-masker.header-bottom {
+    top: 18px;
+    height: 6px;
+}
+
+.background-masker.subheader-left,
+.background-masker.subheader-right {
+    top: 24px;
+    height: 6px;
+}
+
+
+.background-masker.header-right,
+.background-masker.subheader-right {
+    width: auto;
+    left: 300px;
+    right: 0;
+}
+
+.background-masker.subheader-right {
+    left: 230px;
+}
+
+.background-masker.subheader-bottom {
+    top: 30px;
+    height: 10px;
+}
+
+.background-masker.content-top {
+    top: 170px;
+    left: 0;
+    right: 0;
+    height: 6px;
+}
+
+.background-masker.content-top {
+    height:5px;
+}
+
+.background-masker.content-first-end,
+.background-masker.content-second-end,
+.background-masker.content-third-end,
+.background-masker.content-fourth-end{
+    width: auto;
+    left: 380px;
+    right: 0;
+    top: 230px;
+    height: 12px;
+}
+
+.background-masker.content-second-line  {
+    top: 242px;
+}
+
+.background-masker.content-second-end {
+    left: 420px;
+    top: 248px;
+}
+
+.background-masker.content-third-line {
+    top: 259px;
+}
+
+.background-masker.content-third-end {
+    left: 0;
+    top: 277px;
+    right: 0px;
+}
+.background-masker.content-fourth-end {
+    left: 0;
+    top: 289px;
+    right: 50%;
 }

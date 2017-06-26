@@ -24,8 +24,10 @@
         alerts: {
             warning: $('[data-alert-warning-template]').html(),
             danger: $('[data-alert-danger-template]').html(),
+            noLoadMore: $('<p class="text-center">Center aligned text.</p>'),
         },
         searchBar: $('#searchBar'),
+        repoCounter: $('#repoCounter'),
     };
 
     // Cache Objects
@@ -87,10 +89,13 @@
             });
         },
         getStarredRepositories: function( usersEndpoint, username, currentPage ) {
+            render.placeholder('render');
+            console.log(githubAPI.usersEndpoint + githubAPI.username +'/starred?page='+ githubAPI.currentPage);
             $.ajax({
                 url: githubAPI.usersEndpoint + githubAPI.username +'/starred?page='+ githubAPI.currentPage,
                 type: 'GET',
                 success: function( data ) {
+                    render.placeholder('clear');
                     githubAPI.getRateLimit();
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
@@ -108,6 +113,7 @@
                             render.loadMore( false );
                         }
                     } else {
+                        render.loadMore( false );
                         console.log('erro ao carregar elementos');
                     }
                 },
@@ -186,6 +192,7 @@
                         $card.find('[data-card-language]').addClass(languageClass);
                     }
                     DOMCache.cards.wrapper.append($card);
+                    render.repositoriesValue();
                 })
             }
         },
@@ -202,9 +209,36 @@
             }
         },
         loadMore: function( boolean ) {
-            if ( true ) {
+            if ( boolean == true ) {
+                DOMCache.loadMore.loadMoreWrapper.html('');
                 DOMCache.loadMore.loadMoreWrapper.append( DOMCache.loadMore.loadMoreBtn );
-            };
+            }
+            if ( boolean == false ) {
+                console.log('carregou errado');
+                DOMCache.loadMore.loadMoreWrapper.html('');
+                DOMCache.loadMore.loadMoreWrapper.append(DOMCache.alerts.noLoadMore);
+            }
+        },
+        placeholder: function( value ) {
+            if ( value == "render" ) {
+                for ( var i = 0; i < 9; i++ ) {
+                    var $loadingCard = $('<div class="col-md-4 item featured result-item"><div class="timeline-item"><div class="animated-background"><div class="background-masker content-top"></div>');
+                    DOMCache.cards.wrapper.append( $loadingCard );
+                }
+            }
+            else if ( value == "clear" ) {
+                DOMCache.cards.wrapper.find('.result-item').remove();
+            }
+            else {
+                DOMCache.cards.wrapper.find('.result-item').remove();
+            }
+        },
+        repositoriesValue: function() {
+            var DOMLenght = ($('[data-card]').length) -1;
+            if ( DOMLenght == 0 ) return;
+            if ( DOMLenght == 1 ) DOMCache.repoCounter.text('Exibindo ' + DOMLenght + ' repositório.');
+            if ( DOMLenght > 1 ) DOMCache.repoCounter.text('Exibindo ' + DOMLenght + ' repositórios');
+            console.log( DOMLenght );
         }
     };
 
@@ -247,7 +281,6 @@
         render.repositoriesCards(objectFilter, true);
     });
     DOMCache.loadMore.loadMoreBtn.on( 'click', function(e) {
-        e.preventDefault();
         githubAPI.currentPage++;
         githubAPI.getStarredRepositories();
     });
@@ -258,5 +291,9 @@
             githubAPI.currentPage = 1;
             githubAPI.getStarredRepositories();
         }
+    });
+
+    $(document).ready( function() {
+        // render.placeholder('render');
     });
 })();
