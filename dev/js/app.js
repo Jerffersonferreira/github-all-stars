@@ -82,6 +82,7 @@
         targetAPI: 'starred',
         perPage: 30,
         currentPage: 1,
+        githubUrl:'https://github.com/',
         usersEndpoint: 'https://api.github.com/users/',
         rateLimit: 'https://api.github.com/rate_limit',
         getRateLimit: function() {
@@ -203,6 +204,8 @@
                     $card.find('[data-card-name]').attr('href', obj.html_url);
                     $card.find('[data-card-user]').html('by ' + obj.owner.login);
                     $card.find('[data-card-image]').attr('src', obj.owner.avatar_url);
+                    $card.find('[data-card-repo-link]').attr('href', githubAPI.githubUrl + obj.owner.login + '?tab=repositories');
+                    $card.find('[data-card-profile-link]').attr('href', githubAPI.githubUrl + obj.owner.login);
                     $card.find('[data-card-stars]').html(obj.stargazers_count);
                     $card.find('[data-card-issues]').html(obj.open_issues);
                     $card.find('[data-card-watchers]').html(obj.watchers_count);
@@ -225,6 +228,9 @@
             $userProfile.find('[data-user-name]').html(obj.name);
             $userProfile.find('[data-company-name]').html(obj.company);
             $userProfile.find('[data-user-image]').attr('src', obj.avatar_url);
+            $userProfile.find('[data-user-profile-link]').attr('href', githubAPI.githubUrl + obj.login);
+            $userProfile.find('[data-user-repos-link]').attr('href', githubAPI.githubUrl + obj.login + '?tab=repositories');
+            $userProfile.find('[data-user-followrs-link]').attr('href', githubAPI.githubUrl + obj.login + '?tab=followers');
 
             DOMCache.profile.wrapper.append($userProfile);
         },
@@ -250,7 +256,7 @@
                 console.log('carregou errado');
                 DOMCache.loadMore.loadMoreBtn.hide();
                 DOMCache.alerts.noLoadMore.show();
-                DOMCache.loadMore.loadMoreWrapper.append(DOMCache.alerts.noLoadMore);
+                DOMCache.loadMore.loadMoreWrapper.append( DOMCache.alerts.noLoadMore );
             }
         },
         placeholder: function( value ) {
