@@ -69,8 +69,8 @@
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {
             })
-            .done(function(data) {
-               render.limitInformer(data.rate);
+            .done(function( data ) {
+               render.limitInformer( data.rate );
             })
             .fail(function() {
             });
@@ -78,9 +78,10 @@
         getStarredRepositories: function() {
             $.get( 'js/starred.json', function( data ) {
             })
-            .done(function(data) {
+            .done(function( data ) {
                 cachedObj.repositories = data;
-                render.repositoriesCards(data);
+                render.repositoriesCards( data );
+                render.languages( cachedObj.repositories );
             })
             .fail(function() {
             });
@@ -202,7 +203,7 @@
         githubAPI.getRateLimit();
         githubAPI.getStarredRepositories();
         setTimeout( function() {
-            console.log(render.languages(cachedObj.repositories));
+            // console.log(render.languages(cachedObj.repositories));
             // console.log(helpers.removeDuplicateObj(cachedObj.languagesObj));
         }, 1000 );
     });

@@ -2,8 +2,12 @@
 
 var app_plugins = {
     bootstrap_select: function() {
-        if($(".bs-select").length > 0)
-           $(".bs-select").selectpicker({iconBase: '', tickIcon: 'fa fa-check'});
+        console.log($(".bs-select"));
+        if ( $(".bs-select").length > 0 )
+            $(".bs-select").selectpicker({
+                iconBase: '',
+                tickIcon: 'fa fa-check',
+            });
     },
     bootstrap_tooltip: function() {
         $("[data-toggle='tooltip']").tooltip();
