@@ -6,9 +6,9 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     less = require('gulp-less'),
     reload = browserSync.reload,
-    rimraf = require('gulp-rimraf');//,
-    //cleanCSS = require('gulp-clean-css'),
-    //htmlmin = require('gulp-htmlmin');
+    rimraf = require('gulp-rimraf'),
+    cleanCSS = require('gulp-clean-css'),
+    htmlmin = require('gulp-htmlmin');
 
 var path = {
     bower: {

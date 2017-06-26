@@ -54,7 +54,8 @@
         loadMore: {
             loadMoreBtn: $('<button type="button" class="btn btn-large btn-info btn-rounded">Carregar Mais</button>'),
             loadMoreWrapper: $('#loadMoreWrapper'),
-        }
+        },
+        searchBar: $('#searchBar'),
     };
 
     // Cache Objects
@@ -89,7 +90,12 @@
                     githubAPI.getRateLimit();
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
-                        render.repositoriesCards( data );
+                        if ( githubAPI.currentPage > 1 ) {
+                            render.repositoriesCards( data );
+                        } else {
+                            render.repositoriesCards( data, true );
+                        }
+
                         render.languages( cachedObj.repositories );
 
                         if ( data.length <= githubAPI.perPage ) {
@@ -128,9 +134,10 @@
             $progressContainer
             .css({ "width": percentage +"%" })
             .text(percentage + '%');
+
             if ( percentage >= 50 ) $progressContainer.addClass('progress-bar-success');
             if ( percentage < 50 ) $progressContainer.removeClass('progress-bar-success').addClass('progress-bar-warning');
-            if ( percentage < 10 ) $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
+            if ( percentage < 25 ) $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
         },
         repositoriesCards: function( data, clear ) {
             if ( clear == true ) DOMCache.cards.wrapper.html('');
@@ -231,16 +238,19 @@
         e.preventDefault();
         githubAPI.currentPage++;
         githubAPI.getStarredRepositories();
-        console.log(cachedObj.repositories);
+    });
+    DOMCache.searchBar.bind('keypress', function(e) {
+        if ( e.keyCode==13 ) {
+            var username = $(this).val();
+            githubAPI.username = username;
+            githubAPI.currentPage = 1;
+            githubAPI.getStarredRepositories();
+        }
     });
 
     $(document).ready(function() {
-        githubAPI.getRateLimit();
-        githubAPI.getStarredRepositories();
-        setTimeout( function() {
-            // console.log(render.languages(cachedObj.repositories));
-            // console.log(helpers.removeDuplicateObj(cachedObj.languagesObj));
-        }, 1000 );
+        // githubAPI.getRateLimit();
+        // githubAPI.getStarredRepositories();
     });
 
 })();
