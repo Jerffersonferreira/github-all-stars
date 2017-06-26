@@ -7,6 +7,10 @@
             wrapper: $('#appCardList'),
             vcard: $('[data-card-template]').html().trim(),
         },
+        profile: {
+            wrapper: $('#userProfileWrapper'),
+            info: $('[data-user-template]').html().trim(),
+        },
         widgets: {
             widgetContainer: $('#limitInformer'),
             rateValue: $('<div id="rateValue" class="intval">'),
@@ -24,6 +28,7 @@
         alerts: {
             warning: $('[data-alert-warning-template]').html(),
             danger: $('[data-alert-danger-template]').html(),
+            userDanger: $('[data-user-danger-template]').html(),
             noLoadMore: $('<h5 class="text-center">Não há mais repositórios a carregar</h5>'),
         },
         searchBar: $('#searchBar'),
@@ -96,6 +101,7 @@
                 success: function( data ) {
                     render.placeholder('clear');
                     githubAPI.getRateLimit();
+                    githubAPI.getProfileInfo();
 
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
@@ -115,14 +121,30 @@
                         }
                     } else {
                         render.loadMore( false );
-                        console.log('erro ao carregar elementos');
+                        console.log(data);
                     }
                 },
                 error: function(data) {
                     githubAPI.getRateLimit();
-                    app_plugins.statusbar.open('#danger');
                     console.log(data.status);
+                    if ( data.status == 403 ) {
+                        app_plugins.statusbar.open('#danger');
+                    }
+                    if ( data.status == 404 ) {
+                        render.placeholder('clear');
+                        app_plugins.statusbar.open('#userDanger');
+                    }
                 }
+            });
+        },
+        getProfileInfo: function( usersEndpoint, username, currentPage ) {
+            $.ajax({
+                url: githubAPI.usersEndpoint + githubAPI.username,
+                type: 'GET',
+                success: function( data ) {
+                    githubAPI.getRateLimit();
+                    render.userProfile(data);
+                },
             });
         }
     };
@@ -197,6 +219,15 @@
                 })
             }
         },
+        userProfile: function( obj ) {
+            DOMCache.profile.wrapper.html('');
+            var $userProfile = $(DOMCache.profile.info);
+            $userProfile.find('[data-user-name]').html(obj.name);
+            $userProfile.find('[data-company-name]').html(obj.company);
+            $userProfile.find('[data-user-image]').attr('src', obj.avatar_url);
+
+            DOMCache.profile.wrapper.append($userProfile);
+        },
         languages: function( obj ) {
             if ( obj.language !== null ) {
                 cachedObj.languagesObj = obj.forEach( function(obj) {
@@ -241,7 +272,6 @@
             if ( DOMLenght == 0 ) return;
             if ( DOMLenght == 1 ) DOMCache.repoCounter.text('Exibindo ' + DOMLenght + ' repositório.');
             if ( DOMLenght > 1 ) DOMCache.repoCounter.text('Exibindo ' + DOMLenght + ' repositórios');
-            console.log( DOMLenght );
         }
     };
 
@@ -284,13 +314,11 @@
         render.repositoriesCards(objectFilter, true);
     });
     DOMCache.loadMore.loadMoreBtn.on( 'click', function(e) {
-        console.log('cliclou');
         githubAPI.currentPage++;
         githubAPI.getStarredRepositories();
-        console.log(githubAPI.currentPage);
     });
     DOMCache.searchBar.bind('keypress', function(e) {
-        if ( e.keyCode==13 ) {
+        if ( e.keyCode == 13 ) {
             var username = $(this).val();
             githubAPI.username = username;
             githubAPI.currentPage = 1;
@@ -299,6 +327,7 @@
     });
 
     $(document).ready( function() {
+        console.log(DOMCache.profile.info);
         // render.placeholder('render');
     });
 })();

@@ -21,28 +21,8 @@
                         <div class="app-header-search" >
                             <input id="searchBar" type="text" name="keyword" placeholder="Digite o nome de um usuário Github" tabindex="1" autofocus>
                         </div>
-                    
-                        <ul class="app-header-buttons pull-right">
-                            <li>
-                                <div class="contact contact-rounded contact-bordered contact-lg contact-ps-controls">
-                                    <img src="img/no-image.png" alt="John Doe">
-                                    <div class="contact-container">
-                                        <a href="#">John Doe</a>
-                                        <span>Administrator</span>
-                                    </div>
-                                    <div class="contact-controls">
-                                        <div class="dropdown">
-                                            <button type="button" class="btn btn-default btn-icon" data-toggle="dropdown"><span class="icon-plus-circle"></span></button>
-                                            <ul class="dropdown-menu dropdown-left">
-                                                <li><a href="#"><span class="icon-user"></span> Visitar Perfil</a></li>
-                                                <li><a href="#"><span class="icon-code"></span> Repositórios</a></li>
-                                                <li><a href="#"><span class="icon-users"></span> Seguidores <span class="label label-default pull-right">76</span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+                        <div id="userProfileWrapper">
+                        </div>
                     </div>
                     <!-- END APP HEADER  -->
                     <div class="app-heading app-heading-bordered app-heading-page title-only">
@@ -148,6 +128,30 @@
                             </div>
                         </div>
                         
+                        <div data-user-template style="display: none;">
+                            <ul class="app-header-buttons pull-right">
+                                <li>
+                                    <div class="contact contact-rounded contact-bordered contact-lg contact-ps-controls">
+                                        <img data-user-image src="img/no-image.png" alt="">
+                                        <div class="contact-container">
+                                            <a  data-user-name href="#">John Doe</a>
+                                            <span data-company-name >Administrator</span>
+                                        </div>
+                                        <div class="contact-controls">
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-default btn-icon" data-toggle="dropdown"><span class="icon-plus-circle"></span></button>
+                                                <ul class="dropdown-menu dropdown-left">
+                                                    <li><a href="#"><span class="icon-user"></span> Visitar Perfil</a></li>
+                                                    <li><a href="#"><span class="icon-code"></span> Repositórios</a></li>
+                                                    <li><a href="#"><span class="icon-users"></span> Seguidores <span class="label label-default pull-right">76</span></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
                         <div data-alert-warning-template">
                             <div class="app-statusbar app-statusbar-warning" id="warning">
                                 <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
@@ -159,7 +163,15 @@
                         <div data-alert-danger-template">
                             <div class="app-statusbar app-statusbar-danger" id="danger">
                                 <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
-                                <div class="app-statusbar-text">Você esgotou o limite de uso da API</div>
+                                <div class="app-statusbar-text">Você esgotou o limite de uso da API. Tente novamente em alguns minutos.</div>
+                                <div class="app-statusbar-close fa fa-times"></div>
+                            </div>
+                        </div>
+                        
+                        <div data-user-danger-template">
+                            <div class="app-statusbar app-statusbar-danger" id="userDanger">
+                                <div class="app-statusbar-icon"><span class="icon-warning"></span></div>
+                                <div class="app-statusbar-text">O Nome de usuário não existe. Verifique novamente a sintaxe e tente novamente.</div>
                                 <div class="app-statusbar-close fa fa-times"></div>
                             </div>
                         </div>
