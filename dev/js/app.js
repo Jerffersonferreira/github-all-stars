@@ -112,6 +112,9 @@
                     }
                 },
                 error: function(data) {
+                    githubAPI.getRateLimit();
+                    app_plugins.statusbar.open('#danger');
+                    console.log(data.status);
                 }
             });
         }
