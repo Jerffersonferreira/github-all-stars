@@ -1,6 +1,5 @@
 (function() {
     'use strict';
-
     // Application helpers
     var helpers = {
         countObjectProperties: function( obj ) {
@@ -11,7 +10,12 @@
                 }
             }
             return count;
-        }
+        },
+        removeDuplicateObj: function( arrArg ) {
+            return arrArg.filter( function( elem, pos,arr ) {
+                return arr.indexOf( elem ) == pos;
+            });
+        },
     };
 
     // Cache DOM elements
@@ -27,11 +31,17 @@
         },
         selects: {
             orderBy: $('#filterSelect'),
+            languageSelect: $('#languageSelect'),
+            option: $('<option></option>'),
         }
     };
 
-    // Repository cache
-    var cachedRepositories = {};
+    // Cache Objects
+    var cachedObj = {
+        repositories: {},
+        languagesObj: {},
+        languagesArr: [],
+    }
 
     // Api Handler
     var githubAPI = {
@@ -52,7 +62,7 @@
             $.get( 'js/starred.json', function( data ) {
             })
             .done(function(data) {
-                cachedRepositories = data;
+                cachedObj.repositories = data;
                 render.repositoriesCards(data);
             })
             .fail(function() {
@@ -117,7 +127,19 @@
                     DOMCache.cards.wrapper.append($card);
                 })
             }
-        }
+        },
+        languages: function( obj ) {
+            if ( obj.language !== null ) {
+                cachedObj.languagesObj = obj.forEach( function(obj) {
+                    if ( obj.language !== null ) cachedObj.languagesArr.push(obj.language);
+                });
+                var filteredLanguages = helpers.removeDuplicateObj( cachedObj.languagesArr).sort();
+                filteredLanguages.map( function( obj ) {
+                    DOMCache.selects.languageSelect.append('<option value="'+ obj +'">' + obj + '</option>');
+                    $(DOMCache.selects.languageSelect).selectpicker('refresh');
+                });
+            }
+        },
     };
 
     // OrderBy - using COC
@@ -151,15 +173,16 @@
     // Event Handling
     DOMCache.selects.orderBy.on( 'change', function() {
         var selectedValue = $(this).find("option:selected").val();
-        orderBy[selectedValue](cachedRepositories);
+        orderBy[selectedValue](cachedObj.repositories);
     });
 
     $(document).ready(function() {
         githubAPI.getRateLimit();
         githubAPI.getStarredRepositories();
-        // setTimeout( function() {
-        //     orderBy.ascending(cachedRepositories);
-        // }, 5000 );
+        setTimeout( function() {
+            console.log(render.languages(cachedObj.repositories));
+            // console.log(helpers.removeDuplicateObj(cachedObj.languagesObj));
+        }, 1000 );
     });
 
 })();
