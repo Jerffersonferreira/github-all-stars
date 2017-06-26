@@ -258,7 +258,7 @@
     "'": '&#x27;',
     '`': '&#x60;'
   };
-
+  
   var unescapeMap = {
     '&amp;': '&',
     '&lt;': '<',
@@ -331,10 +331,10 @@
 
   // part of this is duplicated in i18n/defaults-en_US.js. Make sure to update both.
   Selectpicker.DEFAULTS = {
-    noneSelectedText: 'Selecionar Linguagem',
-    noneResultsText: 'Nenhum resultado para {0}',
+    noneSelectedText: 'Nothing selected',
+    noneResultsText: 'No results matched {0}',
     countSelectedText: function (numSelected, numTotal) {
-      return (numSelected == 1) ? "{0} itens selecionado" : "{0} itens selecionados";
+      return (numSelected == 1) ? "{0} item selected" : "{0} items selected";
     },
     maxOptionsText: function (numAll, numGroup) {
       return [
@@ -342,10 +342,10 @@
         (numGroup == 1) ? 'Group limit reached ({n} item max)' : 'Group limit reached ({n} items max)'
       ];
     },
-    selectAllText: 'Marcar Todos',
-    deselectAllText: 'Desmarcar Todos',
+    selectAllText: 'Select All',
+    deselectAllText: 'Deselect All',
     doneButton: false,
-    doneButtonText: 'Fechar',
+    doneButtonText: 'Close',
     multipleSeparator: ', ',
     styleBase: 'btn',
     style: 'btn-default',
@@ -1213,7 +1213,7 @@
     },
 
     tabIndex: function () {
-      if (this.$element.data('tabindex') !== this.$element.attr('tabindex') &&
+      if (this.$element.data('tabindex') !== this.$element.attr('tabindex') && 
         (this.$element.attr('tabindex') !== -98 && this.$element.attr('tabindex') !== '-98')) {
         this.$element.data('tabindex', this.$element.attr('tabindex'));
         this.$button.attr('tabindex', this.$element.data('tabindex'));
@@ -1516,13 +1516,13 @@
           $lisVisible = this.$lis.not('.divider, .dropdown-header, .disabled, .hidden'),
           lisVisLen = $lisVisible.length,
           selectedOptions = [];
-
+          
       if (status) {
         if ($lisVisible.filter('.selected').length === $lisVisible.length) return;
       } else {
         if ($lisVisible.filter('.selected').length === 0) return;
       }
-
+          
       $lisVisible.toggleClass('selected', status);
 
       for (var i = 0; i < lisVisLen; i++) {

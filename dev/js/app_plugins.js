@@ -2,7 +2,6 @@
 
 var app_plugins = {
     bootstrap_select: function() {
-        console.log($(".bs-select"));
         if ( $(".bs-select").length > 0 )
             $(".bs-select").selectpicker({
                 language: 'pt_BR',

@@ -18,20 +18,20 @@
             });
         },
         filtered: function( obj, filters ) {
-            // console.log(obj);
-            var teste;
-            var count = 0;
-            var tempArray = [];
-            var arrayLenght = filters.length;
-            var teste = obj.forEach( function(obj) {
-                for ( var i = 0; i < arrayLenght; i++ ) {
-                    if ( obj.language == filters[i]) {
-                        tempArray.push(obj);
+            if ( obj != null ) {
+                var count = 0;
+                var tempArray = [];
+                var arrayLenght = filters.length;
+                obj.forEach( function(obj) {
+                    for ( var i = 0; i < arrayLenght; i++ ) {
+                        if ( obj.language == filters[i]) {
+                            tempArray.push(obj);
+                        }
                     }
-                }
-                count++;
-            });
-            return tempArray;
+                    count++;
+                });
+                return tempArray;
+            }
         },
     };
 
@@ -50,6 +50,10 @@
             orderBy: $('#filterSelect'),
             languageSelect: $('#languageSelect'),
             option: $('<option></option>'),
+        },
+        loadMore: {
+            loadMoreBtn: $('<button type="button" class="btn btn-large btn-info btn-rounded">Carregar Mais</button>'),
+            loadMoreWrapper: $('#loadMoreWrapper'),
         }
     };
 
@@ -64,6 +68,7 @@
     var githubAPI = {
         username: 'suissa',
         targetAPI: 'starred',
+        perPage: 32,
         usersEndpoint: 'https://api.github.com/users/suissa/starred',
         rateLimit: 'https://api.github.com/rate_limit',
         getRateLimit: function() {
@@ -76,14 +81,23 @@
             });
         },
         getStarredRepositories: function() {
-            $.get( 'js/starred.json', function( data ) {
-            })
-            .done(function( data ) {
-                cachedObj.repositories = data;
-                render.repositoriesCards( data );
-                render.languages( cachedObj.repositories );
-            })
-            .fail(function() {
+            $.ajax({
+                url: 'js/starred.json',
+                type: 'GET',
+                success: function( data ) {
+                    if ( data.length > 0 ) {
+                        cachedObj.repositories = data;
+                        render.repositoriesCards( data );
+                        render.languages( cachedObj.repositories );
+
+                        if ( data.length <= githubAPI.perPage ) {
+                            console.log('funfou');
+                            render.loadMore( true );
+                        }
+                    }
+                },
+                error: function(data) {
+                }
             });
         }
     };
@@ -109,6 +123,9 @@
             $progressContainer
             .css({ "width": percentage +"%" })
             .text(percentage + '%');
+            if ( percentage >= 50 ) $progressContainer.addClass('progress-bar-success');
+            if ( percentage < 50 ) $progressContainer.removeClass('progress-bar-success').addClass('progress-bar-warning');
+            if ( percentage < 10 ) $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
         },
         repositoriesCards: function( data ) {
             DOMCache.cards.wrapper.html('');
@@ -158,6 +175,12 @@
                 });
             }
         },
+        loadMore: function( boolean ) {
+            if ( true ) {
+                console.log( 'teste' );
+                DOMCache.loadMore.loadMoreWrapper.append( DOMCache.loadMore.loadMoreBtn );
+            };
+        }
     };
 
     // OrderBy - using COC
