@@ -4,8 +4,8 @@
     // Cache DOM elements
     var DOMCache = {
         cards: {
-            wrapper: $( '#appCardList' ),
-            vcard: $( '[data-card-template]' ).html().trim(),
+            wrapper: $('#appCardList'),
+            vcard: $('[data-card-template]').html().trim(),
         },
         widgets: {
             widgetContainer: $('#limitInformer'),
@@ -24,7 +24,7 @@
         alerts: {
             warning: $('[data-alert-warning-template]').html(),
             danger: $('[data-alert-danger-template]').html(),
-            noLoadMore: $('<p class="text-center">Center aligned text.</p>'),
+            noLoadMore: $('<h5 class="text-center">Não há mais repositórios a carregar</h5>'),
         },
         searchBar: $('#searchBar'),
         repoCounter: $('#repoCounter'),
@@ -42,15 +42,15 @@
         countObjectProperties: function( obj ) {
             var count = 0;
             for ( var property in obj ) {
-                if ( Object.prototype.hasOwnProperty.call( obj, property ) ) {
+                if ( Object.prototype.hasOwnProperty.call(obj, property) ) {
                     count++;
                 }
             }
             return count;
         },
-        removeDuplicateObj: function( arrArg ) {
-            return arrArg.filter( function( elem, pos,arr ) {
-                return arr.indexOf( elem ) == pos;
+        removeDuplicateObj: function( arrLanguages ) {
+            return arrLanguages.filter(function( elem, pos, arr ) {
+                return arr.indexOf(elem) == pos;
             });
         },
         filtered: function( obj, filters ) {
@@ -90,15 +90,16 @@
         },
         getStarredRepositories: function( usersEndpoint, username, currentPage ) {
             render.placeholder('render');
-            console.log(githubAPI.usersEndpoint + githubAPI.username +'/starred?page='+ githubAPI.currentPage);
             $.ajax({
                 url: githubAPI.usersEndpoint + githubAPI.username +'/starred?page='+ githubAPI.currentPage,
                 type: 'GET',
                 success: function( data ) {
                     render.placeholder('clear');
                     githubAPI.getRateLimit();
+
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
+
                         if ( githubAPI.currentPage > 1 ) {
                             render.repositoriesCards( data );
                         } else {
@@ -210,12 +211,14 @@
         },
         loadMore: function( boolean ) {
             if ( boolean == true ) {
-                DOMCache.loadMore.loadMoreWrapper.html('');
+                DOMCache.loadMore.loadMoreBtn.show();
+                DOMCache.alerts.noLoadMore.hide();
                 DOMCache.loadMore.loadMoreWrapper.append( DOMCache.loadMore.loadMoreBtn );
             }
             if ( boolean == false ) {
                 console.log('carregou errado');
-                DOMCache.loadMore.loadMoreWrapper.html('');
+                DOMCache.loadMore.loadMoreBtn.hide();
+                DOMCache.alerts.noLoadMore.show();
                 DOMCache.loadMore.loadMoreWrapper.append(DOMCache.alerts.noLoadMore);
             }
         },
@@ -281,8 +284,10 @@
         render.repositoriesCards(objectFilter, true);
     });
     DOMCache.loadMore.loadMoreBtn.on( 'click', function(e) {
+        console.log('cliclou');
         githubAPI.currentPage++;
         githubAPI.getStarredRepositories();
+        console.log(githubAPI.currentPage);
     });
     DOMCache.searchBar.bind('keypress', function(e) {
         if ( e.keyCode==13 ) {
