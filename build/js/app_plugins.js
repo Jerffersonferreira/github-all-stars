@@ -5,6 +5,7 @@ var app_plugins = {
         console.log($(".bs-select"));
         if ( $(".bs-select").length > 0 )
             $(".bs-select").selectpicker({
+                language: 'pt_BR',
                 iconBase: '',
                 tickIcon: 'fa fa-check',
             });
