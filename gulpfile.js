@@ -53,7 +53,7 @@ var webServerConfig = {
 gulp.task('html:build', function () {
     return gulp.src(path.dev.html)
         .pipe(rigger())
-        //.pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
@@ -61,7 +61,7 @@ gulp.task('html:build', function () {
 gulp.task('style:build', function () {
     return gulp.src(path.dev.css)
         .pipe(less())
-        //.pipe(cleanCSS())
+        .pipe(cleanCSS())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });

@@ -24,10 +24,15 @@
     "type": "git",
     "url": "git+https://github.com/ViniciusVinna/github-all-stars.git"
   },
-  "author": "",
+  "author": "Vinícius Ribeiro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ViniciusVinna/github-all-stars/issues"
   },
-  "homepage": "https://github.com/ViniciusVinna/github-all-stars#readme"
+  "homepage": "https://github.com/ViniciusVinna/github-all-stars#readme",
+  "keywords": [
+    "Jquery",
+    "Javascript",
+    "Bootstrap"
+  ]
 }
