@@ -240,6 +240,7 @@
                     if ( obj.language !== null ) cachedObj.languagesArr.push(obj.language);
                 });
                 var filteredLanguages = helpers.removeDuplicateObj( cachedObj.languagesArr).sort();
+                DOMCache.selects.languageSelect.html('');
                 filteredLanguages.map( function( obj ) {
                     DOMCache.selects.languageSelect.append( '<option value="'+ obj +'">' + obj + '</option>' );
                     $( DOMCache.selects.languageSelect ).selectpicker( 'refresh' );
@@ -253,7 +254,6 @@
                 DOMCache.loadMore.loadMoreWrapper.append( DOMCache.loadMore.loadMoreBtn );
             }
             if ( boolean == false ) {
-                console.log('carregou errado');
                 DOMCache.loadMore.loadMoreBtn.hide();
                 DOMCache.alerts.noLoadMore.show();
                 DOMCache.loadMore.loadMoreWrapper.append( DOMCache.alerts.noLoadMore );
