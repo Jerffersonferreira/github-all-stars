@@ -97,7 +97,7 @@
             var apiResetTimeMinutes = Math.round((( diffMs % 86400000 ) % 3600000 ) / 60000 );
             var timeString = ' minutos';
             if ( apiResetTimeMinutes <= 1 ) var timeString = ' minuto';
-            console.log( apiResetTimeMinutes + timeString );
+            return apiResetTimeMinutes + timeString;
         },
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {})
