@@ -91,13 +91,15 @@
         usersEndpoint: 'https://api.github.com/users/',
         rateLimit: 'https://api.github.com/rate_limit',
         apiRemainingTime: function ( apiLimitTime ) {
-            var now = new Date();
-            var apiResetTime = new Date( apiLimitTime * 1000 ) ;
-            var diffMs = ( apiResetTime - now );
-            var apiResetTimeMinutes = Math.round((( diffMs % 86400000 ) % 3600000 ) / 60000 );
-            var timeString = ' minutos';
-            if ( apiResetTimeMinutes <= 1 ) var timeString = ' minuto';
-            return apiResetTimeMinutes + timeString;
+            if ( apiLimitTime != null ) {
+                var now = new Date();
+                var apiResetTime = new Date( apiLimitTime * 1000 ) ;
+                var diffMs = ( apiResetTime - now );
+                var apiResetTimeMinutes = Math.round((( diffMs % 86400000 ) % 3600000 ) / 60000 );
+                var timeString = ' minutos';
+                if ( apiResetTimeMinutes <= 1 ) var timeString = ' minuto';
+                return apiResetTimeMinutes + timeString;
+            }
         },
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {})
