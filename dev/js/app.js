@@ -119,7 +119,6 @@
                 success: function( data ) {
                     render.placeholder('clearPlaceholder');
                     githubAPI.getRateLimit();
-                    githubAPI.getProfileInfo();
 
                     if ( data.length > 0 ) {
                         cachedObj.repositories = data;
@@ -127,6 +126,7 @@
                         if ( githubAPI.currentPage > 1 ) {
                             render.repositoriesCards( data );
                         } else {
+                            githubAPI.getProfileInfo();
                             render.repositoriesCards( data, true );
                         }
 
