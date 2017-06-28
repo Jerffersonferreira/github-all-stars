@@ -347,23 +347,24 @@
 
     // Event Handling
     DOMCache.selects.orderBy.on( 'change', function() {
-        var selectedValue = $(this).find("option:selected").val();
-        orderBy[selectedValue](cachedObj.repositories);
+        var selectedValue = $( this ).find( 'option:selected' ).val();
+        orderBy[selectedValue]( cachedObj.repositories );
     });
     DOMCache.selects.languageSelect.on( 'change', function() {
-        var filteredValues = $(this).val();
+        var filteredValues = $( this ).val();
         var objectFilter = helpers.filtered( cachedObj.repositories, filteredValues );
-        render.repositoriesCards(objectFilter, true);
+        render.repositoriesCards( objectFilter, true );
     });
-    DOMCache.loadMore.loadMoreBtn.on( 'click', function(e) {
+    DOMCache.loadMore.loadMoreBtn.on( 'click', function() {
         githubAPI.currentPage++;
         githubAPI.getStarredRepositories();
     });
-    DOMCache.searchBar.bind('keypress', function(e) {
+    DOMCache.searchBar.bind( 'keypress', function( e ) {
         if ( e.keyCode == 13 ) {
-            var username = $(this).val();
-            githubAPI.username = username;
+            var username          = $( this ).val();
+            githubAPI.username    = username;
             githubAPI.currentPage = 1;
+
             githubAPI.getStarredRepositories();
         }
     });
