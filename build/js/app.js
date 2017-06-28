@@ -29,6 +29,7 @@
         alerts: {
             warning: $( '[data-alert-warning-template]' ).html(),
             danger: $( '[data-alert-danger-template]' ).html(),
+            timeUpdate: $( '.timeRemaining' ),
             userDanger: $( '[data-user-danger-template]' ).html(),
             noLoadMore: $( '<h5 class="text-center">Não há mais repositórios a carregar</h5>' ),
         },
@@ -97,8 +98,8 @@
                 var apiResetTime = new Date( apiLimitTime * 1000 ) ;
                 var diffMs = ( apiResetTime - now );
                 var apiResetTimeMinutes = Math.round((( diffMs % 86400000 ) % 3600000 ) / 60000 );
-                var timeString = ' minutos';
-                if ( apiResetTimeMinutes <= 1 ) var timeString = ' minuto';
+                var timeString = ' minutos.';
+                if ( apiResetTimeMinutes <= 1 ) var timeString = ' minuto.';
                 return apiResetTimeMinutes + timeString;
             }
         },
@@ -106,6 +107,7 @@
             $.get( this.rateLimit, function( data ) {})
             .done(function( data ) {
                 githubAPI.apiRemainingTime = githubAPI.getApiRemainingTime( data.rate.reset );
+                DOMCache.alerts.timeUpdate.text( githubAPI.apiRemainingTime );
                 render.limitInformer( data.rate );
             })
         },
@@ -259,7 +261,8 @@
 
                     DOMCache.cards.wrapper.append( $card );
                     render.repositoriesValue();
-                })
+                });
+                app_plugins.bootstrap_popover();
             }
         },
         userProfile: function( apiData ) {

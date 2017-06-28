@@ -9,17 +9,14 @@ var app_plugins = {
                 tickIcon: 'fa fa-check',
             });
     },
-    bootstrap_popover: function(){
-        $("[data-toggle='popover']").popover();
-
-        $(".popover-hover").on("mouseenter",function(){
-            $(this).popover('show');
-        }).on("mouseleave",function(){
-            $(this).popover('hide');
-        });
-
-        $(".modal").on("show.bs.modal", function () {
-            $("[data-toggle='popover']").popover("hide");
+    bootstrap_popover: function() {
+        $( '[data-toggle="popover"]' ).popover();
+        $( '.popover-hover' )
+        .on( 'mouseenter',function() {
+            $( this ).popover( 'show' );
+        })
+        .on('mouseleave',function() {
+            $( this ).popover( 'hide' );
         });
     },
     statusbar: {
