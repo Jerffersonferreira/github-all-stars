@@ -9,6 +9,19 @@ var app_plugins = {
                 tickIcon: 'fa fa-check',
             });
     },
+    bootstrap_popover: function(){
+        $("[data-toggle='popover']").popover();
+
+        $(".popover-hover").on("mouseenter",function(){
+            $(this).popover('show');
+        }).on("mouseleave",function(){
+            $(this).popover('hide');
+        });
+
+        $(".modal").on("show.bs.modal", function () {
+            $("[data-toggle='popover']").popover("hide");
+        });
+    },
     statusbar: {
         init: function() {
             $(".app-statusbar-open, .app-statusbar-close").on("click",function () {
@@ -23,6 +36,7 @@ var app_plugins = {
     },
     loaded: function() {
         app_plugins.bootstrap_select();
+        app_plugins.bootstrap_popover();
         app_plugins.statusbar.init();
     }
 };

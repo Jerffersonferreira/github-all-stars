@@ -90,7 +90,8 @@
         githubUrl:'https://github.com/',
         usersEndpoint: 'https://api.github.com/users/',
         rateLimit: 'https://api.github.com/rate_limit',
-        apiRemainingTime: function ( apiLimitTime ) {
+        apiRemainingTime: '',
+        getApiRemainingTime: function ( apiLimitTime ) {
             if ( apiLimitTime != null ) {
                 var now = new Date();
                 var apiResetTime = new Date( apiLimitTime * 1000 ) ;
@@ -104,7 +105,7 @@
         getRateLimit: function() {
             $.get( this.rateLimit, function( data ) {})
             .done(function( data ) {
-                githubAPI.apiRemainingTime( data.rate.reset );
+                githubAPI.apiRemainingTime = githubAPI.getApiRemainingTime( data.rate.reset );
                 render.limitInformer( data.rate );
             })
         },
@@ -172,8 +173,11 @@
                 var apidata    = apiData;
                 var remaining  = apiData.remaining;
                 var limit      = apiData.limit;
+                var remainingString = ' consultas disponíveis à API do Github. ';
+                if ( remaining <= 1 ) var remainingString = ' consulta disponível à API do Github. ';
                 var percentage = parseFloat( remaining / limit * 100 ).toFixed(1);
 
+                DOMCache.widgets.widgetContainer.attr( 'data-content', 'Você possui ' + remaining + remainingString + 'Em ' + githubAPI.apiRemainingTime + ' você voltará a ter 60 requisições disponíveis.' );
                 DOMCache.widgets.rateValue.text( remaining + ' / ' + limit) ;
                 DOMCache.widgets.widgetContainer.html();
                 DOMCache.widgets.widgetContainer.append([
@@ -189,7 +193,7 @@
 
             DOMCache.widgets.progressBarContainer
             .css({ "width": percentage +"%" })
-            .text(percentage + '%');
+            .text( percentage + '%' );
 
             if ( percentage >= 50 ) {
                 DOMCache.widgets.progressBarContainer
