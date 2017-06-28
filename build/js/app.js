@@ -91,8 +91,6 @@
             .done(function( data ) {
                render.limitInformer( data.rate );
             })
-            .fail(function() {
-            });
         },
         getStarredRepositories: function( usersEndpoint, username, currentPage ) {
             render.placeholder('render');
@@ -162,20 +160,33 @@
                 DOMCache.widgets.rateValue.text( remaining + ' / ' + limit) ;
                 DOMCache.widgets.widgetContainer.html();
                 DOMCache.widgets.widgetContainer.append( [ DOMCache.widgets.rateValue, DOMCache.widgets.rateText] );
+
                 render.limitProgressBar( percentage );
             }
         },
         limitProgressBar: function( percentage ) {
             var percentage = percentage;
             var $progressContainer = $( "#limitProgressBar" );
+
             $progressContainer
             .css({ "width": percentage +"%" })
             .text(percentage + '%');
 
-            if ( percentage >= 50 ) $progressContainer.addClass('progress-bar-success');
-            if ( percentage < 50 ) $progressContainer.removeClass('progress-bar-success').addClass('progress-bar-warning');
+            if ( percentage >= 50 ) {
+                $progressContainer
+                .removeClass('progress-bar-danger')
+                .removeClass('progress-bar-warning')
+                .addClass('progress-bar-success');
+            }
+            if ( percentage < 50 ) {
+                $progressContainer
+                .removeClass('progress-bar-success')
+                .addClass('progress-bar-warning');
+            }
             if ( percentage < 25 ) {
-                $progressContainer.removeClass('progress-bar-warning').addClass('progress-bar-danger');
+                $progressContainer
+                .removeClass('progress-bar-warning')
+                .addClass('progress-bar-danger');
                 app_plugins.statusbar.open('#warning');
             }
             if ( percentage == 0 ) {
