@@ -1,4 +1,4 @@
-GITHUB ALLSTARS - ESCALE SEO
+GITHUB ALLSTARS - ESCALE
 ===================
 
 Instruções
