@@ -41,6 +41,7 @@
     var cachedObj = {
         repositories: {},
         languagesObj: {},
+        allTags: [],
         languagesArr: [],
     };
 
@@ -95,7 +96,7 @@
         getApiRemainingTime: function ( apiLimitTime ) {
             if ( apiLimitTime != null ) {
                 var now = new Date();
-                var apiResetTime = new Date( apiLimitTime * 1000 ) ;
+                var apiResetTime = new Date( apiLimitTime * 1000 );
                 var diffMs = ( apiResetTime - now );
                 var apiResetTimeMinutes = Math.round((( diffMs % 86400000 ) % 3600000 ) / 60000 );
                 var timeString = ' minutos.';
@@ -121,7 +122,9 @@
                     githubAPI.getRateLimit();
 
                     if ( data.length > 0 ) {
-                        cachedObj.repositories = data;
+                        var newData = data;
+                        cachedObj.allTags.push.apply( cachedObj.allTags, newData );
+                        cachedObj.repositories = cachedObj.allTags;
 
                         if ( githubAPI.currentPage > 1 ) {
                             render.repositoriesCards( data );
@@ -386,8 +389,10 @@
     });
     DOMCache.searchBar.bind( 'keypress', function( e ) {
         if ( e.keyCode == 13 ) {
-            var username          = $( this ).val();
-            githubAPI.username    = username;
+            var username = $( this ).val();
+            cachedObj.allTags.length = 0;
+            cachedObj.languagesArr.length = 0;
+            githubAPI.username = username;
             githubAPI.currentPage = 1;
 
             githubAPI.getStarredRepositories();
@@ -399,6 +404,7 @@
         if ( username != null ) {
             githubAPI.username = username;
             cachedObj.languagesArr.length = 0;
+            cachedObj.allTags.length = 0;
             githubAPI.currentPage = 1;
             githubAPI.getStarredRepositories();
 
