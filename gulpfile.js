@@ -6,7 +6,9 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'),
     less = require('gulp-less'),
     reload = browserSync.reload,
-    rimraf = require('gulp-rimraf');
+    rimraf = require('gulp-rimraf'),
+    htmlminify = require("gulp-html-minify"),
+    cleanCSS = require('gulp-clean-css');
 
 var path = {
     bower: {
@@ -51,6 +53,7 @@ var webServerConfig = {
 gulp.task('html:build', function () {
     return gulp.src(path.dev.html)
         .pipe(rigger())
+        .pipe(htmlminify())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({stream: true}));
 });
@@ -58,6 +61,7 @@ gulp.task('html:build', function () {
 gulp.task('style:build', function () {
     return gulp.src(path.dev.css)
         .pipe(less())
+        .pipe(cleanCSS())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
