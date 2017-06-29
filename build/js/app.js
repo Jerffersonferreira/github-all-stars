@@ -398,9 +398,11 @@
         var username = $(this).attr( 'href' );
         if ( username != null ) {
             githubAPI.username = username;
-            DOMCache.searchBar.val(username);
+            cachedObj.languagesArr.length = 0;
             githubAPI.currentPage = 1;
             githubAPI.getStarredRepositories();
+
+            DOMCache.searchBar.val( username );
         }
     });
 
