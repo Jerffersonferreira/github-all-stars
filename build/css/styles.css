@@ -555,11 +555,14 @@ a.text-success:focus {
   color: #2b542c;
 }
 .text-info {
-  color: #31708f;
+  color: #205081 !important;
+}
+.text-link {
+  color: #8bb6e2 !important;
 }
 a.text-info:hover,
 a.text-info:focus {
-  color: #245269;
+  color: #205081;
 }
 .text-warning {
   color: #8a6d3b;
@@ -8848,6 +8851,7 @@ select.selectpicker {
   overflow: hidden;
   width: 100%;
   text-align: left;
+  color: #205081;
 }
 .bootstrap-select.btn-group .dropdown-toggle .caret {
   position: absolute;
@@ -8855,6 +8859,7 @@ select.selectpicker {
   right: 12px;
   margin-top: -2px;
   vertical-align: middle;
+  color: #205081;
 }
 .bootstrap-select.btn-group[class*="col-"] .dropdown-toggle {
   width: 100%;
@@ -8894,6 +8899,7 @@ select.selectpicker {
 }
 .bootstrap-select.btn-group .dropdown-menu li a span.check-mark {
   display: none;
+  color: #205081;
 }
 .bootstrap-select.btn-group .dropdown-menu li a span.text {
   display: inline-block;
@@ -9279,7 +9285,7 @@ select.selectpicker {
   color: #292f43 !important;
 }
 .text-info {
-  color: #4FB5DD !important;
+  color: #205081 !important;
 }
 .text-success {
   color: #76AB3C !important;
@@ -12145,21 +12151,21 @@ dl dd {
   box-shadow: 0px 0px 0px 3px rgba(118, 171, 60, 0.3);
 }
 .btn.btn-info {
-  border-color: #42b0db;
-  background: #4FB5DD;
+  border-color: #1d4875;
+  background: #205081;
   color: #FFF;
 }
 .btn.btn-info:hover,
 .btn.btn-info.active,
 .btn.btn-info:active,
 .btn.btn-info:active:focus {
-  border-color: #2da7d6;
-  background: #42b0db;
+  border-color: #183c60;
+  background: #1d4875;
   color: #f2f2f2;
 }
 .btn.btn-info:focus {
-  border-color: #2da7d6;
-  background: #42b0db;
+  border-color: #183c60;
+  background: #1d4875;
   color: #FFF;
 }
 .btn.btn-info:focus,
@@ -12174,21 +12180,21 @@ dl dd {
 .btn.btn-info.active.btn-icon-fixed span,
 .btn.btn-info:active.btn-icon-fixed span,
 .btn.btn-info:active:focus.btn-icon-fixed span {
-  border-color: #2da7d6;
+  border-color: #183c60;
   -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .btn.btn-info.btn-clean {
   background: transparent;
-  color: #4FB5DD;
+  color: #205081;
 }
 .btn.btn-info.btn-clean:hover,
 .btn.btn-info.btn-clean:active,
 .btn.btn-info.btn-clean:active:focus {
   color: #FFF;
-  background: #4FB5DD;
-  border-color: #4FB5DD;
+  background: #205081;
+  border-color: #205081;
 }
 .btn.btn-info.btn-rounded {
   -webkit-border-radius: 20px;
@@ -12197,23 +12203,23 @@ dl dd {
 }
 .btn.btn-info.btn-icon-fixed span[class^="icon-"],
 .btn.btn-info.btn-icon-fixed span.fa {
-  border-right: 1px solid #42b0db;
-  background: #42b0db;
+  border-right: 1px solid #1d4875;
+  background: #1d4875;
 }
 .btn.btn-info.btn-shadowed {
-  -webkit-box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
-  -moz-box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
-  box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
+  box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
 }
 .btn.btn-info.btn-shadowed.btn-lg {
-  -webkit-box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
-  -moz-box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
-  box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
+  box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
 }
 .btn.btn-info.btn-glow {
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
 }
 .btn.btn-warning {
   border-color: #e79500;
@@ -12910,21 +12916,21 @@ dl dd {
   box-shadow: 0px 0px 0px 3px rgba(118, 171, 60, 0.3);
 }
 .open > .dropdown-toggle.btn-info {
-  border-color: #42b0db;
-  background: #4FB5DD;
+  border-color: #1d4875;
+  background: #205081;
   color: #FFF;
 }
 .open > .dropdown-toggle.btn-info:hover,
 .open > .dropdown-toggle.btn-info.active,
 .open > .dropdown-toggle.btn-info:active,
 .open > .dropdown-toggle.btn-info:active:focus {
-  border-color: #2da7d6;
-  background: #42b0db;
+  border-color: #183c60;
+  background: #1d4875;
   color: #f2f2f2;
 }
 .open > .dropdown-toggle.btn-info:focus {
-  border-color: #2da7d6;
-  background: #42b0db;
+  border-color: #183c60;
+  background: #1d4875;
   color: #FFF;
 }
 .open > .dropdown-toggle.btn-info:focus,
@@ -12939,21 +12945,21 @@ dl dd {
 .open > .dropdown-toggle.btn-info.active.btn-icon-fixed span,
 .open > .dropdown-toggle.btn-info:active.btn-icon-fixed span,
 .open > .dropdown-toggle.btn-info:active:focus.btn-icon-fixed span {
-  border-color: #2da7d6;
+  border-color: #183c60;
   -webkit-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 .open > .dropdown-toggle.btn-info.btn-clean {
   background: transparent;
-  color: #4FB5DD;
+  color: #205081;
 }
 .open > .dropdown-toggle.btn-info.btn-clean:hover,
 .open > .dropdown-toggle.btn-info.btn-clean:active,
 .open > .dropdown-toggle.btn-info.btn-clean:active:focus {
   color: #FFF;
-  background: #4FB5DD;
-  border-color: #4FB5DD;
+  background: #205081;
+  border-color: #205081;
 }
 .open > .dropdown-toggle.btn-info.btn-rounded {
   -webkit-border-radius: 20px;
@@ -12962,23 +12968,23 @@ dl dd {
 }
 .open > .dropdown-toggle.btn-info.btn-icon-fixed span[class^="icon-"],
 .open > .dropdown-toggle.btn-info.btn-icon-fixed span.fa {
-  border-right: 1px solid #42b0db;
-  background: #42b0db;
+  border-right: 1px solid #1d4875;
+  background: #1d4875;
 }
 .open > .dropdown-toggle.btn-info.btn-shadowed {
-  -webkit-box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
-  -moz-box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
-  box-shadow: 0px 3px 0px 0px rgba(79, 181, 221, 0.5);
+  -webkit-box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
+  -moz-box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
+  box-shadow: 0px 3px 0px 0px rgba(32, 80, 129, 0.5);
 }
 .open > .dropdown-toggle.btn-info.btn-shadowed.btn-lg {
-  -webkit-box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
-  -moz-box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
-  box-shadow: 0px 5px 0px 0px rgba(79, 181, 221, 0.5);
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
+  box-shadow: 0px 5px 0px 0px rgba(32, 80, 129, 0.5);
 }
 .open > .dropdown-toggle.btn-info.btn-glow {
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
 }
 .open > .dropdown-toggle.btn-warning {
   border-color: #e79500;
@@ -13769,7 +13775,7 @@ dl dd {
 .app .calling:after {
   width: 120px;
   height: 120px;
-  background: rgba(79, 181, 221, 0.3);
+  background: rgba(32, 80, 129, 0.3);
   position: absolute;
   left: 15px;
   top: 15px;
@@ -13793,7 +13799,7 @@ dl dd {
   font-size: 56px;
   left: 0px;
   top: 0px;
-  background: rgba(79, 181, 221, 0.2);
+  background: rgba(32, 80, 129, 0.2);
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
@@ -14061,7 +14067,7 @@ dl dd {
   border-top-left-radius: 0px;
 }
 .app .block.block-info {
-  border-top: 2px solid #4FB5DD;
+  border-top: 2px solid #205081;
   -webkit-border-top-right-radius: 0px;
   -webkit-border-bottom-right-radius: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -14506,7 +14512,7 @@ dl dd {
   color: #FFF;
 }
 .modal .modal-dialog.modal-info .modal-header {
-  background: #4FB5DD;
+  background: #205081;
 }
 .modal .modal-dialog.modal-info .modal-header .modal-title {
   color: #FFF;
@@ -14589,7 +14595,7 @@ dl dd {
   color: #FFF !important;
 }
 .app .label.label-info {
-  background: #4FB5DD;
+  background: #205081;
   color: #FFF !important;
 }
 .app .label.label-warning {
@@ -14647,18 +14653,18 @@ dl dd {
   color: #5c852f;
 }
 .app .label.label-bordered.label-info {
-  border: 1px solid #4FB5DD;
-  color: #4FB5DD;
+  border: 1px solid #205081;
+  color: #205081;
 }
 .app .label.label-bordered.label-info.label-ghost {
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
-  box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
+  box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
 }
 .app .label.label-bordered.label-info[href]:hover {
   background: transparent;
-  border-color: #28a1d1;
-  color: #28a1d1;
+  border-color: #163758;
+  color: #163758;
 }
 .app .label.label-bordered.label-warning {
   border: 1px solid #F69F00;
@@ -14725,11 +14731,11 @@ dl dd {
   color: #e6e6e6;
 }
 .app .badge.badge-info {
-  background: #4FB5DD;
+  background: #205081;
   color: #FFF;
 }
 .app .badge.badge-info[href]:hover {
-  background: #28a1d1;
+  background: #163758;
   color: #e6e6e6;
 }
 .app .badge.badge-warning {
@@ -14765,8 +14771,8 @@ dl dd {
   color: #76AB3C;
 }
 .app .badge.badge-bordered.badge-info {
-  border: 2px solid #4FB5DD;
-  color: #4FB5DD;
+  border: 2px solid #205081;
+  color: #205081;
 }
 .app .badge.badge-bordered.badge-warning {
   border: 2px solid #F69F00;
@@ -14808,11 +14814,11 @@ dl dd {
   color: #e6e6e6;
 }
 .app .label-icon.label-icon-info {
-  background: #4FB5DD;
+  background: #205081;
   color: #FFF;
 }
 .app .label-icon.label-icon-info[href]:hover {
-  background: #28a1d1;
+  background: #163758;
   color: #e6e6e6;
 }
 .app .label-icon.label-icon-warning {
@@ -14878,18 +14884,18 @@ dl dd {
   color: #5c852f;
 }
 .app .label-icon.label-icon-bordered.label-icon-info {
-  border: 1px solid #4FB5DD;
-  color: #4FB5DD;
+  border: 1px solid #205081;
+  color: #205081;
 }
 .app .label-icon.label-icon-bordered.label-icon-info.label-ghost {
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
-  box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.15);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
+  box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.15);
 }
 .app .label-icon.label-icon-bordered.label-icon-info[href]:hover {
   background: transparent;
-  border-color: #28a1d1;
-  color: #28a1d1;
+  border-color: #163758;
+  color: #163758;
 }
 .app .label-icon.label-icon-bordered.label-icon-warning {
   border: 1px solid #F69F00;
@@ -15998,7 +16004,7 @@ dl dd {
   color: #FFF;
 }
 .app-statusbar.app-statusbar-info {
-  background: rgba(79, 181, 221, 0.9);
+  background: rgba(32, 80, 129, 0.9);
 }
 .app-statusbar.app-statusbar-info .app-statusbar-text,
 .app-statusbar.app-statusbar-info .app-statusbar-close,
@@ -16116,20 +16122,20 @@ dl dd {
   border-radius: 6px;
 }
 .app .app-widget-button.app-widget-button-info {
-  background: #4FB5DD;
+  background: #205081;
   color: #FFF;
-  border-color: #42b0db;
+  border-color: #1d4875;
 }
 .app .app-widget-button.app-widget-button-info:hover {
-  background: #3aacd9;
+  background: #1b436d;
 }
 .app .app-widget-button.app-widget-button-info.app-widget-button-ghost {
-  -webkit-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  -moz-box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
-  box-shadow: 0px 0px 0px 3px rgba(79, 181, 221, 0.3);
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  -moz-box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
+  box-shadow: 0px 0px 0px 3px rgba(32, 80, 129, 0.3);
 }
 .app .app-widget-button.app-widget-button-info.app-widget-button-bordered:before {
-  border-color: rgba(79, 181, 221, 0.5);
+  border-color: rgba(32, 80, 129, 0.5);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
@@ -16295,8 +16301,8 @@ dl dd {
   color: #e6e6e6;
 }
 .app .app-widget-tile.app-widget-tile-info {
-  background: #4FB5DD;
-  border: 1px solid #4bb3dc;
+  background: #205081;
+  border: 1px solid #1f4d7d;
 }
 .app .app-widget-tile.app-widget-tile-info .title,
 .app .app-widget-tile.app-widget-tile-info .intval,

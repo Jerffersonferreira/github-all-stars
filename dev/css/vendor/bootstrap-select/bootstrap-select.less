@@ -53,7 +53,7 @@ select.selectpicker {
 
     &:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
         width: @width-default;
-    } 
+    }
 }
 
 .bootstrap-select.form-control {
@@ -129,6 +129,7 @@ select.selectpicker {
             overflow: hidden;
             width: 100%;
             text-align: left;
+            color: #205081;
         }
 
         .caret {
@@ -137,6 +138,7 @@ select.selectpicker {
             right: 12px;
             margin-top: -2px;
             vertical-align: middle;
+            color: #205081;
         }
     }
 
@@ -184,6 +186,7 @@ select.selectpicker {
 
                 span.check-mark {
                     display: none;
+                    color: rgb(32, 80, 129);
                 }
 
                 span.text {
@@ -204,9 +207,9 @@ select.selectpicker {
             min-height: 30px;
             padding: 5px 10px;
             background: @app-design-warning-bg;
-            border: 1px solid darken(@app-design-warning-bg,5%);      
+            border: 1px solid darken(@app-design-warning-bg,5%);
             color: @app-design-warning-color;
-            pointer-events: none;      
+            pointer-events: none;
             box-sizing: border-box;
         }
     }

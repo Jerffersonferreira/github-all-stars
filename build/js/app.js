@@ -237,8 +237,9 @@
 
                     if ( language != null && language != undefined ) {
                         var languageClass = language.toLowerCase().trim();
-                        var languageClass = languageClass.replace( "#", "sharp" );
-                        var languageClass = languageClass.replace( "++", "plusplus" );
+                        var languageClass = languageClass.replace( '#', 'sharp' );
+                        var languageClass = languageClass.replace( '++', 'plusplus' );
+                        var languageClass = languageClass.replace( ' ', '' );
                     }
                     if ( obj.private )
                         var publicRepo = "Privado";
@@ -246,6 +247,7 @@
                     $card.find( '[data-card-name]' ).html( obj.name );
                     $card.find( '[data-card-name]' ).attr( 'href', obj.html_url );
                     $card.find( '[data-card-user]' ).html( 'by ' + obj.owner.login );
+                    $card.find( '[data-card-user]' ).attr( 'href', obj.owner.login );
                     $card.find( '[data-card-image]' ).attr( 'src', obj.owner.avatar_url );
                     $card.find( '[data-card-repo-link]' ).attr( 'href', githubAPI.githubUrl + obj.owner.login + '?tab=repositories' );
                     $card.find( '[data-card-profile-link]' ).attr( 'href', githubAPI.githubUrl + obj.owner.login );
@@ -390,6 +392,14 @@
 
             githubAPI.getStarredRepositories();
         }
+    });
+    $('body').on( 'click', '[data-card-user]', function(e) {
+        e.preventDefault();
+        var username = $(this).attr( 'href' );
+        githubAPI.username = username;
+        DOMCache.searchBar.val(username);
+        githubAPI.currentPage = 1;
+        githubAPI.getStarredRepositories();
     });
 
     $(document).ready( function() {
