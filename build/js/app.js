@@ -179,7 +179,7 @@
                 if ( remaining <= 1 ) var remainingString = ' consulta disponível à API do Github. ';
                 var percentage = parseFloat( remaining / limit * 100 ).toFixed(1);
 
-                DOMCache.widgets.widgetContainer.attr( 'data-content', 'Você possui ' + remaining + remainingString + 'Em ' + githubAPI.apiRemainingTime + ' você voltará a ter 60 requisições disponíveis.' );
+                DOMCache.widgets.widgetContainer.attr( 'data-content', 'Você possui ' + remaining + remainingString + 'Em ' + githubAPI.apiRemainingTime + ' o contador retornará a 60 novamente.' );
                 DOMCache.widgets.rateValue.text( remaining + ' / ' + limit) ;
                 DOMCache.widgets.widgetContainer.html();
                 DOMCache.widgets.widgetContainer.append([
