@@ -30,43 +30,43 @@
 .app-navigation-style-build(@name, @nav-bg, @nav-logo-bg, @nav-logo-bg-hover, @nav-logo-bg-minimized, @nav-element-color, @nav-element-shadow, @nav-element-color-hover, @nav-element-size, @nav-element-weight, @nav-element-border, @nav-element-bg, @nav-element-bg-hover, @nav-element-bg-active, @nav-icon-color, @nav-icon-color-active,@nav-title-color){
     &.@{name}{
         background: @nav-bg;
-        
+
         .app-navigation-logo{
             background: @nav-logo-bg;
-            
+
             .app-navigation-logo-button{
                 background: darken(@nav-element-bg,4%);
                 color: @nav-element-color;
-                
-                &:hover{            
-                    background: darken(@nav-element-bg,5%);            
+
+                &:hover{
+                    background: darken(@nav-element-bg,5%);
                 }
             }
-            
+
             &:hover{ background: @nav-logo-bg-hover; }
         }
-        
+
         nav{
             > ul > li.openable{
                 > a:after{color: @nav-icon-color; }
-                
+
                 &.open{
-                    > a{background: @nav-element-bg-active;}                                        
+                    > a{background: @nav-element-bg-active;}
                 }
             }
-            
+
             > ul{
                 > li{
                     border-bottom: 1px solid @nav-element-border;
-                    
+
                     a{
                         background: @nav-element-bg;
-                        color: @nav-element-color;                      
-                        font-size: @nav-element-size;                    
-                        font-weight: @nav-element-weight;                                          
+                        color: @nav-element-color;
+                        font-size: @nav-element-size;
+                        font-weight: @nav-element-weight;
                         .text-shadow(@nav-element-shadow);
-                        
-                        span{                            
+
+                        span{
                             color: @nav-icon-color;
                         }
 
@@ -74,23 +74,23 @@
                             color: @nav-element-color-hover;
                             background: @nav-element-bg-active;
                         }
-                        
+
                         &.active{
                             span{
                                 color: @nav-icon-color-active;
-                                
+
                                 &.nav-icon-hexa{
                                     color: @nav-icon-color-active;
                                 }
                             }
                         }
                     }
-                    
-                    ul{                                        
-                        > li{                                                
+
+                    ul{
+                        > li{
                             > a{
                                 background: darken(@nav-element-bg,4%);
-                                
+
                                 &:hover,&.active{
                                     background: darken(@nav-element-bg,5%);
                                 }
@@ -101,7 +101,7 @@
                                 }
                                 > ul > li > a{
                                     background: darken(@nav-element-bg,6%);
-                                    
+
                                     &:hover,&.active{
                                         background: darken(@nav-element-bg,7%);
                                     }
@@ -109,7 +109,7 @@
                             }
                         }
                     }
-                    &.title{                        
+                    &.title{
                         font-size: @nav-element-size;
                         color: @nav-title-color;
                         .text-shadow(@nav-element-shadow);
@@ -117,13 +117,13 @@
                 }
             }
         }
-        
+
         &.app-navigation-minimized{
             .app-navigation-logo{
                 //height: @app-navigation-logo-height-minimized;
                 background-image: @nav-logo-bg-minimized;
             }
-            nav{                                
+            nav{
                 > ul > li > a > span{color: @nav-element-color;}
             }
         }
@@ -132,7 +132,7 @@
 
 .app-navigation{
     background: @app-navigation-background;
-    
+
     //build default navigation style
     .app-navigation-style-build(
         app-navigation-style-default,
@@ -153,7 +153,7 @@
         @app-navigation-element-icon-color-active,
         @app-navigation-element-title-color);
     // end of build
-    
+
     //build white navigation style
     .app-navigation-style-build(
         app-navigation-style-light,
@@ -171,9 +171,9 @@
         #F5F5F5,
         #F2F2F2,
         #7F8FA4,
-        #7F8FA4,    
+        #7F8FA4,
         #AAA);
-        
+
         &.app-navigation-style-light{
             border-right: 1px solid @app-desing-border-color;
             .app-navigation-logo{
@@ -181,7 +181,7 @@
             }
         }
     // end of build
-    
+
     //build lightblue navigation style
     .app-navigation-style-build(
         app-navigation-style-lightblue,
@@ -199,9 +199,9 @@
         darken(#f8fafc,2%),
         darken(#f8fafc,3%),
         #659bff,
-        #659bff,    
+        #659bff,
         #99a9bb);
-        
+
         &.app-navigation-style-lightblue{
             border-right: 1px solid #e1eaf3;
             .app-navigation-logo{
@@ -209,7 +209,7 @@
             }
         }
     // end of build
-    
+
     //build purple navigation style
     .app-navigation-style-build(
         app-navigation-style-purple,
@@ -227,14 +227,14 @@
         darken(#443853,2%),
         darken(#443853,3%),
         #f8c36e,
-        #f8c36e,    
-        #9b96a6);        
-        
+        #f8c36e,
+        #9b96a6);
+
         &.app-navigation-style-purple{
-            
+
             .app-navigation-logo{
                 border-bottom: 1px solid #3b3048;
-                
+
                 > .app-navigation-logo-button{
                     background: darken(#f7c36e,3%);
                     &:hover{
@@ -243,9 +243,9 @@
                 }
             }
         }
-        
+
     // end of build
-    
+
     //build blue navigation style
     .app-navigation-style-build(
         app-navigation-style-blue,
@@ -263,30 +263,30 @@
         darken(#225280,2%),
         darken(#225280,3%),
         #478ad9,
-        #478ad9,    
-        #9099b9);                        
+        #478ad9,
+        #9099b9);
     // end of build
-    
+
     .app-navigation-logo{
         float: left;
-        width: 100%;        
-        height: @app-navigation-logo-height;        
+        width: 100%;
+        height: @app-navigation-logo-height;
         font-size: 0px;
         padding-left: 15px;
         position: relative;
         .transition(background-color @app-default-transition-speed linear);
-        
+
         .app-navigation-logo-button{
             position: absolute;
             right: 0px;
             top: 0px;
-            width: 60px;            
+            width: 60px;
             height: 59px;
             border: 0px;
             background: transparent;
             padding: 20px;
             .transition(background @app-default-transition-speed linear);
-            
+
             .app-navigation-logo-button-alert{
                 position: absolute;
                 right: 5px;
@@ -299,20 +299,20 @@
                 background: @app-design-danger-bg;
                 color: @app-design-danger-color;
                 .box-shadow(0px 0px 0px 3px fade(@app-design-danger-bg,20%));
-                
+
                 .border-radius(2px);
             }
-            
-            span[class^='icon-']{                
-                font-size: 20px;                
+
+            span[class^='icon-']{
+                font-size: 20px;
             }
         }
     }
-    
+
     nav{
         float: left;
         width: 100%;
-        
+
         ul{
             display: block;
             float: left;
@@ -320,17 +320,17 @@
             padding: 0px;
             margin: 0px;
             list-style: none;
-            
+
             > li{
                 float: left;
                 width: 100%;
                 position: relative;
-                
+
                 > ul{
                     max-height: 0px;
-                    overflow: hidden;                        
+                    overflow: hidden;
                 }
-                
+
                 &.openable{
                     > a:after{
                         position: absolute;
@@ -342,60 +342,60 @@
                         font-size: 10px;
                         font-family: "linearicons";
                         content: "\e874";
-                        text-align: center;                                               
+                        text-align: center;
                         .transition(all @app-default-transition-speed linear);
-                    }                                        
-                    
-                    &.open{                        
-                        > a{                                                        
-                            &:after{                                
+                    }
+
+                    &.open{
+                        > a{
+                            &:after{
                                 .rotate(180deg);
                             }
-                        }                            
+                        }
                         > ul{
                             max-height: 1000px;
                             overflow: visible;
                         }
                     }
-                    
+
                     > a{
                         span.label{
                             right: 40px;
                         }
-                    }                    
+                    }
                 }
             }
         }
-        
+
         > ul{
             > li{
-                
+
                 a{
                     display: block;
                     float: left;
                     width: 100%;
                     line-height: 30px;
-                    padding: 10px 30px 10px 15px;                    
+                    padding: 10px 30px 10px 15px;
                     text-decoration: none;
-                    .transition(all @app-default-transition-speed linear);                                     
+                    .transition(all @app-default-transition-speed linear);
                     position: relative;
                     text-transform: uppercase;
                     white-space: nowrap;
-                    
-                    
+
+
                     span{
                         float: left;
                         margin: 4px 15px 0px 0px;
                         font-size: 20px;
                         width: 20px;
-                        height: 20px;                        
-                        
+                        height: 20px;
+
                         &.nav-icon-hexa{
                             margin: 0px 10px 0px -5px;
                             font-size: 11px;
                             font-weight: 700;
                             height: 30px;
-                            width: 30px;                            
+                            width: 30px;
                             line-height: 30px;
                             text-transform: initial;
                             text-align: center;
@@ -406,18 +406,18 @@
                             font-size: 11px;
                             font-weight: 700;
                             height: 30px;
-                            width: 30px;                            
+                            width: 30px;
                             line-height: 30px;
                             text-transform: initial;
                             text-align: center;
                             background: rgba(0,0,0,0.1);
-                            border: 1px solid rgba(0,0,0,0.2);                            
+                            border: 1px solid rgba(0,0,0,0.2);
                         }
                         &.nav-icon-circle{
                             .border-radius(50%);
                         }
                     }
-                    
+
                     span.label{
                         position: absolute;
                         float: none;
@@ -425,63 +425,63 @@
                         right: 10px;
                         top: 15px;
                         margin: 0px;
-                        
+
                         &.label-ghost{
                             margin: 0px;
                         }
                     }
-                    
+
                 }
-                
-                ul{                                        
+
+                ul{
                     > li{
                         > a{
                             padding-left: 25px;
                         }
-                        
+
                         ul{
                             > li > a{
                                 padding-left: 45px;
                             }
-                        }                                                
+                        }
                     }
                 }
-                
+
                 &.title{
                     line-height: 30px;
-                    padding: 20px 0px 10px 15px;                                        
+                    padding: 20px 0px 10px 15px;
                 }
             }
         }
     }
-    
+
     &.app-navigation-minimized{
-        
-        .app-navigation-logo{            
+
+        .app-navigation-logo{
             background-image: url(../img/logo-sm.png);
-            
+
             .app-navigation-logo-button{
                 display: none;
             }
         }
-        
-        nav{            
-            
+
+        nav{
+
             ul{
                 > li{
                     > a{
-                        padding-left: 15px;                        
+                        padding-left: 15px;
                     }
-                    
+
                     &.openable{
                         > a:after{content: "\e876";}
-                    }                    
+                    }
                 }
             }
-            
+
             > ul{
                 .animation(nav-appear,300ms,1,linear);
-                
+
                 > li{
                     > a{
                         font-size: 0px;
@@ -493,14 +493,14 @@
                             font-size: 20px;
                             margin-right: 0px;
                             margin-top: 0px;
-                            line-height: 30px;       
-                            
+                            line-height: 30px;
+
                             &.nav-icon-hexa{
                                 margin: 0px 10px 0px 0px;
                                 font-size: 12px;
                                 font-weight: 700;
                                 height: 30px;
-                                width: 30px;                            
+                                width: 30px;
                                 line-height: 30px;
                                 text-transform: initial;
                                 text-align: center;
@@ -511,12 +511,12 @@
                                 font-size: 12px;
                                 font-weight: 700;
                                 height: 30px;
-                                width: 30px;                            
+                                width: 30px;
                                 line-height: 30px;
                                 text-transform: initial;
                                 text-align: center;
                                 background: rgba(0,0,0,0.1);
-                                border: 1px solid rgba(0,0,0,0.2);                            
+                                border: 1px solid rgba(0,0,0,0.2);
                             }
                             &.nav-icon-circle{
                                 .border-radius(50%);
@@ -530,7 +530,7 @@
                     ul{
                         position: absolute;
                         left: 100%;
-                        width: @app-layout-sidebar-dropdown-width;                                
+                        width: @app-layout-sidebar-dropdown-width;
                         z-index: 10;
                     }
 
@@ -544,35 +544,35 @@
             }
 
         }
-        
+
         &.dir-right{
             nav{
-                
+
                 ul{
                     > li{
                         &.openable{
                             > a:after{content: "\e875";}
-                        }                    
+                        }
                     }
                 }
-                
+
                  > ul{
                      > li{
-                         
-                         ul{                            
+
+                         ul{
                             left: auto;
                             right: 100%;
-                            
+
                             > li > a{
                                 padding-left: 15px;
                             }
-                        }                                                 
+                        }
                      }
                  }
             }
         }
-        
-        
+
+
         &.app-navigation-open-hover{
             nav{
                 ul{
@@ -584,30 +584,30 @@
                                     overflow: visible;
                                 }
                             }
-                        }                        
+                        }
                     }
                 }
             }
         }
-        
+
         &.mCustomScrollbar{
             .mCustomScrollBox{
                 overflow: visible;
-                
+
                 .mCSB_container{
                     overflow: visible;
                 }
             }
         }
     }
-    
+
     &.app-navigation-fixed{
         float: none;
         position: fixed;
         left: 0px;
         top: 0px;
         z-index: 10 !important;
-        
+
         &.app-navigation-fixed-absolute{
             position: absolute;
         }
@@ -622,17 +622,17 @@
 
 @-webkit-keyframes nav-appear{
     0%   {opacity: 0;}
-    75%  {opacity: 0;}    
+    75%  {opacity: 0;}
     100% {opacity: 1;}
 }
 @keyframes nav-appear{
     0%   {opacity: 0;}
-    75%  {opacity: 0;}    
+    75%  {opacity: 0;}
     100% {opacity: 1;}
 }
 
 @app-navigation-mobile-bg: @app-navigation-background;
-.app-navigation-mobile-bg{    
+.app-navigation-mobile-bg{
     background: #2d3349;
     background: -moz-linear-gradient(top,  #2d3349 0%, #1b202b 100%);
     background: -webkit-linear-gradient(top,  #2d3349 0%,#1b202b 100%);
@@ -647,34 +647,34 @@
 
 .app{
     &.app-navigation-moblie-wrapper{
-        //background: @app-navigation-mobile-bg;        
+        //background: @app-navigation-mobile-bg;
         .app-navigation-mobile-bg;
-        
+
         .app-container{
             .transition(all @app-default-transition-speed linear);
         }
-    }        
-    
-    &.app-navigation-moblie-open{        
+    }
+
+    &.app-navigation-moblie-open{
         overflow: hidden;
         height: 100%;
-        
+
         .app-container{
             width: 100%;
             height: 100% !important;
             overflow: hidden;
             .box-shadow(0px 0px 75px 20px rgba(0,0,0,0.5));
-            
+
             -ms-transform: matrix(0.9, 0, 0, 0.9, 200, 0);
             -webkit-transform: matrix(0.9, 0, 0, 0.9, 200, 0);
-            transform: matrix(0.9, 0, 0, 0.9, 200, 0);            
-        }        
+            transform: matrix(0.9, 0, 0, 0.9, 200, 0);
+        }
         .app-navigation-mobile{
             opacity: 1;
             z-index: 0;
         }
     }
-    
+
     .app-navigation-mobile{
         position: absolute;
         left: 0px;
@@ -682,18 +682,18 @@
         width: 200px;
         opacity: 0;
         .transition(opacity 0.5s linear);
-        
+
         > ul{
             float: left;
             width: 100%;
             list-style: none;
-            
+
             > li{
                 float: left;
                 width: 100%;
                 padding: 10px 15px;
                 line-height: 20px;
-                
+
                 a{
                     line-height: 30px;
                     font-size: @app-navigation-mobile-text-size;
@@ -701,8 +701,8 @@
                     text-transform: uppercase;
                     color: @app-navigation-mobile-text-color;
                     text-decoration: none;
-                    .transition(color @app-default-transition-speed linear);                    
-                    
+                    .transition(color @app-default-transition-speed linear);
+
                     span{
                         &[class^='icon-']{
                             font-size: 20px;
@@ -716,7 +716,7 @@
                             font-size: 11px;
                             font-weight: 700;
                             height: 30px;
-                            width: 30px;                            
+                            width: 30px;
                             line-height: 30px;
                             text-transform: initial;
                             text-align: center;
@@ -728,50 +728,50 @@
                             font-size: 11px;
                             font-weight: 700;
                             height: 30px;
-                            width: 30px;                            
+                            width: 30px;
                             line-height: 30px;
                             text-transform: initial;
                             text-align: center;
                             background: rgba(0,0,0,0.1);
-                            border: 1px solid rgba(0,0,0,0.2);                            
+                            border: 1px solid rgba(0,0,0,0.2);
                         }
                         &.nav-icon-circle{
                             .border-radius(50%);
                         }
                     }
-                    
+
                     &:hover{
                         color: @app-navigation-mobile-text-color-hover;
                     }
                 }
             }
         }
-    }    
-    
-    
+    }
+
+
     // Horizontal Navigation
     .app-navigation-horizontal{
         float: left;
         width: 100%;
         background: @app-navigation-horizontal-bg;
         position: relative;
-        
-        nav{            
-            > ul{                
+
+        nav{
+            > ul{
                 float: left;
                 width: 100%;
                 margin: 0px 0px 60px 0px;
                 padding: 0px;
-                list-style: none;                
+                list-style: none;
                 padding: 10px 0px 0px 10px;
                 position: relative;
-                
+
                 > li{
-                    width: auto;                    
-                    
+                    width: auto;
+
                     > a{
                         float: left;
-                        padding: 10px 20px 12px 15px;                        
+                        padding: 10px 20px 12px 15px;
                         line-height: 20px;
                         color: @app-navigation-horizontal-color;
                         text-decoration: none;
@@ -780,7 +780,7 @@
                         text-transform: uppercase;
                         .border-radius(@app-desing-border-radius);
                         .transition(color @app-default-transition-speed linear);
-                        
+
                         span[class^="icon-"], .fa{
                             float: left;
                             margin-right: 10px;
@@ -792,13 +792,13 @@
                         .fa{
                             font-size: 14px;
                         }
-                        
+
                         &:hover{
-                            color: @app-navigation-horizontal-color-hover;                            
+                            color: @app-navigation-horizontal-color-hover;
                         }
                     }
-                    
-                    > ul{                                                
+
+                    > ul{
                         position: absolute;
                         width: 100%;
                         left: 0px;
@@ -808,10 +808,10 @@
                         display: none;
                         border-bottom: 1px solid @app-navigation-horizontal-border;
                         padding: 10px 0px 10px 15px;
-                        
+
                         > li{
                             width: auto;
-                            
+
                             > a{
                                 float: left;
                                 color: @app-navigation-horizontal-secondary-color;
@@ -824,94 +824,94 @@
                                 line-height: 20px;
                                 .transition(all @app-default-transition-speed linear);
                                 .border-radius(3px);
-                                
+
                                 &:hover{
                                     color: @app-navigation-horizontal-color-active;
                                     background: @app-navigation-horizontal-secondary-bg-hover;
                                 }
                             }
-                            
+
                             &.active{
-                                > a{                                    
+                                > a{
                                     color: @app-navigation-horizontal-color-active;
-                                    background: @app-navigation-horizontal-secondary-bg-hover;                                    
+                                    background: @app-navigation-horizontal-secondary-bg-hover;
                                 }
                             }
                         }
                     }
-                    
+
                     &.openable{
-                        > a{                                                        
+                        > a{
                             .border-radiuses(3px, 3px, 0px, 0px);
                         }
-                        
+
                         &.active{
                             > a{
                                 background: @app-navigation-horizontal-bg-active;
                             }
                         }
                     }
-                    
-                    &.active{                        
-                        > a{color: @app-navigation-horizontal-color-active;}                        
+
+                    &.active{
+                        > a{color: @app-navigation-horizontal-color-active;}
                         > ul{display: block;}
                     }
                 }
             }
-            
+
         }
-        
+
         .container{
             &.container-boxed{
-                margin: 0px auto;                                
-                
+                margin: 0px auto;
+
                 > nav{
                     > ul{
                         padding-left: 0px;
-                        
+
                         > li > ul{
                             padding-left: 0px;
                         }
                     }
                 }
-                
+
                 &:before{
                     position: absolute;
                     left: 0px;
                     bottom: -1px;
                     height: 61px;
                     width: 100%;
-                    background: @app-navigation-horizontal-bg-active;                        
+                    background: @app-navigation-horizontal-bg-active;
                     content: " ";
                     border-bottom: 1px solid @app-navigation-horizontal-border;
                 }
-                
+
             }
         }
     }
-    
+
     // END Horizontal Navigation
-    
+
 }
 
 
 
 @media (max-width: @screen-md) {
-    .app-navigation{               
+    .app-navigation{
         .app-navigation-logo{
             display: none;
         }
-        
+
         &.app-navigation-style-light{
             border-right: 0px;
-            border-bottom: 1px solid @app-desing-border-color;            
+            border-bottom: 1px solid @app-desing-border-color;
         }
     }
-    
+
     .app{
         .app-navigation-horizontal{
             display: none;
-            
+
             .container{
                 &.container-boxed{
                     padding: 0px;
@@ -920,20 +920,20 @@
                     }
                 }
             }
-            
-            nav{            
+
+            nav{
                 > ul{
                     margin: 0px;
                     padding: 0px;
 
                     > li{
-                        width: 100%;                        
-                        
+                        width: 100%;
+
                         > a{
                             padding: 15px 20px 15px;
                             width: 100%;
                         }
-                        
+
                         &.openable{
                             &.active{
                                 > a{
@@ -942,17 +942,17 @@
                                 }
                             }
                         }
-                        
+
                         > ul{
                             position: relative;
                             float: left;
                             width: 100%;
                             padding: 5px;
-                            
+
                             > li{
                                 width: 100%;
                                 margin-bottom: 5px;
-                                
+
                                 > a{
                                     width: 100%;
                                 }
@@ -964,7 +964,7 @@
                     }
                 }
             }
-            
+
             &.show{
                 display: block;
             }
