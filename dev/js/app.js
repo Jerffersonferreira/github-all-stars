@@ -391,4 +391,8 @@
             githubAPI.getStarredRepositories();
         }
     });
+
+    $(document).ready( function() {
+        githubAPI.getRateLimit();
+    });
 })();
