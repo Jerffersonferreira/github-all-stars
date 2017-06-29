@@ -2823,7 +2823,7 @@ tbody.collapse.in {
   display: none;
   float: left;
   min-width: 160px;
-  padding: 5px 0;
+  padding: 0;
   margin: 2px 0 0;
   list-style: none;
   font-size: 13px;
@@ -2859,8 +2859,8 @@ tbody.collapse.in {
 .dropdown-menu > li > a:hover,
 .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #373737;
-  background-color: #f5f5f5;
+  color: #fff;
+  background-color: #205081;
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -8907,6 +8907,10 @@ select.selectpicker {
 .bootstrap-select.btn-group .dropdown-menu li small {
   padding-left: 0.5em;
 }
+.bootstrap-select.btn-group .dropdown-menu li:hover .check-mark,
+.bootstrap-select.btn-group .dropdown-menu li:focus .check-mark {
+  color: #fff !important;
+}
 .bootstrap-select.btn-group .dropdown-menu .notify {
   position: absolute;
   bottom: 10px;
@@ -13820,6 +13824,9 @@ dl dd {
 }
 .app .app-sidebar-user > .contact.contact-lg {
   margin: 0px;
+}
+.app #loadMoreWrapper {
+  padding: 20px;
 }
 @media (max-width: 992px) {
   .app .app-content-tabs > ul > li > a {
