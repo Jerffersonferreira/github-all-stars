@@ -47,7 +47,7 @@
     // Application helpers
     var helpers = {
         countObjectProperties: function( obj ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 var countProperties = 0;
                 for ( var property in obj ) {
                     if ( Object.prototype.hasOwnProperty.call(obj, property) ) {
@@ -65,7 +65,7 @@
             }
         },
         filtered: function( obj, filters ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 var count = 0;
                 var tempArray = [];
                 var arrayLenght = filters.length;
@@ -171,7 +171,7 @@
     // Render Components
     var render = {
         limitInformer: function( apiData ) {
-            if ( apiData != null ) {
+            if ( ! $.isEmptyObject(apiData) ) {
                 var apidata    = apiData;
                 var remaining  = apiData.remaining;
                 var limit      = apiData.limit;
@@ -272,7 +272,7 @@
             }
         },
         userProfile: function( apiData ) {
-            if ( apiData != null ) {
+            if ( ! $.isEmptyObject(apiData) ) {
                 DOMCache.profile.wrapper.html('');
 
                 var $userProfile = $( DOMCache.profile.info );
@@ -287,7 +287,7 @@
             }
         },
         languages: function( obj ) {
-            if ( obj !== null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 cachedObj.languagesObj = obj.forEach( function(obj) {
                     if ( obj.language !== null ) cachedObj.languagesArr.push( obj.language );
                 });
@@ -337,7 +337,7 @@
     // OrderBy - using COC
     var orderBy = {
         ascending: function( obj ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 obj.sort( function( a, b ) {
                     return 2 * ( a.name.toLowerCase() > b.name.toLowerCase() ) - 1;
                 });
@@ -345,7 +345,7 @@
             }
         },
         openIssues: function( obj ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 obj.sort( function( a, b ) {
                     return b.open_issues - a.open_issues;
                 });
@@ -353,7 +353,7 @@
             }
         },
         stargazers: function( obj ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 obj.sort( function( a, b ) {
                     return b.stargazers_count - a.stargazers_count;
                 });
@@ -361,7 +361,7 @@
             }
         },
         watchers: function( obj ) {
-            if ( obj != null ) {
+            if ( ! $.isEmptyObject(obj) ) {
                 obj.sort( function( a, b ) {
                     return b.watchers - a.watchers;
                 });
