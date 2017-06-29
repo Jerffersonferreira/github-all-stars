@@ -396,7 +396,6 @@
     $('body').on( 'click', '[data-card-user]', function(e) {
         e.preventDefault();
         var username = $(this).attr( 'href' );
-        console.log(username);
         if ( username != null ) {
             githubAPI.username = username;
             DOMCache.searchBar.val(username);
