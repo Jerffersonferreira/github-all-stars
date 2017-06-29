@@ -233,9 +233,13 @@
                     var sizeMB     = parseFloat( obj.size / 1024 ).toFixed(2);
                     var language   = obj.language;
                     var languageClass;
+                    var res;
 
-                    if ( language != null )
+                    if ( language != null && language != undefined ) {
                         var languageClass = language.toLowerCase().trim();
+                        var languageClass = languageClass.replace( "#", "sharp" );
+                        var languageClass = languageClass.replace( "++", "plusplus" );
+                    }
                     if ( obj.private )
                         var publicRepo = "Privado";
 
